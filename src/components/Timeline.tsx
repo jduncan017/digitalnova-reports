@@ -1,22 +1,28 @@
 import { type Action } from "~/lib/types";
 
-function TimelineItem({ action }: { action: Action }) {
+function ActionItem({ action, index }: { action: Action; index: number }) {
   return (
-    <div className="relative mb-7 pl-8">
-      <div
-        className="absolute left-0 top-1.5 h-3 w-3 rounded-full"
-        style={{
-          backgroundColor:
-            action.status === "done" ? "#34d399" : "var(--secondary)",
-          border: "2px solid var(--bg)",
-        }}
-      />
-      <h4
-        className="mb-1 text-base font-medium"
-        style={{ color: "var(--text-heading)" }}
-      >
-        {action.title}
-      </h4>
+    <div
+      className="rounded-2xl p-6 backdrop-blur-sm"
+      style={{
+        border: "1px solid var(--border)",
+        backgroundColor: "var(--surface-transparent)",
+      }}
+    >
+      <div className="mb-2 flex items-baseline gap-2">
+        <span
+          className="text-lg font-bold"
+          style={{ color: action.status === "done" ? "#34d399" : "var(--secondary)" }}
+        >
+          {index + 1})
+        </span>
+        <h4
+          className="text-base font-medium"
+          style={{ color: "var(--text-heading)" }}
+        >
+          {action.title}
+        </h4>
+      </div>
       <p
         className="text-[15px] leading-relaxed"
         style={{ color: "var(--text-muted)" }}
@@ -29,13 +35,9 @@ function TimelineItem({ action }: { action: Action }) {
 
 export function Timeline({ actions }: { actions: Action[] }) {
   return (
-    <div className="relative mb-12 pl-2">
-      <div
-        className="absolute bottom-2 left-[7px] top-2 w-0.5"
-        style={{ backgroundColor: "var(--border)" }}
-      />
-      {actions.map((a) => (
-        <TimelineItem key={a.title} action={a} />
+    <div className="mb-12 grid grid-cols-1 gap-4 sm:grid-cols-2">
+      {actions.map((a, i) => (
+        <ActionItem key={a.title} action={a} index={i} />
       ))}
     </div>
   );

@@ -5,13 +5,26 @@ import { type Funnel } from "~/lib/types";
 const CHART_HEIGHT = 200;
 const RAMP_WIDTH = 28;
 
-export function FunnelChart({ funnel }: { funnel: Funnel }) {
+export function FunnelChart({
+  funnel,
+  adSpend,
+}: {
+  funnel: Funnel;
+  adSpend?: number;
+}) {
   const maxCount = funnel.steps[0]?.count ?? 1;
 
   // Pre-calculate heights
   const heights = funnel.steps.map(
     (step) => Math.max((step.count / maxCount) * CHART_HEIGHT, 16),
   );
+
+  // Build cost-per metrics if ad spend is provided
+  const costPer = adSpend
+    ? funnel.steps.map((step) =>
+        step.count > 0 ? (adSpend / step.count).toFixed(2) : null,
+      )
+    : null;
 
   // Build the items: bar, ramp, bar, ramp, bar...
   const items: React.ReactNode[] = [];
@@ -72,14 +85,13 @@ export function FunnelChart({ funnel }: { funnel: Funnel }) {
       {/* Bars + ramps */}
       <div className="flex items-end">{items}</div>
 
-      {/* Labels row — needs to align with bars, skipping ramp space */}
+      {/* Labels row */}
       <div className="mt-4 flex">
         {funnel.steps.map((step, i) => (
           <div
             key={step.label}
             className="flex-1 text-center"
             style={{
-              // Add margin-right equal to ramp width to stay aligned with bars
               marginRight:
                 i < funnel.steps.length - 1 ? RAMP_WIDTH : 0,
             }}
@@ -109,6 +121,14 @@ export function FunnelChart({ funnel }: { funnel: Funnel }) {
             >
               {step.pct}%
             </div>
+            {costPer?.[i] && (
+              <div
+                className="mt-1 text-xs"
+                style={{ color: "var(--text-muted)" }}
+              >
+                ${costPer[i]}/user
+              </div>
+            )}
           </div>
         ))}
       </div>

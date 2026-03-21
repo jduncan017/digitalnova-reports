@@ -22,7 +22,7 @@ function toRgba(color: string, alpha: number): string {
     return `rgba(${r}, ${g}, ${b}, ${alpha})`;
   }
   // Handle rgb(r, g, b) or rgba(r, g, b, a)
-  const match = color.match(/(\d+),\s*(\d+),\s*(\d+)/);
+  const match = /(\d+),\s*(\d+),\s*(\d+)/.exec(color);
   if (match) {
     return `rgba(${match[1]}, ${match[2]}, ${match[3]}, ${alpha})`;
   }

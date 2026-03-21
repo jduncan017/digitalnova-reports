@@ -28,10 +28,21 @@ export default async function ReportPage({
   const report = await getReport(clientSlug, date);
   if (!report) notFound();
 
+  // Extract ad spend as a number for cost-per calculations in the funnel
+  const spendMetric = report.metrics.find((m) =>
+    m.label.toLowerCase().includes("spend"),
+  );
+  const adSpend = spendMetric
+    ? parseFloat(spendMetric.value.replace(/[^0-9.]/g, ""))
+    : undefined;
+
   return (
     <div
       className="flex min-h-screen flex-col"
-      style={{ backgroundColor: "var(--bg)" }}
+      style={{
+        background:
+          "linear-gradient(to bottom right, var(--bg), var(--surface))",
+      }}
     >
       <ReportHeader
         report={report}
@@ -48,7 +59,7 @@ export default async function ReportPage({
               label="Funnel Analysis"
               title={`${report.funnel.title}`}
             />
-            <FunnelChart funnel={report.funnel} />
+            <FunnelChart funnel={report.funnel} adSpend={adSpend} />
           </div>
         )}
 

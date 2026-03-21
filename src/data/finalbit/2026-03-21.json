@@ -50,8 +50,8 @@
       "type": "bar",
       "title": "Ad Performance Breakdown",
       "data": {
-        "labels": ["Impressions", "Reach", "Link Clicks", "Page Views"],
-        "values": [4465, 3800, 97, 97]
+        "labels": ["Impressions", "Reach", "Link Clicks"],
+        "values": [4465, 3800, 97]
       }
     },
     {
@@ -71,12 +71,6 @@
 
   "findings": [
     {
-      "icon": "target",
-      "title": "Ad Creative Is Working",
-      "description": "2.17% CTR on cold prospecting is well above average for B2B campaigns. The messaging resonates with the target audience and is driving quality traffic at an efficient $3.20 CPC.",
-      "highlight": true
-    },
-    {
       "icon": "search",
       "title": "Tracking Gap Identified & Fixed",
       "description": "We discovered and resolved a PostHog tracking issue early on. Corrected data reveals real engagement happening — 21.65% of visitors click through and 7.22% interact with a CTA.",
@@ -87,21 +81,10 @@
       "title": "Funnel Optimization Opportunity",
       "description": "The original landing page added an unnecessary decision step. By simplifying the user journey, we expect to see significant improvement in click-through and conversion rates.",
       "highlight": false
-    },
-    {
-      "icon": "zap",
-      "title": "New Landing Page Deployed",
-      "description": "A redesigned page now leads with the 'One Platform Replaces 4+ Tools' value prop, competitor comparison, and all pricing tiers — capturing interest across every budget level.",
-      "highlight": true
     }
   ],
 
   "actions": [
-    {
-      "title": "Fixed Analytics Tracking",
-      "description": "Resolved PostHog integration issue to get full funnel visibility.",
-      "status": "done"
-    },
     {
       "title": "Redesigned Landing Page",
       "description": "Consolidated into a single page with value prop, competitor comparison, all pricing tiers, and social proof.",
@@ -128,7 +111,6 @@
     "CTA click-through rates on the new page (by button ID)",
     "Which pricing tier gets the most engagement",
     "Demo bookings (Enterprise) vs. free signups (other tiers)",
-    "Overall funnel conversion rate improvement vs. Week 1 baseline",
-    "Mid-week check-in if we see meaningful early movement"
+    "Overall funnel conversion rate improvement vs. Week 1 baseline"
   ]
 }
