@@ -44,10 +44,10 @@ export default async function ClientDashboard({
               <Image
                 src={client.logo}
                 alt={client.name}
-                width={80}
-                height={80}
+                width={96}
+                height={96}
                 unoptimized
-                className="h-20 w-20 rounded-2xl object-contain p-2.5"
+                className="h-24 w-24 rounded-2xl object-contain p-2.5"
                 style={{
                   border: "1px solid var(--border)",
                   backgroundColor: "var(--bg)",

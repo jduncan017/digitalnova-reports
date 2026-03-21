@@ -11,7 +11,7 @@
     {
       "label": "Ad Spend",
       "value": "$612.54",
-      "note": "of $2,500/mo budget — pacing at ~$2,450/mo",
+      "note": "of $2,500/mo budget",
       "status": "good"
     },
     {
@@ -121,26 +121,28 @@
 
   "actions": [
     {
-      "title": "Added Negative Keywords Across All Campaigns",
-      "description": "Blocked 6 keyword themes — ticket sales, buy tickets, online tickets, seating chart, phone integration, phone CRM — to eliminate spam and irrelevant traffic.",
-      "status": "done"
-    },
-    {
-      "title": "Monitored Restructured Campaigns (Full Week)",
-      "description": "First full week of the 5-campaign structure validated. Budget allocation now matches priority — top 2 campaigns received 54% of spend.",
-      "status": "done"
-    },
-    {
       "title": "Search Terms Analysis for Spam Patterns",
       "description": "Reviewed all search term reports to identify suspicious high-CTR queries and irrelevant traffic sources driving non-converting clicks.",
+      "status": "done"
+    },
+    {
+      "title": "Added Negative Keywords Across All Campaigns",
+      "description": "Blocked 6 keyword themes — ticket sales, buy tickets, online tickets, seating chart, phone integration, phone CRM — to eliminate spam and irrelevant traffic.",
       "status": "done"
     },
     {
       "title": "Spam Traffic Identified & Blocked",
       "description": "Detected suspicious search terms (e.g., 'crm integration phone' at 89% CTR) and irrelevant queries ('online ticket sales', 'seating chart'). Added 6 negative keyword themes across all 5 campaigns to stop budget waste.",
       "highlight": false
+    },
+    {
+      "title": "Monitored Restructured Campaigns (Full Week)",
+      "description": "First full week of the 5-campaign structure validated. Budget allocation now matches priority — top 2 campaigns received 54% of spend.",
+      "status": "done"
     }
   ],
+
+  "videoUrl": "https://supercut.ai/share/digitalnova-studio/OtAb6n2rgocLJa11UGiqY8",
 
   "nextSteps": [
     "Monitor if negative keywords reduce spam bookings and irrelevant impressions",
@@ -148,7 +150,5 @@
     "Evaluate whether to shift Event Registration budget ($10/day) to converting campaigns",
     "Consider dedicated landing page for Event Registration to fix intent mismatch",
     "Track conversion quality — confirm demo bookings are legitimate enterprise leads"
-  ],
-
-  "videoUrl": ""
+  ]
 }

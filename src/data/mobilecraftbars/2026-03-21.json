@@ -1,0 +1,115 @@
+{
+  "client": "Mobile Craft Bars",
+  "reportTitle": "Google Ads Weekly Report",
+  "reportSubtitle": "Campaign Performance & Optimization Summary",
+  "period": "Mar 14 – Mar 20, 2026",
+  "date": "2026-03-21",
+  "platform": "Google Ads",
+  "summary": "Slower week with only 1 conversion at $226.85 — above our $80 target. The 30-day average ($88.21/conversion) is still near target, so this looks like normal variance on a small-volume campaign. We identified mobile traffic as a confirmed budget drain and have a plan to fix it.",
+
+  "metrics": [
+    {
+      "label": "Ad Spend",
+      "value": "$227",
+      "note": "of $1,200/mo budget ($40/day) — budget limited",
+      "status": "neutral"
+    },
+    {
+      "label": "Conversions",
+      "value": "1",
+      "note": "Down from ~3/week avg — small sample variance",
+      "status": "bad"
+    },
+    {
+      "label": "Cost per Conversion",
+      "value": "$226.85",
+      "note": "30-day avg still $88.21 — one bad week",
+      "status": "bad"
+    },
+    {
+      "label": "Avg CPC",
+      "value": "$5.53",
+      "note": "41 clicks, 9.36% CTR — traffic volume is stable",
+      "status": "neutral"
+    }
+  ],
+
+  "funnel": {
+    "title": "Ad-to-Booking Funnel",
+    "source": "Google Ads",
+    "steps": [
+      { "label": "Impressions", "count": 438, "pct": 100 },
+      { "label": "Clicks", "count": 41, "pct": 9.36 },
+      { "label": "Bookings", "count": 1, "pct": 0.23 }
+    ],
+    "notes": "The single conversion came from desktop via 'bartenders for hire' keyword. Mobile clicks (22 of 41) produced zero bookings."
+  },
+
+  "charts": [
+    {
+      "id": "device-clicks",
+      "type": "doughnut",
+      "title": "Clicks by Device",
+      "data": {
+        "labels": [
+          "Mobile — 0 conversions (54%)",
+          "Desktop — 1 conversion (46%)"
+        ],
+        "values": [54, 46]
+      }
+    },
+    {
+      "id": "device-spend",
+      "type": "doughnut",
+      "title": "Spend by Device",
+      "data": {
+        "labels": ["Desktop (63%)", "Mobile (37%)"],
+        "values": [63, 37]
+      }
+    }
+  ],
+
+  "findings": [
+    {
+      "title": "Mobile Traffic Is a Confirmed Budget Drain",
+      "description": "Mobile got 54% of clicks and 37% of spend but produced zero conversions across multiple weeks. We've now increased the mobile bid reduction from -20% to -50% to redirect budget toward desktop where conversions happen.",
+      "highlight": false
+    },
+    {
+      "title": "One Bad Week, Not a Broken Campaign",
+      "description": "The 30-day average is 10 conversions at $88.21 each — still near the $80 target. With only ~3 conversions per week on average, a 1-conversion week is within normal variance for this volume.",
+      "highlight": false
+    },
+    {
+      "title": "Single Keyword Carrying the Account",
+      "description": "'Bartenders for hire' drives 89% of spend and is the only keyword converting. The other keywords combined generated just 3 clicks. This concentration is a risk if competition increases on that term.",
+      "highlight": false
+    }
+  ],
+
+  "actions": [
+    {
+      "title": "Monitored Target CPA Performance",
+      "description": "The lowered $80 Target CPA has been running for one full week. Early signal: the algorithm is limiting spend rather than finding cheaper conversions. Needs more time before adjusting.",
+      "status": "done"
+    },
+    {
+      "title": "Analyzed Device Performance",
+      "description": "Confirmed the mobile conversion gap is persistent — zero conversions despite significant click volume. A -20% bid adjustment wasn't enough.",
+      "status": "done"
+    },
+    {
+      "title": "Increased Mobile Bid Reduction to -50%",
+      "description": "Mobile was consuming 37% of budget with zero conversions. Increased the bid adjustment from -20% to -50% to shift budget toward desktop where all conversions occur.",
+      "status": "done"
+    }
+  ],
+
+  "nextSteps": [
+    "Monitor whether the -50% mobile bid reduction shifts budget to desktop and improves conversions",
+    "Give the $80 Target CPA one more week — if CPA stays elevated, raise back to $100",
+    "Review search terms for any wasted spend or new keyword opportunities"
+  ],
+
+  "videoUrl": "https://supercut.ai/share/digitalnova-studio/Nnv61l8S18nQfmCL1hEw-P"
+}

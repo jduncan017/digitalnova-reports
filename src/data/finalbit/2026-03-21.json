@@ -73,15 +73,13 @@
 
   "findings": [
     {
-      "icon": "search",
-      "title": "Tracking Gap Identified & Fixed",
-      "description": "We discovered and resolved a PostHog tracking issue early on. Corrected data reveals real engagement happening — 21.65% of visitors click through and 7.22% interact with a CTA.",
+      "title": "Strong Engagement for Cold B2B",
+      "description": "2.17% CTR and $3.20 CPC are well above average for cold B2B traffic. 21.65% of visitors click through the page and 7.22% interact with a CTA — solid Week 1 baselines.",
       "highlight": false
     },
     {
-      "icon": "trending-up",
-      "title": "Funnel Optimization Opportunity",
-      "description": "The original landing page added an unnecessary decision step. By simplifying the user journey, we expect to see significant improvement in click-through and conversion rates.",
+      "title": "Landing Page Has a Friction Point",
+      "description": "The original page added an unnecessary decision step before pricing. Simplifying the path from ad click to CTA should meaningfully improve conversion rates in Week 2.",
       "highlight": false
     }
   ],
@@ -98,8 +96,13 @@
       "status": "done"
     },
     {
-      "title": "Added Granular Tracking",
-      "description": "Every CTA button now has a unique PostHog ID for engagement tracking.",
+      "title": "Fixed PostHog Tracking",
+      "description": "Resolved a tracking gap that was undercounting engagement — data is now accurate for optimization decisions.",
+      "status": "done"
+    },
+    {
+      "title": "Added Granular CTA Tracking",
+      "description": "Every CTA button now has a unique PostHog ID so we can measure which buttons and pricing tiers drive engagement.",
       "status": "done"
     },
     {
@@ -108,6 +111,8 @@
       "status": "done"
     }
   ],
+
+  "videoUrl": "https://supercut.ai/share/digitalnova-studio/YpqQREAVG3RpdwMAymPXD5",
 
   "nextSteps": [
     "CTA click-through rates on the new page (by button ID)",

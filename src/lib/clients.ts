@@ -38,9 +38,18 @@ const clients: Record<string, ClientConfig> = {
       dark: false,
     },
   },
-  // Add more clients here:
-  // eventcombo: { ... },
-  // mobilecraftbars: { ... },
+  mobilecraftbars: {
+    slug: "mobilecraftbars",
+    name: "Mobile Craft Bars",
+    password: "mcb-2026",
+    logo: "/logos/mcb.png",
+    brand: {
+      background: "#0d0f17",
+      surface: "#0c0c0d",
+      primary: "#3d87bd",
+      dark: true,
+    },
+  },
 };
 
 export function getClient(slug: string): ClientConfig | undefined {

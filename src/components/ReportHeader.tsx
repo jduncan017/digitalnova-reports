@@ -50,10 +50,10 @@ export function ReportHeader({
             <Image
               src={clientLogo}
               alt={report.client}
-              width={80}
-              height={80}
+              width={96}
+              height={96}
               unoptimized
-              className="mt-1 h-20 w-20 rounded-xl object-contain p-2"
+              className="mt-1 h-24 w-24 rounded-xl object-contain p-2"
               style={{
                 border: "1px solid var(--border)",
                 backgroundColor: "var(--bg)",

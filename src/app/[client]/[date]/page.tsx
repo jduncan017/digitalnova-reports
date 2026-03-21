@@ -56,7 +56,18 @@ export default async function ReportPage({
         clientLogo={client.logo}
         dnLogo={getDnLogo(client)}
       />
-      <div className="mx-auto max-w-[1100px] px-6 py-12 sm:px-10">
+
+      <div className="mx-auto max-w-[1100px] px-6 py-20 sm:px-10">
+        {videoUrl && (
+          <div className="mt-12">
+            <SectionHeader label="Video Review" title="Campaign Walkthrough" />
+            <VideoEmbed
+              url={videoUrl}
+              title={`${report.client} — ${report.reportTitle}`}
+            />
+          </div>
+        )}
+
         {report.summary && (
           <div className="mb-12">
             <SectionHeader label="Summary" title="This Week at a Glance" />
@@ -71,16 +82,6 @@ export default async function ReportPage({
 
         <SectionHeader label="Performance Overview" title="Key Metrics" />
         <MetricGrid metrics={report.metrics} />
-
-        {videoUrl && (
-          <div className="mt-12">
-            <SectionHeader label="Video Review" title="Campaign Walkthrough" />
-            <VideoEmbed
-              url={videoUrl}
-              title={`${report.client} — ${report.reportTitle}`}
-            />
-          </div>
-        )}
 
         {report.funnel && (
           <div className="mt-12">
