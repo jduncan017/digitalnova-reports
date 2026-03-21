@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
+.report-link {
+  border: 1px solid var(--border);
+  background-color: var(--surface-transparent);
+}
+
+.report-link:hover {
+  border-color: var(--border-hover);
+  background-color: var(--surface-hover);
+}

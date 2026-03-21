@@ -1,0 +1,134 @@
+{
+  "client": "FinalBit",
+  "reportTitle": "Meta Ads Week 1 Report",
+  "reportSubtitle": "Campaign Performance & Optimization Summary",
+  "period": "Feb 18 – Mar 19, 2026",
+  "date": "2026-03-21",
+  "platform": "Meta Ads",
+
+  "metrics": [
+    {
+      "label": "Ad Spend",
+      "value": "$310",
+      "note": "of $1,500/mo budget",
+      "status": "neutral"
+    },
+    {
+      "label": "Impressions",
+      "value": "4,465",
+      "note": "CPM: $69.51",
+      "status": "neutral"
+    },
+    {
+      "label": "Click-Through Rate",
+      "value": "2.17%",
+      "note": "Strong for cold B2B",
+      "status": "good"
+    },
+    {
+      "label": "Cost Per Click",
+      "value": "$3.20",
+      "note": "Efficient for this space",
+      "status": "good"
+    }
+  ],
+
+  "funnel": {
+    "title": "Landing Page Funnel",
+    "source": "PostHog",
+    "steps": [
+      { "label": "Landed on Page", "count": 97, "pct": 100 },
+      { "label": "Clicked Through", "count": 21, "pct": 21.65 },
+      { "label": "CTA Interaction", "count": 7, "pct": 7.22 }
+    ],
+    "notes": "Median time: Landing → Click-through: 10s | Click-through → CTA: 1m 7s"
+  },
+
+  "charts": [
+    {
+      "id": "ad-performance",
+      "type": "bar",
+      "title": "Ad Performance Breakdown",
+      "data": {
+        "labels": ["Impressions", "Reach", "Link Clicks", "Page Views"],
+        "values": [4465, 3800, 97, 97]
+      }
+    },
+    {
+      "id": "funnel-breakdown",
+      "type": "doughnut",
+      "title": "Funnel Conversion Rates",
+      "data": {
+        "labels": [
+          "Clicked Through (21.65%)",
+          "CTA Interaction (7.22%)",
+          "Bounced (71.13%)"
+        ],
+        "values": [21.65, 7.22, 71.13]
+      }
+    }
+  ],
+
+  "findings": [
+    {
+      "icon": "target",
+      "title": "Ad Creative Is Working",
+      "description": "2.17% CTR on cold prospecting is well above average for B2B campaigns. The messaging resonates with the target audience and is driving quality traffic at an efficient $3.20 CPC.",
+      "highlight": true
+    },
+    {
+      "icon": "search",
+      "title": "Tracking Gap Identified & Fixed",
+      "description": "We discovered and resolved a PostHog tracking issue early on. Corrected data reveals real engagement happening — 21.65% of visitors click through and 7.22% interact with a CTA.",
+      "highlight": false
+    },
+    {
+      "icon": "trending-up",
+      "title": "Funnel Optimization Opportunity",
+      "description": "The original landing page added an unnecessary decision step. By simplifying the user journey, we expect to see significant improvement in click-through and conversion rates.",
+      "highlight": false
+    },
+    {
+      "icon": "zap",
+      "title": "New Landing Page Deployed",
+      "description": "A redesigned page now leads with the 'One Platform Replaces 4+ Tools' value prop, competitor comparison, and all pricing tiers — capturing interest across every budget level.",
+      "highlight": true
+    }
+  ],
+
+  "actions": [
+    {
+      "title": "Fixed Analytics Tracking",
+      "description": "Resolved PostHog integration issue to get full funnel visibility.",
+      "status": "done"
+    },
+    {
+      "title": "Redesigned Landing Page",
+      "description": "Consolidated into a single page with value prop, competitor comparison, all pricing tiers, and social proof.",
+      "status": "done"
+    },
+    {
+      "title": "Optimized CTAs",
+      "description": "Hero CTAs now anchor to pricing section instead of booking demos.",
+      "status": "done"
+    },
+    {
+      "title": "Added Granular Tracking",
+      "description": "Every CTA button now has a unique PostHog ID for engagement tracking.",
+      "status": "done"
+    },
+    {
+      "title": "Updated Ad Destination",
+      "description": "Meta ad URL now points to the new optimized page.",
+      "status": "done"
+    }
+  ],
+
+  "nextSteps": [
+    "CTA click-through rates on the new page (by button ID)",
+    "Which pricing tier gets the most engagement",
+    "Demo bookings (Enterprise) vs. free signups (other tiers)",
+    "Overall funnel conversion rate improvement vs. Week 1 baseline",
+    "Mid-week check-in if we see meaningful early movement"
+  ]
+}
