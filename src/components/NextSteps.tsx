@@ -1,7 +1,7 @@
 export function NextSteps({ steps }: { steps: string[] }) {
   return (
     <div
-      className="rounded-2xl p-6 backdrop-blur-sm sm:p-8"
+      className="card-shadow rounded-2xl p-6 backdrop-blur-sm sm:p-8"
       style={{
         border:
           "1px solid color-mix(in srgb, var(--primary) 25%, transparent)",
@@ -10,7 +10,7 @@ export function NextSteps({ steps }: { steps: string[] }) {
       }}
     >
       <h3
-        className="mb-5 text-lg font-semibold"
+        className="mb-5 text-xl font-semibold"
         style={{ color: "var(--text-heading)" }}
       >
         What We&apos;re Watching
@@ -19,15 +19,13 @@ export function NextSteps({ steps }: { steps: string[] }) {
         {steps.map((step) => (
           <li
             key={step}
-            className="relative pl-6 text-base leading-relaxed"
+            className="flex items-baseline gap-3 text-lg leading-relaxed"
             style={{ color: "var(--text-body)" }}
           >
             <span
-              className="absolute left-0"
-              style={{ color: "var(--secondary)" }}
-            >
-              →
-            </span>
+              className="mt-[10px] h-1.5 w-1.5 shrink-0 rounded-full"
+              style={{ backgroundColor: "var(--primary)" }}
+            />
             {step}
           </li>
         ))}

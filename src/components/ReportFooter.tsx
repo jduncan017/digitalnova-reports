@@ -1,23 +1,23 @@
 import Image from "next/image";
 
-export function ReportFooter() {
+export function ReportFooter({ dnLogo = "/dn-logo.png" }: { dnLogo?: string }) {
   return (
     <div
-      className="mt-auto w-full bg-stone-950/50 py-10"
-      style={{ borderTop: "1px solid var(--border)" }}
+      className="mt-auto w-full py-10"
+      style={{
+        borderTop: "1px solid var(--border)",
+        backgroundColor: "var(--surface-transparent)",
+      }}
     >
       <div className="flex flex-col items-center gap-3">
         <Image
-          src="/dn-logo.png"
+          src={dnLogo}
           alt="DigitalNova Studio"
           width={160}
           height={48}
           unoptimized
           className="h-8 w-auto"
         />
-        <p className="text-sm" style={{ color: "var(--text-faint)" }}>
-          Confidential — prepared for client use only
-        </p>
       </div>
     </div>
   );

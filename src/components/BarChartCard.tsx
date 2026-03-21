@@ -39,15 +39,14 @@ function useThemeColors(ref: React.RefObject<HTMLDivElement | null>) {
     if (!ref.current) return;
     const styles = getComputedStyle(ref.current);
     const primary = styles.getPropertyValue("--primary").trim();
-    const secondary = styles.getPropertyValue("--secondary").trim();
     const bg = styles.getPropertyValue("--bg").trim();
 
-    if (primary && secondary) {
+    if (primary) {
       setColors([
         toRgba(primary, 0.85),
-        toRgba(secondary, 0.65),
+        toRgba(primary, 0.65),
         toRgba(primary, 0.5),
-        toRgba(secondary, 0.4),
+        toRgba(primary, 0.4),
       ]);
     }
     if (bg) setTooltipBg(toRgba(bg, 0.95));
@@ -82,7 +81,7 @@ export function BarChartCard({ chart }: { chart: ChartData }) {
   return (
     <div
       ref={ref}
-      className="rounded-2xl p-6 backdrop-blur-sm sm:p-7"
+      className="card-shadow rounded-2xl p-6 backdrop-blur-sm sm:p-7"
       style={{
         border: "1px solid var(--border)",
         backgroundColor: "var(--surface-transparent)",

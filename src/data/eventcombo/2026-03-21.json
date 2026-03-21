@@ -1,0 +1,154 @@
+{
+  "client": "EventCombo",
+  "reportTitle": "Google Ads Week 2 Report",
+  "reportSubtitle": "Campaign Performance & Optimization Summary",
+  "period": "Mar 14 – Mar 20, 2026",
+  "date": "2026-03-21",
+  "platform": "Google Ads",
+  "summary": "Week 2 validates the campaign restructure — conversions more than doubled (2 → 5) while cost per conversion dropped 57%. All 5 conversions came from the two campaigns best aligned with the landing page. We also identified and blocked spam traffic sources with new negative keywords.",
+
+  "metrics": [
+    {
+      "label": "Ad Spend",
+      "value": "$612.54",
+      "note": "of $2,500/mo budget — pacing at ~$2,450/mo",
+      "status": "good"
+    },
+    {
+      "label": "Conversions",
+      "value": "5",
+      "note": "Up from 2 last week (+150%)",
+      "status": "good"
+    },
+    {
+      "label": "Cost per Conversion",
+      "value": "$122.51",
+      "note": "Down from $284.92 last week (-57%)",
+      "status": "good"
+    },
+    {
+      "label": "Avg CPC",
+      "value": "$1.09",
+      "note": "Down from $1.50 last week — strong for B2B",
+      "status": "good"
+    }
+  ],
+
+  "funnel": {
+    "title": "Ad-to-Demo Funnel",
+    "source": "Google Ads",
+    "steps": [
+      { "label": "Impressions", "count": 3787, "pct": 100 },
+      { "label": "Clicks", "count": 562, "pct": 14.84 },
+      { "label": "Demo Bookings", "count": 5, "pct": 0.13 }
+    ],
+    "notes": "All 5 conversions from Competitor Conquest (3) and Integration Intent (2) — the campaigns aligned with the CRM-focused landing page."
+  },
+
+  "charts": [
+    {
+      "id": "campaign-conversions",
+      "type": "bar",
+      "title": "Conversions by Campaign",
+      "data": {
+        "labels": [
+          "Competitor Conquest",
+          "Integration Intent",
+          "Enterprise Keywords",
+          "Event Registration",
+          "ROI & Analytics"
+        ],
+        "values": [3, 2, 0, 0, 0]
+      }
+    },
+    {
+      "id": "campaign-spend",
+      "type": "doughnut",
+      "title": "Spend Distribution by Campaign",
+      "data": {
+        "labels": [
+          "Competitor Conquest (29%)",
+          "Integration Intent (25%)",
+          "Enterprise Keywords (23%)",
+          "Event Registration (13%)",
+          "ROI & Analytics (10%)"
+        ],
+        "values": [29, 25, 23, 13, 10]
+      }
+    },
+    {
+      "id": "cost-per-conversion",
+      "type": "bar",
+      "title": "Cost per Conversion by Campaign",
+      "data": {
+        "labels": ["Competitor Conquest", "Integration Intent"],
+        "values": [60.03, 75.65]
+      }
+    },
+    {
+      "id": "week-over-week",
+      "type": "bar",
+      "title": "Week 1 vs Week 2 — Key Metrics",
+      "data": {
+        "labels": [
+          "Conversions (Wk1)",
+          "Conversions (Wk2)",
+          "Cost/Conv Wk1 (÷10)",
+          "Cost/Conv Wk2 (÷10)"
+        ],
+        "values": [2, 5, 28.49, 12.25]
+      }
+    }
+  ],
+
+  "findings": [
+    {
+      "title": "Campaign Restructure Is Paying Off",
+      "description": "Conversions jumped from 2 to 5 while cost per conversion dropped 57% ($284.92 → $122.51). The restructure into 5 campaigns with controlled budgets is delivering exactly as planned.",
+      "highlight": true
+    },
+    {
+      "title": "Conversions Coming from the Right Campaigns",
+      "description": "Competitor Conquest (3 at $60.03 each) and Integration Intent (2 at $75.65 each) are driving all conversions — the two campaigns best aligned with the CRM-focused landing page. This confirms our targeting hypothesis.",
+      "highlight": false
+    },
+    {
+      "title": "Event Registration: High Clicks, Zero Conversions",
+      "description": "154 clicks at 21.51% CTR but no demo bookings. People searching for event registration features land on a CRM integration page — a clear intent mismatch. Contained to $77/week while we evaluate a dedicated landing page.",
+      "highlight": false
+    }
+  ],
+
+  "actions": [
+    {
+      "title": "Added Negative Keywords Across All Campaigns",
+      "description": "Blocked 6 keyword themes — ticket sales, buy tickets, online tickets, seating chart, phone integration, phone CRM — to eliminate spam and irrelevant traffic.",
+      "status": "done"
+    },
+    {
+      "title": "Monitored Restructured Campaigns (Full Week)",
+      "description": "First full week of the 5-campaign structure validated. Budget allocation now matches priority — top 2 campaigns received 54% of spend.",
+      "status": "done"
+    },
+    {
+      "title": "Search Terms Analysis for Spam Patterns",
+      "description": "Reviewed all search term reports to identify suspicious high-CTR queries and irrelevant traffic sources driving non-converting clicks.",
+      "status": "done"
+    },
+    {
+      "title": "Spam Traffic Identified & Blocked",
+      "description": "Detected suspicious search terms (e.g., 'crm integration phone' at 89% CTR) and irrelevant queries ('online ticket sales', 'seating chart'). Added 6 negative keyword themes across all 5 campaigns to stop budget waste.",
+      "highlight": false
+    }
+  ],
+
+  "nextSteps": [
+    "Monitor if negative keywords reduce spam bookings and irrelevant impressions",
+    "Watch Enterprise Keywords campaign — 163 clicks at $0.88 CPC is strong volume, needs time for conversions",
+    "Evaluate whether to shift Event Registration budget ($10/day) to converting campaigns",
+    "Consider dedicated landing page for Event Registration to fix intent mismatch",
+    "Track conversion quality — confirm demo bookings are legitimate enterprise leads"
+  ],
+
+  "videoUrl": ""
+}

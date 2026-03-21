@@ -2,7 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
 import { Calendar, FileText, TrendingUp } from "lucide-react";
-import { getClient } from "~/lib/clients";
+import { getClient, getDnLogo } from "~/lib/clients";
+import { MetricCard } from "~/components/MetricCard";
 import { isAuthenticated } from "~/lib/auth";
 import { getReportDates, getReport } from "~/lib/reports";
 import { ReportFooter } from "~/components/ReportFooter";
@@ -30,7 +31,7 @@ export default async function ClientDashboard({
     >
       {/* Header */}
       <div
-        className="px-6 py-10 sm:px-10 sm:py-14"
+        className="header-shadow px-6 py-10 sm:px-10 sm:py-14"
         style={{
           background:
             "linear-gradient(to bottom right, color-mix(in srgb, var(--primary) 20%, transparent), var(--surface))",
@@ -43,13 +44,13 @@ export default async function ClientDashboard({
               <Image
                 src={client.logo}
                 alt={client.name}
-                width={64}
-                height={64}
+                width={80}
+                height={80}
                 unoptimized
-                className="h-16 w-16 rounded-2xl object-contain p-2.5"
+                className="h-20 w-20 rounded-2xl object-contain p-2.5"
                 style={{
                   border: "1px solid var(--border)",
-                  backgroundColor: "var(--surface-transparent)",
+                  backgroundColor: "var(--bg)",
                 }}
               />
             )}
@@ -71,18 +72,18 @@ export default async function ClientDashboard({
         </div>
       </div>
 
-      <div className="mx-auto max-w-[1100px] px-6 py-10 sm:px-10">
+      <div className="mx-auto max-w-[1100px] px-6 py-20 sm:px-20">
         {/* Stats row */}
         <div className="mb-10 grid grid-cols-2 gap-4 sm:grid-cols-3">
           <div
-            className="rounded-2xl p-5 backdrop-blur-sm"
+            className="card-shadow rounded-2xl p-5 backdrop-blur-sm"
             style={{
               border: "1px solid var(--border)",
               backgroundColor: "var(--surface-transparent)",
             }}
           >
             <div
-              className="mb-1.5 flex items-center gap-2 text-sm font-medium tracking-wider uppercase"
+              className="mb-1.5 flex items-center gap-2 text-xs font-medium tracking-wider uppercase"
               style={{ color: "var(--text-muted)" }}
             >
               <FileText className="h-4 w-4" />
@@ -98,14 +99,14 @@ export default async function ClientDashboard({
           {latestReport && (
             <>
               <div
-                className="rounded-2xl p-5 backdrop-blur-sm"
+                className="card-shadow rounded-2xl p-5 backdrop-blur-sm"
                 style={{
                   border: "1px solid var(--border)",
                   backgroundColor: "var(--surface-transparent)",
                 }}
               >
                 <div
-                  className="mb-1.5 flex items-center gap-2 text-sm font-medium tracking-wider uppercase"
+                  className="mb-1.5 flex items-center gap-2 text-xs font-medium tracking-wider uppercase"
                   style={{ color: "var(--text-muted)" }}
                 >
                   <Calendar className="h-4 w-4" />
@@ -119,14 +120,14 @@ export default async function ClientDashboard({
                 </div>
               </div>
               <div
-                className="col-span-2 rounded-2xl p-5 backdrop-blur-sm sm:col-span-1"
+                className="card-shadow col-span-2 rounded-2xl p-5 backdrop-blur-sm sm:col-span-1"
                 style={{
                   border: "1px solid var(--border)",
                   backgroundColor: "var(--surface-transparent)",
                 }}
               >
                 <div
-                  className="mb-1.5 flex items-center gap-2 text-sm font-medium tracking-wider uppercase"
+                  className="mb-1.5 flex items-center gap-2 text-xs font-medium tracking-wider uppercase"
                   style={{ color: "var(--text-muted)" }}
                 >
                   <TrendingUp className="h-4 w-4" />
@@ -156,49 +157,15 @@ export default async function ClientDashboard({
               <Link
                 href={`/${clientSlug}/${latestReport.date}`}
                 className="text-[15px] transition hover:opacity-80"
-                style={{ color: "var(--secondary)" }}
+                style={{ color: "var(--primary)" }}
               >
                 View full report →
               </Link>
             </div>
-            <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
-              {latestReport.metrics.map((m) => {
-                const noteColor =
-                  m.status === "good"
-                    ? "#34d399"
-                    : m.status === "bad"
-                      ? "#ef4444"
-                      : "var(--secondary)";
-                return (
-                  <div
-                    key={m.label}
-                    className="rounded-xl p-4 backdrop-blur-sm"
-                    style={{
-                      border: "1px solid var(--border)",
-                      backgroundColor: "var(--surface-transparent)",
-                    }}
-                  >
-                    <div
-                      className="mb-1 text-sm font-medium tracking-wider uppercase"
-                      style={{ color: "var(--text-faint)" }}
-                    >
-                      {m.label}
-                    </div>
-                    <div
-                      className="text-xl font-semibold"
-                      style={{ color: "var(--text-heading)" }}
-                    >
-                      {m.value}
-                    </div>
-                    <div
-                      className="mt-0.5 text-sm"
-                      style={{ color: noteColor }}
-                    >
-                      {m.note}
-                    </div>
-                  </div>
-                );
-              })}
+            <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
+              {latestReport.metrics.map((m) => (
+                <MetricCard key={m.label} metric={m} />
+              ))}
             </div>
           </div>
         )}
@@ -233,7 +200,7 @@ export default async function ClientDashboard({
                     >
                       <FileText
                         className="h-5 w-5"
-                        style={{ color: "var(--secondary)" }}
+                        style={{ color: "var(--primary)" }}
                       />
                     </div>
                     <div>
@@ -263,7 +230,7 @@ export default async function ClientDashboard({
           )}
         </div>
       </div>
-      <ReportFooter />
+      <ReportFooter dnLogo={getDnLogo(client)} />
     </div>
   );
 }

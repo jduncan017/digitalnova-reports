@@ -7,9 +7,11 @@ import { authenticate } from "~/app/[client]/login/actions";
 export function LoginForm({
   clientSlug,
   clientName,
+  dnLogo = "/dn-logo.png",
 }: {
   clientSlug: string;
   clientName: string;
+  dnLogo?: string;
 }) {
   const [error, formAction, isPending] = useActionState(
     authenticate.bind(null, clientSlug),
@@ -24,7 +26,7 @@ export function LoginForm({
       <div className="w-full max-w-sm">
         <div className="mb-10 text-center">
           <Image
-            src="/dn-logo.png"
+            src={dnLogo}
             alt="DigitalNova Studio"
             width={200}
             height={60}

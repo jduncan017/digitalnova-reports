@@ -21,7 +21,6 @@ export default async function ClientLayout({
           "--bg": brand.background,
           "--surface": brand.surface,
           "--primary": brand.primary,
-          "--secondary": brand.secondary,
           "--text-heading": brand.dark ? "#ffffff" : "#0f0f0f",
           "--text-body": brand.dark ? "#a1a1aa" : "#3f3f46",
           "--text-muted": brand.dark ? "#71717a" : "#71717a",

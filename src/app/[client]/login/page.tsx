@@ -1,5 +1,5 @@
 import { notFound, redirect } from "next/navigation";
-import { getClient } from "~/lib/clients";
+import { getClient, getDnLogo } from "~/lib/clients";
 import { isAuthenticated } from "~/lib/auth";
 import { LoginForm } from "~/components/LoginForm";
 
@@ -17,5 +17,5 @@ export default async function LoginPage({
     redirect(`/${clientSlug}`);
   }
 
-  return <LoginForm clientSlug={client.slug} clientName={client.name} />;
+  return <LoginForm clientSlug={client.slug} clientName={client.name} dnLogo={getDnLogo(client)} />;
 }

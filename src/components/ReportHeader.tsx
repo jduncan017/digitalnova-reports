@@ -7,14 +7,16 @@ export function ReportHeader({
   report,
   clientSlug,
   clientLogo,
+  dnLogo,
 }: {
   report: Report;
   clientSlug: string;
   clientLogo?: string;
+  dnLogo: string;
 }) {
   return (
     <div
-      className="px-6 py-10 sm:px-10 sm:py-14"
+      className="header-shadow px-6 py-10 sm:px-10 sm:py-14"
       style={{
         background:
           "linear-gradient(to bottom right, color-mix(in srgb, var(--primary) 20%, transparent), var(--surface))",
@@ -33,7 +35,7 @@ export function ReportHeader({
             Back to Dashboard
           </Link>
           <Image
-            src="/dn-logo.png"
+            src={dnLogo}
             alt="DigitalNova Studio"
             width={200}
             height={60}
@@ -48,13 +50,13 @@ export function ReportHeader({
             <Image
               src={clientLogo}
               alt={report.client}
-              width={56}
-              height={56}
+              width={80}
+              height={80}
               unoptimized
               className="mt-1 h-20 w-20 rounded-xl object-contain p-2"
               style={{
                 border: "1px solid var(--border)",
-                backgroundColor: "var(--surface-transparent)",
+                backgroundColor: "var(--bg)",
               }}
             />
           )}
@@ -79,7 +81,7 @@ export function ReportHeader({
                 style={{
                   backgroundColor:
                     "color-mix(in srgb, var(--primary) 15%, transparent)",
-                  color: "var(--secondary)",
+                  color: "var(--primary)",
                 }}
               >
                 {report.platform}

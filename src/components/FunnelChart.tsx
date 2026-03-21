@@ -5,6 +5,7 @@ import { type Funnel } from "~/lib/types";
 const CHART_HEIGHT = 200;
 const RAMP_WIDTH = 28;
 
+
 export function FunnelChart({
   funnel,
   adSpend,
@@ -42,8 +43,7 @@ export function FunnelChart({
           className="w-full rounded-t-md"
           style={{
             height: h,
-            background:
-              "linear-gradient(180deg, var(--primary), var(--secondary))",
+            background: "var(--primary)",
           }}
         />
       </div>,
@@ -76,7 +76,7 @@ export function FunnelChart({
 
   return (
     <div
-      className="mb-12 rounded-2xl p-6 backdrop-blur-sm sm:p-8"
+      className="card-shadow mb-12 rounded-2xl p-6 backdrop-blur-sm sm:p-8"
       style={{
         border: "1px solid var(--border)",
         backgroundColor: "var(--surface-transparent)",
@@ -86,7 +86,7 @@ export function FunnelChart({
       <div className="flex items-end">{items}</div>
 
       {/* Labels row */}
-      <div className="mt-4 flex">
+      <div className="mt-5 flex">
         {funnel.steps.map((step, i) => (
           <div
             key={step.label}
@@ -97,33 +97,26 @@ export function FunnelChart({
             }}
           >
             <div
-              className="text-2xl font-bold"
+              className="text-3xl font-bold"
               style={{ color: "var(--text-heading)" }}
             >
               {step.count.toLocaleString()}
             </div>
             <div
-              className="mt-0.5 text-sm font-medium"
+              className="mt-0.5 text-[15px] font-medium"
               style={{ color: "var(--text-body)" }}
             >
               {step.label}
             </div>
             <div
-              className="mt-0.5 text-sm font-semibold"
-              style={{
-                color:
-                  step.pct >= 50
-                    ? "#34d399"
-                    : step.pct >= 15
-                      ? "var(--secondary)"
-                      : "#fbbf24",
-              }}
+              className="mt-0.5 text-[15px] font-semibold"
+              style={{ color: "var(--primary)" }}
             >
               {step.pct}%
             </div>
             {costPer?.[i] && (
               <div
-                className="mt-1 text-xs"
+                className="mt-1 text-sm"
                 style={{ color: "var(--text-muted)" }}
               >
                 ${costPer[i]}/user
@@ -134,7 +127,7 @@ export function FunnelChart({
       </div>
 
       <p
-        className="mt-6 text-center text-sm"
+        className="mt-6 text-center text-[15px]"
         style={{ color: "var(--text-muted)" }}
       >
         {funnel.notes}

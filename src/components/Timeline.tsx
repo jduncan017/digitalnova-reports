@@ -3,7 +3,7 @@ import { type Action } from "~/lib/types";
 function ActionItem({ action, index }: { action: Action; index: number }) {
   return (
     <div
-      className="rounded-2xl p-6 backdrop-blur-sm"
+      className="card-shadow rounded-2xl p-6 backdrop-blur-sm"
       style={{
         border: "1px solid var(--border)",
         backgroundColor: "var(--surface-transparent)",
@@ -11,13 +11,13 @@ function ActionItem({ action, index }: { action: Action; index: number }) {
     >
       <div className="mb-2 flex items-baseline gap-2">
         <span
-          className="text-lg font-bold"
-          style={{ color: action.status === "done" ? "#34d399" : "var(--secondary)" }}
+          className="text-xl font-bold"
+          style={{ color: "var(--primary)" }}
         >
           {index + 1})
         </span>
         <h4
-          className="text-base font-medium"
+          className="text-lg font-medium"
           style={{ color: "var(--text-heading)" }}
         >
           {action.title}

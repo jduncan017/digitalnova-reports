@@ -24,7 +24,7 @@ export function DoughnutChartCard({ chart }: { chart: ChartData }) {
 
   return (
     <div
-      className="rounded-2xl p-6 backdrop-blur-sm sm:p-7"
+      className="card-shadow rounded-2xl p-6 backdrop-blur-sm sm:p-7"
       style={{
         border: "1px solid var(--border)",
         backgroundColor: "var(--surface-transparent)",

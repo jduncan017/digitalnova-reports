@@ -1,16 +1,16 @@
 import { notFound, redirect } from "next/navigation";
-import { getClient } from "~/lib/clients";
+import { getClient, getDnLogo } from "~/lib/clients";
 import { isAuthenticated } from "~/lib/auth";
 import { getReport } from "~/lib/reports";
 import { ReportHeader } from "~/components/ReportHeader";
 import { ReportFooter } from "~/components/ReportFooter";
 import { MetricGrid } from "~/components/MetricGrid";
 import { FunnelChart } from "~/components/FunnelChart";
-import { ChartGrid } from "~/components/ChartGrid";
 import { FindingsGrid } from "~/components/FindingsGrid";
 import { Timeline } from "~/components/Timeline";
 import { NextSteps } from "~/components/NextSteps";
 import { SectionHeader } from "~/components/SectionHeader";
+import { VideoEmbed } from "~/components/VideoEmbed";
 
 export default async function ReportPage({
   params,
@@ -35,6 +35,12 @@ export default async function ReportPage({
   const adSpend = spendMetric
     ? parseFloat(spendMetric.value.replace(/[^0-9.]/g, ""))
     : undefined;
+  const reportWithVideo = report as typeof report & { videoUrl?: string };
+  const videoUrl =
+    typeof reportWithVideo.videoUrl === "string" &&
+    reportWithVideo.videoUrl.length > 0
+      ? reportWithVideo.videoUrl
+      : null;
 
   return (
     <div
@@ -48,10 +54,33 @@ export default async function ReportPage({
         report={report}
         clientSlug={clientSlug}
         clientLogo={client.logo}
+        dnLogo={getDnLogo(client)}
       />
       <div className="mx-auto max-w-[1100px] px-6 py-12 sm:px-10">
+        {report.summary && (
+          <div className="mb-12">
+            <SectionHeader label="Summary" title="This Week at a Glance" />
+            <p
+              className="max-w-[720px] text-base leading-relaxed"
+              style={{ color: "var(--text-body)" }}
+            >
+              {report.summary}
+            </p>
+          </div>
+        )}
+
         <SectionHeader label="Performance Overview" title="Key Metrics" />
         <MetricGrid metrics={report.metrics} />
+
+        {videoUrl && (
+          <div className="mt-12">
+            <SectionHeader label="Video Review" title="Campaign Walkthrough" />
+            <VideoEmbed
+              url={videoUrl}
+              title={`${report.client} — ${report.reportTitle}`}
+            />
+          </div>
+        )}
 
         {report.funnel && (
           <div className="mt-12">
@@ -60,13 +89,6 @@ export default async function ReportPage({
               title={`${report.funnel.title}`}
             />
             <FunnelChart funnel={report.funnel} adSpend={adSpend} />
-          </div>
-        )}
-
-        {report.charts.length > 0 && (
-          <div className="mt-12">
-            <SectionHeader label="Data" title="Charts & Breakdowns" />
-            <ChartGrid charts={report.charts} />
           </div>
         )}
 
@@ -94,7 +116,7 @@ export default async function ReportPage({
           </div>
         )}
       </div>
-      <ReportFooter />
+      <ReportFooter dnLogo={getDnLogo(client)} />
     </div>
   );
 }

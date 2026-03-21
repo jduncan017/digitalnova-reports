@@ -51,10 +51,12 @@ export type Report = {
   period: string;
   date: string;
   platform: string;
+  summary?: string;
   metrics: Metric[];
   funnel?: Funnel;
   charts: ChartData[];
   findings: Finding[];
   actions: Action[];
   nextSteps: string[];
+  videoUrl?: string;
 };

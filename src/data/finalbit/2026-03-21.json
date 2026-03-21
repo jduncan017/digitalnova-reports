@@ -6,6 +6,8 @@
   "date": "2026-03-21",
   "platform": "Meta Ads",
 
+  "summary": "Week 1 focused on establishing baseline metrics and fixing tracking infrastructure. Your ads are performing above average for cold B2B — 2.17% CTR at $3.20/click. We identified and resolved a PostHog tracking gap, redesigned the landing page to reduce friction, and deployed granular CTA tracking. The foundation is set for Week 2 optimization.",
+
   "metrics": [
     {
       "label": "Ad Spend",
