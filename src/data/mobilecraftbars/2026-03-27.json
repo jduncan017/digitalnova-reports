@@ -73,10 +73,7 @@
           "Desktop — 5 conversions (87%)",
           "Mobile — 0 conversions (13%)"
         ],
-        "values": [
-          87,
-          13
-        ]
+        "values": [87, 13]
       }
     },
     {
@@ -84,14 +81,8 @@
       "type": "doughnut",
       "title": "Clicks by Device",
       "data": {
-        "labels": [
-          "Desktop (66%)",
-          "Mobile (34%)"
-        ],
-        "values": [
-          66,
-          34
-        ]
+        "labels": ["Desktop (66%)", "Mobile (34%)"],
+        "values": [66, 34]
       }
     }
   ],
@@ -131,5 +122,5 @@
     "Continue monitoring keyword concentration risk on 'bartenders for hire'",
     "Track demographic trend (female, 35-54) for potential audience targeting refinements"
   ],
-  "videoUrl": ""
+  "videoUrl": "https://supercut.ai/share/digitalnova-studio/XErLJbEPVk8Vq4VKMLtKR8"
 }
