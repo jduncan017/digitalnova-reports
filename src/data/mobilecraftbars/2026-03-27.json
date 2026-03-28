@@ -1,0 +1,135 @@
+{
+  "client": "Mobile Craft Bars",
+  "reportTitle": "Google Ads Weekly Report",
+  "reportSubtitle": "Campaign Performance & Optimization Summary",
+  "period": "Mar 20 – Mar 26, 2026",
+  "date": "2026-03-27",
+  "platform": "Google Ads",
+  "summary": "Best week yet — 5 conversions at $56.24 CPA, well under the $80 target. The -50% mobile bid adjustment we made last week is clearly working: mobile spend dropped from 37% to 13% of total while desktop delivers 100% of conversions. Search terms are completely clean with zero spam. Campaign is now budget-limited, meaning Google could spend more profitably if given room.",
+  "kpis": {
+    "adSpend": 281,
+    "impressions": 345,
+    "clicks": 47,
+    "ctr": 13.62,
+    "cpc": 6.52,
+    "conversions": 5,
+    "costPerConversion": 56.24
+  },
+  "metrics": [
+    {
+      "label": "Ad Spend",
+      "value": "$281",
+      "note": "of $1,200/mo budget ($40/day) — budget limited",
+      "status": "neutral"
+    },
+    {
+      "label": "Conversions",
+      "value": "5",
+      "note": "Up from 1 last week — strong rebound",
+      "status": "good"
+    },
+    {
+      "label": "Cost per Conversion",
+      "value": "$56.24",
+      "note": "Best weekly CPA — well under $80 target",
+      "status": "good"
+    },
+    {
+      "label": "Avg CPC",
+      "value": "$6.52",
+      "note": "47 clicks, 8.98% CTR — healthy traffic",
+      "status": "neutral"
+    }
+  ],
+  "funnel": {
+    "title": "Ad-to-Booking Funnel",
+    "source": "Google Ads",
+    "steps": [
+      {
+        "label": "Impressions",
+        "count": 345,
+        "pct": 100
+      },
+      {
+        "label": "Clicks",
+        "count": 47,
+        "pct": 13.62
+      },
+      {
+        "label": "Bookings",
+        "count": 5,
+        "pct": 1.45
+      }
+    ],
+    "notes": "All 5 conversions came from desktop. Search terms are 100% relevant — no spam or irrelevant clicks this week."
+  },
+  "charts": [
+    {
+      "id": "device-cost",
+      "type": "doughnut",
+      "title": "Cost by Device",
+      "data": {
+        "labels": [
+          "Desktop — 5 conversions (87%)",
+          "Mobile — 0 conversions (13%)"
+        ],
+        "values": [
+          87,
+          13
+        ]
+      }
+    },
+    {
+      "id": "device-clicks",
+      "type": "doughnut",
+      "title": "Clicks by Device",
+      "data": {
+        "labels": [
+          "Desktop (66%)",
+          "Mobile (34%)"
+        ],
+        "values": [
+          66,
+          34
+        ]
+      }
+    }
+  ],
+  "findings": [
+    {
+      "title": "Mobile Bid Adjustment Is Working",
+      "description": "After increasing the mobile bid reduction to -50% last week, mobile's share of spend dropped from 37% to 13%. Desktop now gets 87% of budget and is delivering all 5 conversions. This single change appears to be the biggest driver of this week's improvement."
+    },
+    {
+      "title": "Search Terms Are Completely Clean",
+      "description": "Every search term this week is relevant — mobile bartending, bar catering, event beverage services, and Denver-area queries. No spam, no irrelevant clicks. Competitor brand searches (moonlight bartending, wandering wagon, etc.) also show strong buyer intent."
+    },
+    {
+      "title": "Campaign Is Budget-Limited — A Good Problem",
+      "description": "Google is flagging the campaign as 'limited by budget,' meaning it could serve more impressions profitably. With CPA at $56.24 (well under the $80 target), there's room to increase daily budget and capture more leads."
+    },
+    {
+      "title": "Keyword Concentration Remains",
+      "description": "'Bartenders for hire' still drives 89% of spend ($249 of $281). It's converting well, but if a competitor starts aggressively bidding on this term, CPA could spike quickly."
+    }
+  ],
+  "actions": [
+    {
+      "title": "Monitored -50% Mobile Bid Adjustment",
+      "description": "Confirmed the change is working as intended — mobile cost share dropped from 37% to 13% with no negative impact on conversion volume. Desktop conversions jumped from 1 to 5.",
+      "status": "done"
+    },
+    {
+      "title": "Reviewed Search Terms for Spam",
+      "description": "Audited all search terms for Mar 20-26. Zero spam or irrelevant clicks found. All terms are mobile bartending, bar catering, or event beverage related.",
+      "status": "done"
+    }
+  ],
+  "nextSteps": [
+    "Consider increasing daily budget from $40 — campaign is budget-limited and CPA is strong at $56.24",
+    "Evaluate whether to raise Target CPA back to $100 to give the algorithm more room, or keep at $80 since it's performing well this week",
+    "Continue monitoring keyword concentration risk on 'bartenders for hire'",
+    "Track demographic trend (female, 35-54) for potential audience targeting refinements"
+  ],
+  "videoUrl": ""
+}

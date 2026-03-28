@@ -6,11 +6,13 @@ export function MetricCard({ metric }: { metric: Metric }) {
       ? "#059669"
       : metric.status === "bad"
         ? "#ef4444"
-        : "var(--primary)";
+        : metric.status === "warning"
+          ? "#f59e0b"
+          : "var(--primary)";
 
   return (
     <div
-      className="card-shadow rounded-2xl p-6 backdrop-blur-sm"
+      className="card-shadow rounded-2xl p-4 backdrop-blur-sm sm:p-6"
       style={{
         border: "1px solid var(--border)",
         backgroundColor: "var(--surface-transparent)",
@@ -23,12 +25,12 @@ export function MetricCard({ metric }: { metric: Metric }) {
         {metric.label}
       </div>
       <div
-        className="text-2xl font-semibold tracking-tight"
+        className="text-xl font-semibold tracking-tight sm:text-2xl"
         style={{ color: "var(--text-heading)" }}
       >
         {metric.value}
       </div>
-      <div className="mt-1.5 text-[15px]" style={{ color: noteColor }}>
+      <div className="mt-1.5 text-sm sm:text-[15px]" style={{ color: noteColor }}>
         {metric.note}
       </div>
     </div>

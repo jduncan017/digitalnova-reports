@@ -1,0 +1,130 @@
+{
+  "client": "FinalBit",
+  "reportTitle": "Meta Ads Week 3 Report",
+  "reportSubtitle": "CTA Engagement Analysis & Demo Funnel Review",
+  "period": "Mar 21 – Mar 27, 2026",
+  "date": "2026-03-27",
+  "platform": "Meta Ads",
+  "summary": "Ads are performing well — both ad sets delivering leads at ~$90 CPL with consistent reach. The new enterprise landing page (live since Mar 21) is driving strong CTA engagement with 71 button clicks this week. See CTA click breakdown below.\n\nThe dual-tier funnel is working as designed — 'Start Free' got 12 clicks, showing real B2C self-serve interest — but we currently can't track whether those clicks become actual signups. Next steps: I'll request GTM access on the FinalBit app domain to close the attribution loop, clean up non-enterprise URL endpoints, and give targeting one more week of data before making larger changes.",
+
+  "kpis": {
+    "adSpend": 362.06,
+    "clicks": 172,
+    "impressions": 6170,
+    "reach": 4163,
+    "leads": 4,
+    "cpl": 90.52,
+    "demosBooked": 4,
+    "demosAttended": 3,
+    "b2bQualified": 1,
+    "ctaClicks": 71,
+    "demoCtaClicks": 21,
+    "clickToBookingRate": 19.0
+  },
+
+  "metrics": [
+    {
+      "label": "Ad Spend",
+      "value": "$362.06",
+      "note": "Split evenly between static and video ad sets.",
+      "status": "good"
+    },
+    {
+      "label": "Cost per Lead",
+      "value": "$90.52",
+      "note": "Consistent across both ad sets. At this CPL, closing 1/10 enterprise leads is profitable.",
+      "status": "good"
+    },
+    {
+      "label": "Demos Booked",
+      "value": "4",
+      "note": "1 no-show, 2 B2C, 1 B2B — need more data to know if this split is a pattern.",
+      "status": "warning"
+    },
+    {
+      "label": "CTA Clicks (Enterprise Page)",
+      "value": "71",
+      "note": "Strong engagement across all pricing tiers on the new landing page.",
+      "status": "good"
+    }
+  ],
+
+  "funnel": {
+    "title": "Ad-to-Demo Funnel",
+    "source": "Meta Ads → try.finalbitai.com/enterprise",
+    "steps": [
+      { "label": "Impressions", "count": 6170, "pct": 100 },
+      { "label": "Reach (Unique)", "count": 4163, "pct": 67.5 },
+      { "label": "CTA Clicks on Page", "count": 71, "pct": 1.2 },
+      { "label": "Demo CTA Clicks", "count": 21, "pct": 0.34 },
+      { "label": "Demos Booked", "count": 4, "pct": 0.06 },
+      { "label": "Demos Attended", "count": 3, "pct": 0.05 },
+      { "label": "B2B Qualified", "count": 1, "pct": 0.02 }
+    ],
+    "notes": "Big drop-off between demo CTA clicks (21) and actual bookings (4). Will continue tracking this."
+  },
+
+  "charts": [
+    {
+      "id": "cta-clicks-breakdown",
+      "type": "horizontal-bar",
+      "title": "CTA Clicks by Type",
+      "width": "full",
+      "data": {
+        "labels": [
+          "View Pricing (48%)",
+          "Book a Demo (25%)",
+          "Start Free (17%)",
+          "Next Testimonial (6%)",
+          "Book a Demo — Save 90% (4%)"
+        ],
+        "values": [34, 18, 12, 4, 3]
+      }
+    }
+  ],
+
+  "findings": [
+    {
+      "title": "'View Pricing' Dominates CTA Clicks at 46%",
+      "description": "Visitors want to see pricing before anything else. 'Book a Demo' follows at 28% combined, showing strong demo intent after price evaluation. The landing page structure is working."
+    },
+    {
+      "title": "19% Click-to-Booking Rate on Demo CTA",
+      "description": "21 people clicked 'Book a Demo' but only 4 completed booking. 81% drop-off could indicate that customers clicking `Book a Demo` don't actually want to schedule one."
+    },
+    {
+      "title": "'Start Free' Gets 16% of Clicks — Dual-Tier Funnel Is Working",
+      "description": "12 visitors clicked 'Start Free', validating the strategy of showing all pricing tiers. Whether these are converting to actual signups is unknown — we have no tracking on the app domain yet."
+    },
+    {
+      "title": "3 of 4 Demos Were B2C — But Sample Size Is Tiny",
+      "description": "Only 1 of 3 attended demos was a B2B enterprise prospect. At face value that's a 25% B2B qualification rate (~$362 effective enterprise CPL). 3 demos is too small to change targeting strategy."
+    }
+  ],
+
+  "actions": [
+    {
+      "title": "Analyzed PostHog CTA Data for Enterprise Page",
+      "description": "Cataloged all 71 CTA clicks by type and identified the 19% click-to-booking conversion gap.",
+      "status": "done"
+    },
+    {
+      "title": "Request GTM Manager Access from FinalBit Team",
+      "description": "Will add conversion tracking on the app domain (finalbitai.com) to close the signup attribution loop.",
+      "status": "pending"
+    },
+    {
+      "title": "Remove/Reroute Non-Enterprise URL Endpoints",
+      "description": "Clean up homepage and /small-teams on the marketing site. All ad traffic should funnel through /enterprise only.",
+      "status": "done"
+    }
+  ],
+
+  "nextSteps": [
+    "Monday Mar 30: Follow-up with Anna/Khachatur on demo quality and GTM access request.",
+    "Give targeting one more week before considering changes — landing page v2 is only 1 week old.",
+    "Once Google Tag Manager is on app domain, we'll track who actually converts by plan tier."
+  ],
+
+  "videoUrl": "https://supercut.ai/share/digitalnova-studio/Spd0swSN642R1NSN6BZUPc"
+}

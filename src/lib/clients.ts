@@ -5,12 +5,15 @@ export type ClientBrand = {
   dark: boolean;
 };
 
+import { type TrendChartConfig } from "./types";
+
 export type ClientConfig = {
   slug: string;
   name: string;
   password: string;
   logo?: string;
   brand: ClientBrand;
+  trendCharts: TrendChartConfig[];
 };
 
 const clients: Record<string, ClientConfig> = {
@@ -25,18 +28,30 @@ const clients: Record<string, ClientConfig> = {
       primary: "#1d6ee3",
       dark: true,
     },
+    trendCharts: [
+      { key: "reach", title: "Reach", subtitle: "Unique people who saw the ad", format: "number" },
+      { key: "clicks", title: "Clicks", subtitle: "Link clicks from ad to landing page", format: "number" },
+      { key: "demosBooked", title: "Demos Booked", subtitle: "Completed demo bookings", format: "number" },
+      { key: "cpl", title: "Cost per Lead", subtitle: "Ad spend per demo booking", format: "dollar2" },
+    ],
   },
   eventcombo: {
     slug: "eventcombo",
     name: "Eventcombo",
     password: "eventcombo-2026",
-    logo: "/logos/eventcombo.png", // uncomment after adding the file
+    logo: "/logos/eventcombo.png",
     brand: {
       background: "#fff",
       surface: "#FFF0ED",
       primary: "#ff008a",
       dark: false,
     },
+    trendCharts: [
+      { key: "conversions", title: "Conversions", subtitle: "Demo bookings from Google Ads", format: "number" },
+      { key: "adSpend", title: "Ad Spend", subtitle: "Total weekly ad spend", format: "dollar" },
+      { key: "costPerConversion", title: "Cost per Conversion", subtitle: "Ad spend per demo booking", format: "dollar2" },
+      { key: "cpc", title: "CPC", subtitle: "Average cost per click", format: "dollar2" },
+    ],
   },
   mobilecraftbars: {
     slug: "mobilecraftbars",
@@ -49,6 +64,12 @@ const clients: Record<string, ClientConfig> = {
       primary: "#3d87bd",
       dark: true,
     },
+    trendCharts: [
+      { key: "conversions", title: "Conversions", subtitle: "Booking inquiries from Google Ads", format: "number" },
+      { key: "adSpend", title: "Ad Spend", subtitle: "Total weekly ad spend", format: "dollar" },
+      { key: "costPerConversion", title: "Cost per Conversion", subtitle: "Ad spend per booking inquiry", format: "dollar2" },
+      { key: "cpc", title: "CPC", subtitle: "Average cost per click", format: "dollar2" },
+    ],
   },
 };
 

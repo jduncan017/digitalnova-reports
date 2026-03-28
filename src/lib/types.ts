@@ -1,4 +1,4 @@
-export type MetricStatus = "good" | "bad" | "neutral";
+export type MetricStatus = "good" | "bad" | "neutral" | "warning";
 
 export type Metric = {
   label: string;
@@ -22,8 +22,9 @@ export type Funnel = {
 
 export type ChartData = {
   id: string;
-  type: "bar" | "doughnut" | "line";
+  type: "bar" | "horizontal-bar" | "pie" | "doughnut" | "line";
   title: string;
+  width?: "full" | "half";
   data: {
     labels: string[];
     values: number[];
@@ -31,10 +32,8 @@ export type ChartData = {
 };
 
 export type Finding = {
-  icon: string;
   title: string;
   description: string;
-  highlight: boolean;
 };
 
 export type Action = {
@@ -43,15 +42,22 @@ export type Action = {
   status: "done" | "pending";
 };
 
+export type TrendChartConfig = {
+  key: string;
+  title: string;
+  subtitle?: string;
+  format: "number" | "dollar" | "dollar2" | "percent";
+};
+
 export type Report = {
   client: string;
-  clientLogo?: string;
   reportTitle: string;
   reportSubtitle: string;
   period: string;
   date: string;
   platform: string;
   summary?: string;
+  kpis?: Record<string, number>;
   metrics: Metric[];
   funnel?: Funnel;
   charts: ChartData[];

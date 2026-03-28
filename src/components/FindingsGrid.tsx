@@ -3,7 +3,7 @@ import { type Finding } from "~/lib/types";
 function FindingCard({ finding, index }: { finding: Finding; index: number }) {
   return (
     <div
-      className="card-shadow rounded-2xl p-6 backdrop-blur-sm"
+      className="card-shadow rounded-2xl p-4 backdrop-blur-sm sm:p-6"
       style={{
         border: "1px solid var(--border)",
         backgroundColor: "var(--surface-transparent)",
@@ -17,7 +17,7 @@ function FindingCard({ finding, index }: { finding: Finding; index: number }) {
           {index + 1})
         </span>
         <h4
-          className="text-lg font-semibold"
+          className="text-base font-semibold sm:text-lg"
           style={{ color: "var(--text-heading)" }}
         >
           {finding.title}

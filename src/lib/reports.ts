@@ -32,3 +32,12 @@ export async function getReport(
     return null;
   }
 }
+
+/** Load all reports for a client, sorted oldest to newest. */
+export async function getAllReports(clientSlug: string): Promise<Report[]> {
+  const dates = await getReportDates(clientSlug);
+  const reports = await Promise.all(
+    dates.map((date) => getReport(clientSlug, date)),
+  );
+  return reports.filter((r): r is Report => r !== null).reverse();
+}

@@ -6,6 +6,7 @@ import { ReportHeader } from "~/components/ReportHeader";
 import { ReportFooter } from "~/components/ReportFooter";
 import { MetricGrid } from "~/components/MetricGrid";
 import { FunnelChart } from "~/components/FunnelChart";
+import { ChartGrid } from "~/components/ChartGrid";
 import { FindingsGrid } from "~/components/FindingsGrid";
 import { Timeline } from "~/components/Timeline";
 import { NextSteps } from "~/components/NextSteps";
@@ -28,13 +29,6 @@ export default async function ReportPage({
   const report = await getReport(clientSlug, date);
   if (!report) notFound();
 
-  // Extract ad spend as a number for cost-per calculations in the funnel
-  const spendMetric = report.metrics.find((m) =>
-    m.label.toLowerCase().includes("spend"),
-  );
-  const adSpend = spendMetric
-    ? parseFloat(spendMetric.value.replace(/[^0-9.]/g, ""))
-    : undefined;
   const reportWithVideo = report as typeof report & { videoUrl?: string };
   const videoUrl =
     typeof reportWithVideo.videoUrl === "string" &&
@@ -72,7 +66,7 @@ export default async function ReportPage({
           <div className="mb-12">
             <SectionHeader label="Summary" title="This Week at a Glance" />
             <p
-              className="max-w-[720px] text-base leading-relaxed"
+              className="max-w-[720px] text-base leading-relaxed whitespace-pre-line"
               style={{ color: "var(--text-body)" }}
             >
               {report.summary}
@@ -89,7 +83,13 @@ export default async function ReportPage({
               label="Funnel Analysis"
               title={`${report.funnel.title}`}
             />
-            <FunnelChart funnel={report.funnel} adSpend={adSpend} />
+            <FunnelChart funnel={report.funnel} />
+          </div>
+        )}
+
+        {report.charts.length > 0 && (
+          <div className="mt-12">
+            <ChartGrid charts={report.charts} />
           </div>
         )}
 
@@ -105,7 +105,7 @@ export default async function ReportPage({
 
         {report.actions.length > 0 && (
           <div className="mt-12">
-            <SectionHeader label="Actions Taken" title="Optimizations" />
+            <SectionHeader label="Actions Taken" title="What We Did" />
             <Timeline actions={report.actions} />
           </div>
         )}

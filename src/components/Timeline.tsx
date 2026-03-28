@@ -1,27 +1,42 @@
 import { type Action } from "~/lib/types";
 
 function ActionItem({ action, index }: { action: Action; index: number }) {
+  const isDone = action.status === "done";
+
   return (
     <div
-      className="card-shadow rounded-2xl p-6 backdrop-blur-sm"
+      className="card-shadow rounded-2xl p-4 backdrop-blur-sm sm:p-6"
       style={{
         border: "1px solid var(--border)",
         backgroundColor: "var(--surface-transparent)",
       }}
     >
-      <div className="mb-2 flex items-baseline gap-2">
+      <div className="mb-2 flex items-start justify-between gap-3">
+        <div className="flex items-baseline gap-2">
+          <span
+            className="text-xl font-bold"
+            style={{ color: "var(--primary)" }}
+          >
+            {index + 1})
+          </span>
+          <h4
+            className="text-base font-medium sm:text-lg"
+            style={{ color: "var(--text-heading)" }}
+          >
+            {action.title}
+          </h4>
+        </div>
         <span
-          className="text-xl font-bold"
-          style={{ color: "var(--primary)" }}
+          className="shrink-0 rounded-full px-2.5 py-0.5 text-xs font-medium"
+          style={{
+            backgroundColor: isDone
+              ? "rgba(5, 150, 105, 0.15)"
+              : "rgba(245, 158, 11, 0.15)",
+            color: isDone ? "#059669" : "#f59e0b",
+          }}
         >
-          {index + 1})
+          {isDone ? "Done" : "Pending"}
         </span>
-        <h4
-          className="text-lg font-medium"
-          style={{ color: "var(--text-heading)" }}
-        >
-          {action.title}
-        </h4>
       </div>
       <p
         className="text-[15px] leading-relaxed"

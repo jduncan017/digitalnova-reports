@@ -18,6 +18,14 @@
   background-color: var(--surface-transparent);
 }
 
+.recharts-wrapper,
+.recharts-wrapper *:focus,
+.recharts-wrapper *:focus-visible,
+.recharts-surface {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
 .report-link:hover {
   border-color: var(--border-hover);
   background-color: var(--surface-hover);

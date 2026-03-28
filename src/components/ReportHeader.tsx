@@ -45,7 +45,7 @@ export function ReportHeader({
         </div>
 
         {/* Client + title */}
-        <div className="flex items-start gap-5">
+        <div className="flex items-start gap-4 sm:gap-5">
           {clientLogo && (
             <Image
               src={clientLogo}
@@ -53,7 +53,7 @@ export function ReportHeader({
               width={96}
               height={96}
               unoptimized
-              className="mt-1 h-24 w-24 rounded-xl object-contain p-2"
+              className="mt-1 h-16 w-16 shrink-0 rounded-xl object-contain p-1.5 sm:h-24 sm:w-24 sm:p-2"
               style={{
                 border: "1px solid var(--border)",
                 backgroundColor: "var(--bg)",
@@ -71,7 +71,7 @@ export function ReportHeader({
               {report.reportSubtitle}
             </div>
             <div
-              className="mt-2.5 flex items-center gap-3 text-[15px]"
+              className="mt-2.5 flex flex-wrap items-center gap-2 text-sm sm:gap-3 sm:text-[15px]"
               style={{ color: "var(--text-muted)" }}
             >
               <span>{report.period}</span>

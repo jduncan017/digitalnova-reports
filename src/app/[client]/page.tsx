@@ -4,8 +4,9 @@ import { notFound, redirect } from "next/navigation";
 import { Calendar, FileText, TrendingUp } from "lucide-react";
 import { getClient, getDnLogo } from "~/lib/clients";
 import { MetricCard } from "~/components/MetricCard";
+import { TrendCharts } from "~/components/TrendCharts";
 import { isAuthenticated } from "~/lib/auth";
-import { getReportDates, getReport } from "~/lib/reports";
+import { getReportDates, getReport, getAllReports } from "~/lib/reports";
 import { ReportFooter } from "~/components/ReportFooter";
 
 export default async function ClientDashboard({
@@ -23,6 +24,15 @@ export default async function ClientDashboard({
 
   const dates = await getReportDates(clientSlug);
   const latestReport = dates[0] ? await getReport(clientSlug, dates[0]) : null;
+  const allReports = await getAllReports(clientSlug);
+
+  const trendData = allReports
+    .filter((r) => r.kpis)
+    .map((r, i) => ({
+      date: r.date,
+      label: `Wk ${i + 1}`,
+      ...r.kpis!,
+    }));
 
   return (
     <div
@@ -155,7 +165,7 @@ export default async function ClientDashboard({
                 Latest Report Summary
               </h2>
               <Link
-                href={`/${clientSlug}/${latestReport.date}`}
+                href={`/${clientSlug}/${dates[0]}`}
                 className="text-[15px] transition hover:opacity-80"
                 style={{ color: "var(--primary)" }}
               >
@@ -169,6 +179,9 @@ export default async function ClientDashboard({
             </div>
           </div>
         )}
+
+        {/* Performance trends */}
+        <TrendCharts data={trendData} charts={client.trendCharts} />
 
         {/* Report history */}
         <div>

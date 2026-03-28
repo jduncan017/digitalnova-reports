@@ -1,0 +1,181 @@
+{
+  "client": "EventCombo",
+  "reportTitle": "Google Ads Week 3 Report",
+  "reportSubtitle": "Traffic Quality Audit & Optimization",
+  "period": "Mar 21 – Mar 27, 2026",
+  "date": "2026-03-27",
+  "platform": "Google Ads",
+  "summary": "Deep audit this week uncovered the root cause of our traffic quality issues: 88% of clicks were coming from Google Search Partners (low-quality partner sites, not Google Search itself) and 89% from mobile. We leave this on when launching campaigns to get more data, but this was a specifically bad case of spam. \n\n This means a majority of weekly spend was going to junk traffic. We've now turned off Search Partners and added -50% mobile bid adjustments (a lot of ad spend was going to mobile with zero conversions, makes sense with audience). I expect fewer clicks next week, but dramatically better quality. Looking to scale as soon as possible but we need 2-3 weeks of clean data before I can recommend scaling ad spend.",
+  "kpis": {
+    "adSpend": 691.56,
+    "impressions": 6231,
+    "clicks": 597,
+    "ctr": 9.58,
+    "cpc": 1.17,
+    "conversions": 1,
+    "costPerConversion": 196.25
+  },
+  "metrics": [
+    {
+      "label": "Ad Spend",
+      "value": "$691.56",
+      "note": "Inflated by low-quality traffic sources — now resolved. Expect lower but cleaner spend next week.",
+      "status": "warning"
+    },
+    {
+      "label": "Conversions",
+      "value": "1",
+      "note": "Down from 5 — last week's number included spam traffic.",
+      "status": "warning"
+    },
+    {
+      "label": "Cost per Conversion",
+      "value": "$196.25",
+      "note": "Up from $122.51 — transitional number, expect improvement as cleaner traffic kicks in.",
+      "status": "warning"
+    },
+    {
+      "label": "Avg CPC",
+      "value": "$1.17",
+      "note": "Up slightly from $1.09 — still strong for B2B SaaS.",
+      "status": "good"
+    }
+  ],
+  "funnel": {
+    "title": "Ad-to-Demo Funnel",
+    "source": "Google Ads",
+    "steps": [
+      {
+        "label": "Impressions",
+        "count": 6231,
+        "pct": 100
+      },
+      {
+        "label": "Clicks",
+        "count": 597,
+        "pct": 9.58
+      },
+      {
+        "label": "Demo Bookings",
+        "count": 1,
+        "pct": 0.02
+      }
+    ],
+    "notes": "Single conversion from Integration Intent ($196.25). Competitor Conquest had 0 this week — may be related to spam reduction from broader negative keywords."
+  },
+  "charts": [
+    {
+      "id": "campaign-spend",
+      "type": "doughnut",
+      "title": "Spend Distribution by Campaign (Week 3)",
+      "data": {
+        "labels": [
+          "Competitor Conquest (35%)",
+          "Integration Intent (28%)",
+          "Enterprise Keywords (19%)",
+          "Event Registration (11%)",
+          "ROI & Analytics (7%)"
+        ],
+        "values": [
+          35,
+          28,
+          19,
+          11,
+          7
+        ]
+      }
+    },
+    {
+      "id": "week-over-week-conversions",
+      "type": "bar",
+      "title": "Week-over-Week Conversions",
+      "data": {
+        "labels": [
+          "Week 1",
+          "Week 2",
+          "Week 3"
+        ],
+        "values": [
+          2,
+          5,
+          1
+        ]
+      }
+    },
+    {
+      "id": "campaign-clicks",
+      "type": "bar",
+      "title": "Clicks by Campaign (Week 3)",
+      "data": {
+        "labels": [
+          "Competitor Conquest",
+          "Integration Intent",
+          "Enterprise Keywords",
+          "Event Registration",
+          "ROI & Analytics"
+        ],
+        "values": [
+          151,
+          110,
+          147,
+          120,
+          69
+        ]
+      }
+    },
+    {
+      "id": "traffic-quality-issues",
+      "type": "bar",
+      "title": "Traffic Quality: Where Budget Was Going",
+      "data": {
+        "labels": [
+          "Search Partners (88%)",
+          "Google Search (12%)",
+          "Mobile (89%)",
+          "Desktop/Tablet (11%)"
+        ],
+        "values": [
+          88,
+          12,
+          89,
+          11
+        ]
+      }
+    }
+  ],
+  "findings": [
+    {
+      "title": "Search Partners Consuming 88% of Clicks",
+      "description": "The vast majority of traffic was coming from low-quality Google Search Partner sites rather than Google Search itself. This is a primary driver of spam and irrelevant traffic."
+    },
+    {
+      "title": "Mobile Traffic at 89% With No Bid Adjustment",
+      "description": "Mobile users dominated spend without converting proportionally."
+    }
+  ],
+  "actions": [
+    {
+      "title": "Turned Off Search Partners Across All Campaigns",
+      "description": "Eliminated the #1 source of low-quality traffic. 88% of clicks were coming from partner sites instead of Google Search.",
+      "status": "done"
+    },
+    {
+      "title": "Added -50% Mobile Bid Adjustment",
+      "description": "Reduced mobile bid by 50% across all 5 campaigns to shift budget toward desktop/tablet traffic which converts better for enterprise demos.",
+      "status": "done"
+    },
+    {
+      "icon": "",
+      "title": "API Keyword Angle Has No Search Demand",
+      "description": "Researched 'API for Events' differentiation idea. Best candidate 'event management api' has ~30 monthly US searches — not viable for paid or organic. Let's keep brainstorming new angles as we optimize.",
+      "highlight": false
+    }
+  ],
+  "nextSteps": [
+    "Looking for 2-3 weeks of clean data collection before scaling for clean use of ad spend.",
+    "We'll monitor Week 4 performance to measure impact of Search Partners removal and mobile bid adjustment.",
+    "Reassess Event Registration campaign after one more week of cleaner traffic data.",
+    "Target mid-April for scaling readiness assessment with Saroosh based on verified lead costs."
+  ],
+  "videoUrl": "https://supercut.ai/share/digitalnova-studio/tEbz2WDR7gUKtSYI9nWEP1"
+}

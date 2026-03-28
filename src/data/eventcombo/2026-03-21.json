@@ -6,7 +6,15 @@
   "date": "2026-03-21",
   "platform": "Google Ads",
   "summary": "Week 2 validates the campaign restructure — conversions more than doubled (2 → 5) while cost per conversion dropped 57%. All 5 conversions came from the two campaigns best aligned with the landing page. We also identified and blocked spam traffic sources with new negative keywords.",
-
+  "kpis": {
+    "adSpend": 612.54,
+    "impressions": 3787,
+    "clicks": 562,
+    "ctr": 14.84,
+    "cpc": 1.09,
+    "conversions": 5,
+    "costPerConversion": 122.51
+  },
   "metrics": [
     {
       "label": "Ad Spend",
@@ -33,18 +41,28 @@
       "status": "good"
     }
   ],
-
   "funnel": {
     "title": "Ad-to-Demo Funnel",
     "source": "Google Ads",
     "steps": [
-      { "label": "Impressions", "count": 3787, "pct": 100 },
-      { "label": "Clicks", "count": 562, "pct": 14.84 },
-      { "label": "Demo Bookings", "count": 5, "pct": 0.13 }
+      {
+        "label": "Impressions",
+        "count": 3787,
+        "pct": 100
+      },
+      {
+        "label": "Clicks",
+        "count": 562,
+        "pct": 14.84
+      },
+      {
+        "label": "Demo Bookings",
+        "count": 5,
+        "pct": 0.13
+      }
     ],
     "notes": "All 5 conversions from Competitor Conquest (3) and Integration Intent (2) — the campaigns aligned with the CRM-focused landing page."
   },
-
   "charts": [
     {
       "id": "campaign-conversions",
@@ -100,25 +118,20 @@
       }
     }
   ],
-
   "findings": [
     {
       "title": "Campaign Restructure Is Paying Off",
-      "description": "Conversions jumped from 2 to 5 while cost per conversion dropped 57% ($284.92 → $122.51). The restructure into 5 campaigns with controlled budgets is delivering exactly as planned.",
-      "highlight": true
+      "description": "Conversions jumped from 2 to 5 while cost per conversion dropped 57% ($284.92 → $122.51). The restructure into 5 campaigns with controlled budgets is delivering exactly as planned."
     },
     {
       "title": "Conversions Coming from the Right Campaigns",
-      "description": "Competitor Conquest (3 at $60.03 each) and Integration Intent (2 at $75.65 each) are driving all conversions — the two campaigns best aligned with the CRM-focused landing page. This confirms our targeting hypothesis.",
-      "highlight": false
+      "description": "Competitor Conquest (3 at $60.03 each) and Integration Intent (2 at $75.65 each) are driving all conversions — the two campaigns best aligned with the CRM-focused landing page. This confirms our targeting hypothesis."
     },
     {
       "title": "Event Registration: High Clicks, Zero Conversions",
-      "description": "154 clicks at 21.51% CTR but no demo bookings. People searching for event registration features land on a CRM integration page — a clear intent mismatch. Contained to $77/week while we evaluate a dedicated landing page.",
-      "highlight": false
+      "description": "154 clicks at 21.51% CTR but no demo bookings. People searching for event registration features land on a CRM integration page — a clear intent mismatch. Contained to $77/week while we evaluate a dedicated landing page."
     }
   ],
-
   "actions": [
     {
       "title": "Search Terms Analysis for Spam Patterns",
@@ -141,9 +154,7 @@
       "status": "done"
     }
   ],
-
   "videoUrl": "https://supercut.ai/share/digitalnova-studio/OtAb6n2rgocLJa11UGiqY8",
-
   "nextSteps": [
     "Monitor if negative keywords reduce spam bookings and irrelevant impressions",
     "Watch Enterprise Keywords campaign — 163 clicks at $0.88 CPC is strong volume, needs time for conversions",

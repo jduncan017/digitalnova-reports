@@ -19,7 +19,7 @@ export function NextSteps({ steps }: { steps: string[] }) {
         {steps.map((step) => (
           <li
             key={step}
-            className="flex items-baseline gap-3 text-lg leading-relaxed"
+            className="flex items-baseline gap-3 text-base leading-relaxed sm:text-lg"
             style={{ color: "var(--text-body)" }}
           >
             <span
