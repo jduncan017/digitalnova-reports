@@ -10,7 +10,6 @@ import { type TrendChartConfig } from "./types";
 export type ClientConfig = {
   slug: string;
   name: string;
-  password: string;
   logo?: string;
   emails?: string[];
   splash?: string;
@@ -22,7 +21,6 @@ const clients: Record<string, ClientConfig> = {
   finalbit: {
     slug: "finalbit",
     name: "FinalBit",
-    password: "finalbit-2026",
     logo: "/logos/finalbit.png",
     emails: ["anna@finalbitai.com", "khachatur@finalbitai.com"],
     splash: "/splash-images/finalbit.webp",
@@ -62,7 +60,6 @@ const clients: Record<string, ClientConfig> = {
   eventcombo: {
     slug: "eventcombo",
     name: "Eventcombo",
-    password: "eventcombo-2026",
     logo: "/logos/eventcombo.png",
     emails: ["saroosh@eventcombo.com"],
     splash: "/splash-images/eventcombo.webp",
@@ -102,7 +99,6 @@ const clients: Record<string, ClientConfig> = {
   mobilecraftbars: {
     slug: "mobilecraftbars",
     name: "Mobile Craft Bars",
-    password: "mcb-2026",
     logo: "/logos/mcb.png",
     emails: ["mobilecraftbars@gmail.com"],
     splash: "/splash-images/mcb.webp",
@@ -143,6 +139,11 @@ const clients: Record<string, ClientConfig> = {
 
 export function getClient(slug: string): ClientConfig | undefined {
   return clients[slug];
+}
+
+export function getClientPassword(slug: string): string | undefined {
+  const key = `CLIENT_PASSWORD_${slug.toUpperCase()}` as keyof typeof process.env;
+  return process.env[key] ?? undefined;
 }
 
 export function getAllClientSlugs(): string[] {

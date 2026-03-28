@@ -10,7 +10,7 @@ import {
 } from "lucide-react";
 import { isAdminAuthenticated } from "~/lib/admin-auth";
 import { NotifyButton } from "~/components/NotifyModal";
-import { getAllClientSlugs, getClient } from "~/lib/clients";
+import { getAllClientSlugs, getClient, getClientPassword } from "~/lib/clients";
 import { getReportDates, getReport } from "~/lib/reports";
 
 type ClientSummary = {
@@ -50,7 +50,7 @@ async function getClientSummaries(): Promise<ClientSummary[]> {
       name: client.name,
       logo: client.logo,
       emails: client.emails ?? [],
-      password: client.password,
+      password: getClientPassword(slug) ?? "",
       platform: latestReport?.platform ?? "—",
       reportCount: dates.length,
       lastReportDate: dates[0] ?? null,

@@ -1,5 +1,5 @@
 import { cookies } from "next/headers";
-import { getClient } from "./clients";
+import { getClient, getClientPassword } from "./clients";
 
 const COOKIE_PREFIX = "auth_";
 
@@ -24,7 +24,8 @@ export async function verifyPassword(
 ): Promise<string | null> {
   const client = getClient(clientSlug);
   if (!client) return null;
-  if (client.password !== password) return null;
+  const expected = getClientPassword(clientSlug);
+  if (!expected || expected !== password) return null;
   return generateToken(clientSlug);
 }
 
