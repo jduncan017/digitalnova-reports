@@ -76,13 +76,7 @@
           "Event Registration (11%)",
           "ROI & Analytics (7%)"
         ],
-        "values": [
-          35,
-          28,
-          19,
-          11,
-          7
-        ]
+        "values": [35, 28, 19, 11, 7]
       }
     },
     {
@@ -90,56 +84,8 @@
       "type": "bar",
       "title": "Week-over-Week Conversions",
       "data": {
-        "labels": [
-          "Week 1",
-          "Week 2",
-          "Week 3"
-        ],
-        "values": [
-          2,
-          5,
-          1
-        ]
-      }
-    },
-    {
-      "id": "campaign-clicks",
-      "type": "bar",
-      "title": "Clicks by Campaign (Week 3)",
-      "data": {
-        "labels": [
-          "Competitor Conquest",
-          "Integration Intent",
-          "Enterprise Keywords",
-          "Event Registration",
-          "ROI & Analytics"
-        ],
-        "values": [
-          151,
-          110,
-          147,
-          120,
-          69
-        ]
-      }
-    },
-    {
-      "id": "traffic-quality-issues",
-      "type": "bar",
-      "title": "Traffic Quality: Where Budget Was Going",
-      "data": {
-        "labels": [
-          "Search Partners (88%)",
-          "Google Search (12%)",
-          "Mobile (89%)",
-          "Desktop/Tablet (11%)"
-        ],
-        "values": [
-          88,
-          12,
-          89,
-          11
-        ]
+        "labels": ["Week 1", "Week 2", "Week 3"],
+        "values": [2, 5, 1]
       }
     }
   ],

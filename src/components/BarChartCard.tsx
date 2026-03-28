@@ -81,7 +81,7 @@ export function BarChartCard({ chart }: { chart: ChartData }) {
   return (
     <div
       ref={ref}
-      className="card-shadow rounded-2xl p-6 backdrop-blur-sm sm:p-7"
+      className="card-shadow h-full rounded-2xl p-6 backdrop-blur-sm sm:p-7"
       style={{
         border: "1px solid var(--border)",
         backgroundColor: "var(--surface-transparent)",
