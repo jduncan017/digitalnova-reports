@@ -12,6 +12,7 @@ import { Timeline } from "~/components/Timeline";
 import { NextSteps } from "~/components/NextSteps";
 import { SectionHeader } from "~/components/SectionHeader";
 import { VideoEmbed } from "~/components/VideoEmbed";
+import { ReportFeedback } from "~/components/ReportFeedback";
 
 export default async function ReportPage({
   params,
@@ -116,6 +117,15 @@ export default async function ReportPage({
             <NextSteps steps={report.nextSteps} />
           </div>
         )}
+        <div className="mt-12">
+          <SectionHeader label="Your Input" title="Report Feedback" />
+          <ReportFeedback
+            clientSlug={clientSlug}
+            clientName={client.name}
+            reportDate={date}
+            clientEmails={client.emails ?? []}
+          />
+        </div>
       </div>
       <ReportFooter dnLogo={getDnLogo(client)} />
     </div>

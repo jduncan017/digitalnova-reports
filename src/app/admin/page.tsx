@@ -9,6 +9,7 @@ import {
   Eye,
 } from "lucide-react";
 import { isAdminAuthenticated } from "~/lib/admin-auth";
+import { NotifyButton } from "~/components/NotifyModal";
 import { getAllClientSlugs, getClient } from "~/lib/clients";
 import { getReportDates, getReport } from "~/lib/reports";
 
@@ -16,6 +17,8 @@ type ClientSummary = {
   slug: string;
   name: string;
   logo?: string;
+  emails: string[];
+  password: string;
   platform: string;
   reportCount: number;
   lastReportDate: string | null;
@@ -46,6 +49,8 @@ async function getClientSummaries(): Promise<ClientSummary[]> {
       slug,
       name: client.name,
       logo: client.logo,
+      emails: client.emails ?? [],
+      password: client.password,
       platform: latestReport?.platform ?? "—",
       reportCount: dates.length,
       lastReportDate: dates[0] ?? null,
@@ -198,6 +203,16 @@ export default async function AdminDashboard() {
                       <div className="text-sm text-[#71717a]">No reports</div>
                     )}
                   </div>
+                  <NotifyButton
+                    client={{
+                      slug: client.slug,
+                      name: client.name,
+                      emails: client.emails,
+                      lastReportDate: client.lastReportDate,
+                      password: client.password,
+                      dashboardUrl: `https://reports.digitalnovastudio.com/${client.slug}`,
+                    }}
+                  />
                 </div>
               </div>
             ))}

@@ -12,6 +12,8 @@ export type ClientConfig = {
   name: string;
   password: string;
   logo?: string;
+  emails?: string[];
+  splash?: string;
   brand: ClientBrand;
   trendCharts: TrendChartConfig[];
 };
@@ -22,6 +24,8 @@ const clients: Record<string, ClientConfig> = {
     name: "FinalBit",
     password: "finalbit-2026",
     logo: "/logos/finalbit.png",
+    emails: ["anna@finalbitai.com", "khachatur@finalbitai.com"],
+    splash: "/splash-images/finalbit.webp",
     brand: {
       background: "#191b1f",
       surface: "#0c0a09",
@@ -29,10 +33,30 @@ const clients: Record<string, ClientConfig> = {
       dark: true,
     },
     trendCharts: [
-      { key: "reach", title: "Reach", subtitle: "Unique people who saw the ad", format: "number" },
-      { key: "clicks", title: "Clicks", subtitle: "Link clicks from ad to landing page", format: "number" },
-      { key: "demosBooked", title: "Demos Booked", subtitle: "Completed demo bookings", format: "number" },
-      { key: "cpl", title: "Cost per Lead", subtitle: "Ad spend per demo booking", format: "dollar2" },
+      {
+        key: "reach",
+        title: "Reach",
+        subtitle: "Unique people who saw the ad",
+        format: "number",
+      },
+      {
+        key: "clicks",
+        title: "Clicks",
+        subtitle: "Link clicks from ad to landing page",
+        format: "number",
+      },
+      {
+        key: "demosBooked",
+        title: "Demos Booked",
+        subtitle: "Completed demo bookings",
+        format: "number",
+      },
+      {
+        key: "cpl",
+        title: "Cost per Lead",
+        subtitle: "Ad spend per demo booking",
+        format: "dollar2",
+      },
     ],
   },
   eventcombo: {
@@ -40,6 +64,8 @@ const clients: Record<string, ClientConfig> = {
     name: "Eventcombo",
     password: "eventcombo-2026",
     logo: "/logos/eventcombo.png",
+    emails: ["saroosh@eventcombo.com"],
+    splash: "/splash-images/eventcombo.webp",
     brand: {
       background: "#fff",
       surface: "#FFF0ED",
@@ -47,10 +73,30 @@ const clients: Record<string, ClientConfig> = {
       dark: false,
     },
     trendCharts: [
-      { key: "conversions", title: "Conversions", subtitle: "Demo bookings from Google Ads", format: "number" },
-      { key: "adSpend", title: "Ad Spend", subtitle: "Total weekly ad spend", format: "dollar" },
-      { key: "costPerConversion", title: "Cost per Conversion", subtitle: "Ad spend per demo booking", format: "dollar2" },
-      { key: "cpc", title: "CPC", subtitle: "Average cost per click", format: "dollar2" },
+      {
+        key: "conversions",
+        title: "Conversions",
+        subtitle: "Demo bookings from Google Ads",
+        format: "number",
+      },
+      {
+        key: "adSpend",
+        title: "Ad Spend",
+        subtitle: "Total weekly ad spend",
+        format: "dollar",
+      },
+      {
+        key: "costPerConversion",
+        title: "Cost per Conversion",
+        subtitle: "Ad spend per demo booking",
+        format: "dollar2",
+      },
+      {
+        key: "cpc",
+        title: "CPC",
+        subtitle: "Average cost per click",
+        format: "dollar2",
+      },
     ],
   },
   mobilecraftbars: {
@@ -58,6 +104,8 @@ const clients: Record<string, ClientConfig> = {
     name: "Mobile Craft Bars",
     password: "mcb-2026",
     logo: "/logos/mcb.png",
+    emails: ["mobilecraftbars@gmail.com"],
+    splash: "/splash-images/mcb.webp",
     brand: {
       background: "#0d0f17",
       surface: "#0c0c0d",
@@ -65,10 +113,30 @@ const clients: Record<string, ClientConfig> = {
       dark: true,
     },
     trendCharts: [
-      { key: "conversions", title: "Conversions", subtitle: "Booking inquiries from Google Ads", format: "number" },
-      { key: "adSpend", title: "Ad Spend", subtitle: "Total weekly ad spend", format: "dollar" },
-      { key: "costPerConversion", title: "Cost per Conversion", subtitle: "Ad spend per booking inquiry", format: "dollar2" },
-      { key: "cpc", title: "CPC", subtitle: "Average cost per click", format: "dollar2" },
+      {
+        key: "conversions",
+        title: "Conversions",
+        subtitle: "Booking inquiries from Google Ads",
+        format: "number",
+      },
+      {
+        key: "adSpend",
+        title: "Ad Spend",
+        subtitle: "Total weekly ad spend",
+        format: "dollar",
+      },
+      {
+        key: "costPerConversion",
+        title: "Cost per Conversion",
+        subtitle: "Ad spend per booking inquiry",
+        format: "dollar2",
+      },
+      {
+        key: "cpc",
+        title: "CPC",
+        subtitle: "Average cost per click",
+        format: "dollar2",
+      },
     ],
   },
 };

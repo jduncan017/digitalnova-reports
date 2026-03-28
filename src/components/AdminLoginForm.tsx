@@ -17,8 +17,8 @@ export function AdminLoginForm() {
         placeholder="Password"
         required
         autoFocus
-        className="w-full rounded-xl bg-[#1a1c22] px-4 py-3.5 text-base text-[#e4e4e7] outline-none transition placeholder:text-[#52525b]"
-        style={{ border: "1px solid rgba(255,255,255,0.08)" }}
+        className="w-full rounded-xl px-4 py-3.5 text-base text-[#e4e4e7] outline-none backdrop-blur-sm transition placeholder:text-[#52525b]"
+        style={{ border: "1px solid rgba(255,255,255,0.08)", backgroundColor: "rgba(15, 17, 21, 0.5)" }}
       />
       <button
         type="submit"

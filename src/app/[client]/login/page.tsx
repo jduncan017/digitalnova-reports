@@ -17,5 +17,5 @@ export default async function LoginPage({
     redirect(`/${clientSlug}`);
   }
 
-  return <LoginForm clientSlug={client.slug} clientName={client.name} dnLogo={getDnLogo(client)} />;
+  return <LoginForm clientSlug={client.slug} clientName={client.name} dnLogo={getDnLogo(client)} splash={client.splash} />;
 }

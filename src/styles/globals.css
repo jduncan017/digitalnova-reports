@@ -30,3 +30,34 @@
   border-color: var(--border-hover);
   background-color: var(--surface-hover);
 }
+
+.feedback-btn {
+  cursor: pointer;
+  transition: all 150ms ease;
+  background-color: var(--surface-transparent);
+  color: var(--text-muted);
+}
+
+.feedback-btn:hover {
+  background-color: color-mix(in srgb, var(--primary) 12%, transparent) !important;
+  border-color: color-mix(in srgb, var(--primary) 30%, transparent) !important;
+  color: var(--primary) !important;
+}
+
+.feedback-btn:active {
+  transform: scale(0.97);
+}
+
+.feedback-rating-active {
+  cursor: pointer;
+  transition: all 150ms ease;
+}
+
+.feedback-submit:hover {
+  background-color: color-mix(in srgb, var(--primary) 85%, white) !important;
+  box-shadow: 0 4px 16px color-mix(in srgb, var(--primary) 35%, transparent);
+}
+
+.feedback-submit:active {
+  transform: scale(0.98);
+}
