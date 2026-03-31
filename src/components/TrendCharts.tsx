@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useEffect, useState, type RefObject } from "react";
+import { useRef } from "react";
 import {
   XAxis,
   YAxis,
@@ -9,6 +9,7 @@ import {
   Area,
   AreaChart,
 } from "recharts";
+import { useThemeColors } from "~/hooks/useThemeColors";
 type ChartFormat = "number" | "dollar" | "dollar2" | "percent";
 
 type ChartConfig = {
@@ -26,29 +27,6 @@ const formatters: Record<ChartFormat, (v: number) => string> = {
   dollar2: (v) => `$${v.toFixed(2)}`,
   percent: (v) => `${v.toFixed(1)}%`,
 };
-
-function useThemeColors(ref: RefObject<HTMLDivElement | null>) {
-  const [primary, setPrimary] = useState("#1d6ee3");
-  const [tooltipBg, setTooltipBg] = useState("rgba(15, 17, 23, 0.95)");
-  const [textColor, setTextColor] = useState("#e4e4e7");
-  const [mutedColor, setMutedColor] = useState("#71717a");
-  const [borderColor, setBorderColor] = useState("rgba(255,255,255,0.1)");
-
-  useEffect(() => {
-    if (!ref.current) return;
-    const styles = getComputedStyle(ref.current);
-    const p = styles.getPropertyValue("--primary").trim();
-    const bg = styles.getPropertyValue("--bg").trim();
-    const border = styles.getPropertyValue("--border").trim();
-    if (p) setPrimary(p);
-    if (bg) setTooltipBg(bg);
-    if (border) setBorderColor(border);
-    setTextColor(styles.getPropertyValue("--text-heading").trim() || "#e4e4e7");
-    setMutedColor(styles.getPropertyValue("--text-muted").trim() || "#71717a");
-  }, [ref]);
-
-  return { primary, tooltipBg, textColor, mutedColor, borderColor };
-}
 
 function TrendCard({
   config,
@@ -84,7 +62,7 @@ function TrendCard({
   if (prevVal !== undefined && prevVal !== 0 && currentVal !== 0) {
     const pctChange = ((currentVal - prevVal) / prevVal) * 100;
     const sign = pctChange >= 0 ? "+" : "";
-    changeText = `${sign}${pctChange.toFixed(0)}% from last week`;
+    changeText = `${sign}${pctChange.toFixed(0)}% from prev`;
   }
 
   return (

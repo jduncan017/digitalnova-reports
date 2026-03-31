@@ -1,0 +1,108 @@
+{
+  "client": "Miles & Memories",
+  "reportTitle": "December Marketing Report",
+  "reportSubtitle": "Blog Launch & Content Foundation",
+  "period": "Dec 1 – Dec 31, 2025",
+  "date": "2025-12-31",
+  "platform": "Content Marketing",
+
+  "kpis": {
+    "websiteSessions": 88,
+    "linkedinFollowers": 196,
+    "tasksCompleted": 5
+  },
+
+  "metrics": [
+    {
+      "label": "Website Sessions",
+      "value": "88",
+      "note": "Up from 56 in October. Direct traffic (71) is the main driver.",
+      "status": "good"
+    },
+    {
+      "label": "LinkedIn Audience",
+      "value": "196",
+      "note": "Up from 175. Steady growth continues.",
+      "status": "good"
+    },
+    {
+      "label": "New Users",
+      "value": "117",
+      "note": "More new users than active users — discovery is happening.",
+      "status": "good"
+    },
+    {
+      "label": "Tasks Completed",
+      "value": "5",
+      "note": "Blog infrastructure + Banff content published.",
+      "status": "good"
+    }
+  ],
+
+  "charts": [
+    {
+      "id": "traffic-sources-dec",
+      "type": "horizontal-bar",
+      "title": "Website Traffic Sources",
+      "width": "full",
+      "data": {
+        "labels": ["Direct", "Google Organic", "Instagram", "LinkedIn"],
+        "values": [71, 10, 6, 1]
+      }
+    }
+  ],
+
+  "findings": [
+    {
+      "title": "Website Traffic Recovering (56 → 88)",
+      "description": "Back above the September baseline. Most visitors (71) are coming directly — consistent with referral-based discovery. Google organic (10) is growing, which means SEO groundwork is starting to pay off."
+    },
+    {
+      "title": "Blog Infrastructure Opens a New Growth Channel",
+      "description": "The blog index page, destinations index, and Banff content create a foundation for SEO-driven traffic. Each new blog post is a new entry point for Google searchers — this compounds over time."
+    },
+    {
+      "title": "Content Volume Remains the Core Challenge",
+      "description": "Only 2 LinkedIn posts published in all of Q4. The engagement is there when we post, but inconsistency means we can't build momentum or properly test LinkedIn as a channel."
+    }
+  ],
+
+  "actions": [
+    {
+      "title": "Blog Index Page Created",
+      "description": "New blog section on the website ready for ongoing content.",
+      "status": "done"
+    },
+    {
+      "title": "Banff Corporate Travel Blog Published",
+      "description": "First destination-focused blog post live on the site.",
+      "status": "done"
+    },
+    {
+      "title": "Destinations Index Page Created",
+      "description": "New destinations section for showcasing travel offerings.",
+      "status": "done"
+    },
+    {
+      "title": "Banff Destination Page Live",
+      "description": "Dedicated landing page for Banff corporate travel.",
+      "status": "done"
+    },
+    {
+      "title": "Site Architecture Improvements",
+      "description": "Structural updates to support blog and destinations content.",
+      "status": "done"
+    },
+    {
+      "title": "Google Business Profile Verification",
+      "description": "Still waiting on Google.",
+      "status": "pending"
+    }
+  ],
+
+  "nextSteps": [
+    "Jump on a call to discuss two potential paths forward for Q1 — both designed to solve the content bottleneck.",
+    "Explore ways to simplify content workflow so we can hit consistent posting targets.",
+    "Continue building out blog content to grow organic search traffic."
+  ]
+}

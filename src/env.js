@@ -15,6 +15,7 @@ export const env = createEnv({
     CLIENT_PASSWORD_FINALBIT: z.string().optional(),
     CLIENT_PASSWORD_EVENTCOMBO: z.string().optional(),
     CLIENT_PASSWORD_MOBILECRAFTBARS: z.string().optional(),
+    CLIENT_PASSWORD_MILES_AND_MEMORIES: z.string().optional(),
   },
 
   /**
@@ -39,6 +40,7 @@ export const env = createEnv({
     CLIENT_PASSWORD_FINALBIT: process.env.CLIENT_PASSWORD_FINALBIT,
     CLIENT_PASSWORD_EVENTCOMBO: process.env.CLIENT_PASSWORD_EVENTCOMBO,
     CLIENT_PASSWORD_MOBILECRAFTBARS: process.env.CLIENT_PASSWORD_MOBILECRAFTBARS,
+    CLIENT_PASSWORD_MILES_AND_MEMORIES: process.env.CLIENT_PASSWORD_MILES_AND_MEMORIES,
   },
   /**
    * Run `build` or `dev` with `SKIP_ENV_VALIDATION` to skip env validation. This is especially

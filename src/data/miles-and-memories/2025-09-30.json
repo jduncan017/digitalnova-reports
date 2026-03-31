@@ -1,0 +1,125 @@
+{
+  "client": "Miles & Memories",
+  "reportTitle": "September Marketing Report",
+  "reportSubtitle": "First Full Month — Traffic & LinkedIn Growth",
+  "period": "Sep 1 – Sep 30, 2025",
+  "date": "2025-09-30",
+  "platform": "Content Marketing",
+
+  "kpis": {
+    "websiteSessions": 72,
+    "linkedinFollowers": 152,
+    "tasksCompleted": 9
+  },
+
+  "metrics": [
+    {
+      "label": "Website Sessions",
+      "value": "72",
+      "note": "Up from 4 in August — strong first month of real traffic.",
+      "status": "good"
+    },
+    {
+      "label": "LinkedIn Audience",
+      "value": "152",
+      "note": "Up from 31 in August. Profile visits jumped from 1 to 50.",
+      "status": "good"
+    },
+    {
+      "label": "Consultations Booked",
+      "value": "0",
+      "note": "72 sessions with 0 bookings — not unusual for month one, but monitoring.",
+      "status": "neutral"
+    },
+    {
+      "label": "Tasks Completed",
+      "value": "9",
+      "note": "Foundation setup plus strategic pivots.",
+      "status": "good"
+    }
+  ],
+
+  "charts": [
+    {
+      "id": "traffic-sources",
+      "type": "horizontal-bar",
+      "title": "Website Traffic Sources",
+      "width": "full",
+      "data": {
+        "labels": ["LinkedIn", "Google", "Instagram", "TravelJoy", "Yahoo", "Contact Card"],
+        "values": [4, 3, 3, 2, 2, 3]
+      }
+    }
+  ],
+
+  "findings": [
+    {
+      "title": "Website Traffic 18x Growth (4 → 72)",
+      "description": "First real month of traffic after the August infrastructure build. Traffic is coming from diverse sources — LinkedIn, Google, Instagram, TravelJoy, and direct contact cards."
+    },
+    {
+      "title": "LinkedIn Growth 5x (31 → 152 Connections)",
+      "description": "Profile visits went from 1 to 50. The optimized profile and early outreach are working, but we tested and abandoned an inefficient commenting strategy — pivoting to direct outreach instead."
+    },
+    {
+      "title": "Content Volume Is the Bottleneck",
+      "description": "Target was 4 LinkedIn posts/month but we're not hitting it yet. Need to nail down a content workflow that works for both of us to really test LinkedIn as a channel."
+    }
+  ],
+
+  "actions": [
+    {
+      "title": "Email Header Updates",
+      "description": "Implemented across communications.",
+      "status": "done"
+    },
+    {
+      "title": "TravelJoy Contacts Connected",
+      "description": "All contacts linked and booking flow optimized.",
+      "status": "done"
+    },
+    {
+      "title": "LinkedIn Profile Updated",
+      "description": "Optimized for target audience with new post templates.",
+      "status": "done"
+    },
+    {
+      "title": "LinkedIn Sales Navigator Setup",
+      "description": "Completed setup and joined relevant corporate travel groups.",
+      "status": "done"
+    },
+    {
+      "title": "Commenting Strategy Tested & Pivoted",
+      "description": "Tested LinkedIn commenting strategy, found it inefficient. Pivoted to direct outreach approach — 50% connection requests, 50% InMail.",
+      "status": "done"
+    },
+    {
+      "title": "Strategic Partnership Outreach",
+      "description": "Target: 5-6 contacts/week. Partner one-pager still needed.",
+      "status": "pending"
+    },
+    {
+      "title": "Google Business Profile",
+      "description": "Setup started but not yet finished.",
+      "status": "pending"
+    },
+    {
+      "title": "Metricool Scheduling Setup",
+      "description": "Needed for consistent content cadence.",
+      "status": "pending"
+    },
+    {
+      "title": "Content Cadence",
+      "description": "Target of 4 posts/month not yet met.",
+      "status": "pending"
+    }
+  ],
+
+  "nextSteps": [
+    "Activate content engine — schedule and publish first October post by Oct 7.",
+    "Set up Metricool for scheduling.",
+    "Finalize partner one-pager and create outreach message templates.",
+    "Begin systematic outreach: 5-6 contacts/week.",
+    "Goal: at least 2 consultations booked from LinkedIn or partnership referrals."
+  ]
+}

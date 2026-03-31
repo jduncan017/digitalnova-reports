@@ -26,13 +26,24 @@ export default async function ClientDashboard({
   const latestReport = dates[0] ? await getReport(clientSlug, dates[0]) : null;
   const allReports = await getAllReports(clientSlug);
 
-  const trendData = allReports
-    .filter((r) => r.kpis)
-    .map((r, i) => ({
+  const reportsWithKpis = allReports.filter((r) => r.kpis);
+  const isMonthly =
+    reportsWithKpis.length >= 2 &&
+    (new Date(reportsWithKpis[1]!.date).getTime() -
+      new Date(reportsWithKpis[0]!.date).getTime()) /
+      (1000 * 60 * 60 * 24) >
+      20;
+
+  const trendData = reportsWithKpis.map((r, i) => {
+    const d = new Date(r.date + "T00:00:00");
+    return {
       date: r.date,
-      label: `Wk ${i + 1}`,
+      label: isMonthly
+        ? d.toLocaleString("en-US", { month: "short" })
+        : `Wk ${i + 1}`,
       ...r.kpis!,
-    }));
+    };
+  });
 
   return (
     <div
@@ -221,13 +232,17 @@ export default async function ClientDashboard({
                         className="text-base font-medium"
                         style={{ color: "var(--text-heading)" }}
                       >
-                        Weekly Report — {date}
+                        {isMonthly ? "Monthly" : "Weekly"} Report — {date}
                       </div>
                       <div
                         className="text-sm"
                         style={{ color: "var(--text-faint)" }}
                       >
-                        {i === 0 ? "Latest" : `Week ${dates.length - i}`}
+                        {i === 0
+                          ? "Latest"
+                          : isMonthly
+                            ? `Month ${dates.length - i}`
+                            : `Week ${dates.length - i}`}
                       </div>
                     </div>
                   </div>

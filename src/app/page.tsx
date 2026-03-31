@@ -26,7 +26,7 @@ export default function HomePage() {
               Client Portal
             </h1>
             <p className="text-base text-[#71717a]">
-              Enter your client ID to continue
+              Enter your business name to continue
             </p>
           </div>
           <ClientSelector />

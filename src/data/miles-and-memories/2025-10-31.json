@@ -1,0 +1,99 @@
+{
+  "client": "Miles & Memories",
+  "reportTitle": "October Marketing Report",
+  "reportSubtitle": "LinkedIn Engagement & Systems",
+  "period": "Oct 1 – Oct 31, 2025",
+  "date": "2025-10-31",
+  "platform": "Content Marketing",
+
+  "kpis": {
+    "websiteSessions": 56,
+    "linkedinFollowers": 175,
+    "linkedinImpressions": 873,
+    "linkedinEngagementRate": 2.98
+  },
+
+  "metrics": [
+    {
+      "label": "Website Sessions",
+      "value": "56",
+      "note": "Down from 72 in September — seasonal dip or content gap.",
+      "status": "warning"
+    },
+    {
+      "label": "LinkedIn Audience",
+      "value": "175",
+      "note": "Up from 152. Steady growth through direct outreach.",
+      "status": "good"
+    },
+    {
+      "label": "LinkedIn Impressions",
+      "value": "873",
+      "note": "28-day rolling impressions across 2 posts.",
+      "status": "neutral"
+    },
+    {
+      "label": "Engagement Rate",
+      "value": "~3%",
+      "note": "26 engagements on 873 impressions — solid for B2B.",
+      "status": "good"
+    }
+  ],
+
+  "charts": [],
+
+  "findings": [
+    {
+      "title": "3% Engagement Rate Is Strong for B2B",
+      "description": "When we publish, people engage. The audience is responding — the challenge is publishing consistently. 2 posts vs. a goal of 4 means we're leaving engagement on the table."
+    },
+    {
+      "title": "Website Traffic Dipped (72 → 56)",
+      "description": "Could be seasonal or tied to lower content output. Without consistent posting to drive referral traffic, organic discovery is doing the heavy lifting alone."
+    },
+    {
+      "title": "Partner Pitch Deck Ready for Outreach",
+      "description": "The pitch deck positions Miles & Memories well for strategic partnerships. Ready to start systematic outreach — this could be the highest-leverage growth channel."
+    }
+  ],
+
+  "actions": [
+    {
+      "title": "Partner Pitch Deck Completed",
+      "description": "Ready for outreach to strategic partners.",
+      "status": "done"
+    },
+    {
+      "title": "Asana Project Management Implemented",
+      "description": "Better workflow and task tracking system in place.",
+      "status": "done"
+    },
+    {
+      "title": "2 LinkedIn Posts Published",
+      "description": "Below target of 4, but engagement was strong on both.",
+      "status": "done"
+    },
+    {
+      "title": "Instagram Cross-Posting Research",
+      "description": "Looking into adapting LinkedIn content for Instagram.",
+      "status": "done"
+    },
+    {
+      "title": "Google Business Profile",
+      "description": "Still in progress.",
+      "status": "pending"
+    },
+    {
+      "title": "Content Cadence",
+      "description": "2 posts published vs. goal of 4.",
+      "status": "pending"
+    }
+  ],
+
+  "nextSteps": [
+    "Start cross-posting relevant LinkedIn content to Instagram.",
+    "Push for 4 LinkedIn posts in November.",
+    "Begin strategic partnership outreach using the new pitch deck.",
+    "Complete Google Business Profile setup."
+  ]
+}

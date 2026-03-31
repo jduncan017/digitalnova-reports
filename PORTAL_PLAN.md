@@ -248,7 +248,74 @@ create trigger on_auth_user_created
 6. Click a report → same rendered view as before, data from Supabase
 7. Run seed script and verify all 3 existing clients + reports migrated correctly
 
+## Modular Service Framework
+
+Clients can have different marketing service types. Rather than building separate "client types," each client gets a set of **service modules** that determine their dashboard sections, data sources, and report format.
+
+### Module Types
+- **`ads`** — Paid advertising (Meta, Google Ads). Metrics: reach, clicks, conversions, CPC, ad spend. Weekly reporting cadence.
+- **`content`** — Content marketing (LinkedIn, blogs, SEO). Metrics: website sessions, LinkedIn followers/impressions/engagements. Monthly reporting cadence.
+- **`tasks`** — General marketing deliverables tracked via Asana. Shows completed/pending tasks.
+
+### Integration Config (per-client)
+
+Added to `ClientConfig` (currently in `src/lib/clients.ts`, becomes JSONB column on `clients` table in Supabase):
+
+```typescript
+type IntegrationConfig = {
+  asana?: { projectGid: string };
+  googleAnalytics?: { propertyId: string };  // "properties/123456789"
+  linkedin?: { organizationId: string };
+};
+```
+
+Dashboard sections and report generation render based on which integrations are configured.
+
+### Current Clients by Module
+- **FinalBit**: `ads` (Meta Ads)
+- **Eventcombo**: `ads` (Google Ads)
+- **Mobile Craft Bars**: `ads` (Google Ads)
+- **Miles & Memories**: `content` + `tasks` (LinkedIn, GA, Asana)
+
 ## Future Phases
-- **Phase 2**: n8n integration (automation activity feed), Stripe integration (invoice history in portal), automated report generation via n8n + ad platform APIs
-- **Phase 3**: File uploads, onboarding (integrate agency-forms), feedback collection, subscription management
-- **Long-term**: Multi-tenant SaaS for other agencies
+
+### Phase 2: API Integrations & On-Demand Report Generation
+
+**New files:**
+- `src/lib/integrations/asana.ts` — Fetch completed tasks from an Asana project for a date range (PAT auth)
+- `src/lib/integrations/google-analytics.ts` — Fetch GA4 sessions via service account JWT
+- `src/lib/integrations/linkedin.ts` — Fetch LinkedIn page analytics (followers, impressions, engagements)
+- `src/lib/integrations/generate-report.ts` — Orchestrator: calls configured integrations, assembles draft Report JSON
+
+**Admin UI:**
+- "Generate Draft" button on client cards (only for clients with integrations)
+- Modal flow: select date range → generate → review/edit draft → save to Supabase
+- Findings and strategic commentary added manually by admin
+
+**Env vars:**
+- `ASANA_PAT` — Asana Personal Access Token
+- `GA4_PROPERTY_ID` — GA4 property identifier
+- `GA4_SERVICE_ACCOUNT_JSON` — Base64-encoded service account key
+- `LINKEDIN_ACCESS_TOKEN` — LinkedIn OAuth2 bearer token (expires every 60 days)
+- `LINKEDIN_ORGANIZATION_ID` — LinkedIn org page ID
+
+**Notes:**
+- Each integration fails independently (LinkedIn outage doesn't block Asana + GA4)
+- LinkedIn token refresh is manual for MVP; automate in Phase 3
+- This phase depends on Supabase (Phase 1) for report storage — filesystem writes don't persist on Vercel
+
+### Phase 3: Automation, Billing & Scheduling
+- Cron-scheduled report generation (Vercel cron or n8n)
+- n8n integration (automation activity feed)
+- Stripe integration (invoice history in portal)
+- Automated LinkedIn token refresh
+- Ad platform API integrations (Meta Ads API, Google Ads API) for ads clients
+
+### Phase 4: Portal Expansion
+- File uploads
+- Onboarding (integrate agency-forms)
+- Feedback collection
+- Subscription management
+
+### Long-term
+- Multi-tenant SaaS for other agencies

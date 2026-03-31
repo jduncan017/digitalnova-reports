@@ -30,11 +30,9 @@ export default async function ReportPage({
   const report = await getReport(clientSlug, date);
   if (!report) notFound();
 
-  const reportWithVideo = report as typeof report & { videoUrl?: string };
   const videoUrl =
-    typeof reportWithVideo.videoUrl === "string" &&
-    reportWithVideo.videoUrl.length > 0
-      ? reportWithVideo.videoUrl
+    typeof report.videoUrl === "string" && report.videoUrl.length > 0
+      ? report.videoUrl
       : null;
 
   return (

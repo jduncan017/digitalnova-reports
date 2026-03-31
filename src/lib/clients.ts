@@ -135,6 +135,45 @@ const clients: Record<string, ClientConfig> = {
       },
     ],
   },
+  "miles-and-memories": {
+    slug: "miles-and-memories",
+    name: "Miles & Memories",
+    logo: "/logos/miles-and-memories.png",
+    emails: ["mandy@milesandmemories.net"],
+    splash: "/splash-images/miles-and-memories.webp",
+    brand: {
+      background: "#fefcf7",
+      surface: "#efe8d7",
+      primary: "#d63663",
+      dark: false,
+    },
+    trendCharts: [
+      {
+        key: "websiteSessions",
+        title: "Website Sessions",
+        subtitle: "Monthly visits from Google Analytics",
+        format: "number",
+      },
+      {
+        key: "linkedinFollowers",
+        title: "LinkedIn Audience",
+        subtitle: "Connections / followers over time",
+        format: "number",
+      },
+      {
+        key: "linkedinImpressions",
+        title: "LinkedIn Impressions",
+        subtitle: "Total post impressions",
+        format: "number",
+      },
+      {
+        key: "linkedinEngagementRate",
+        title: "Engagement Rate",
+        subtitle: "Engagements / impressions",
+        format: "percent",
+      },
+    ],
+  },
 };
 
 export function getClient(slug: string): ClientConfig | undefined {
@@ -142,8 +181,8 @@ export function getClient(slug: string): ClientConfig | undefined {
 }
 
 export function getClientPassword(slug: string): string | undefined {
-  const key = `CLIENT_PASSWORD_${slug.toUpperCase()}` as keyof typeof process.env;
-  return process.env[key] ?? undefined;
+  const envKey = `CLIENT_PASSWORD_${slug.replace(/-/g, "_").toUpperCase()}`;
+  return process.env[envKey] ?? undefined;
 }
 
 export function getAllClientSlugs(): string[] {

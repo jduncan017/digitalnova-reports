@@ -5,14 +5,12 @@ import { useRouter } from "next/navigation";
 
 export function ClientSelector() {
   const [slug, setSlug] = useState("");
-  const [error, setError] = useState("");
   const router = useRouter();
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    const trimmed = slug.trim().toLowerCase();
+    const trimmed = slug.trim().toLowerCase().replace(/\s+/g, "-");
     if (!trimmed) return;
-    setError("");
     router.push(`/${trimmed}/login`);
   }
 
@@ -22,7 +20,7 @@ export function ClientSelector() {
         type="text"
         value={slug}
         onChange={(e) => setSlug(e.target.value)}
-        placeholder="Client ID"
+        placeholder="Business name"
         required
         autoFocus
         className="w-full rounded-xl px-4 py-3.5 text-base text-[#e4e4e7] outline-none backdrop-blur-sm transition placeholder:text-[#52525b]"
@@ -34,9 +32,6 @@ export function ClientSelector() {
       >
         Continue
       </button>
-      {error && (
-        <p className="mt-1 text-center text-[15px] text-red-400">{error}</p>
-      )}
     </form>
   );
 }

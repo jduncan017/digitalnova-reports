@@ -1,0 +1,115 @@
+{
+  "client": "Miles & Memories",
+  "reportTitle": "February Marketing Report",
+  "reportSubtitle": "Content Marketing & LinkedIn Performance",
+  "period": "Feb 1 – Feb 28, 2026",
+  "date": "2026-02-28",
+  "platform": "Content Marketing",
+
+  "kpis": {
+    "websiteSessions": 96,
+    "linkedinFollowers": 237,
+    "linkedinImpressions": 1104,
+    "linkedinEngagementRate": 6.16
+  },
+
+  "metrics": [
+    {
+      "label": "Website Sessions",
+      "value": "96",
+      "note": "Monthly sessions from Google Analytics.",
+      "status": "neutral"
+    },
+    {
+      "label": "LinkedIn Followers",
+      "value": "237",
+      "note": "Tracking followers instead of connections — more useful metric going forward.",
+      "status": "neutral"
+    },
+    {
+      "label": "LinkedIn Impressions",
+      "value": "1,104",
+      "note": "Across 3 posts this month.",
+      "status": "neutral"
+    },
+    {
+      "label": "Engagement Rate",
+      "value": "6.2%",
+      "note": "Well above LinkedIn average of 2-3%.",
+      "status": "good"
+    }
+  ],
+
+  "charts": [
+    {
+      "id": "linkedin-engagement",
+      "type": "bar",
+      "title": "LinkedIn Post Performance",
+      "width": "full",
+      "data": {
+        "labels": ["Post 1", "Post 2", "Post 3"],
+        "values": [412, 389, 303]
+      }
+    }
+  ],
+
+  "findings": [
+    {
+      "title": "6.2% LinkedIn Engagement Rate Is Strong",
+      "description": "68 engagements on 1,104 impressions is well above the LinkedIn average of 2-3%. The audience is small but highly engaged — quality over quantity at this stage."
+    },
+    {
+      "title": "Website Traffic Needs a Growth Channel",
+      "description": "96 sessions is a baseline to build from. Organic search and LinkedIn referral traffic are the main levers — blog content and consistent posting will compound over time."
+    },
+    {
+      "title": "Follower Tracking Is the Right Metric",
+      "description": "Switching from connections to followers gives a clearer picture of audience growth. Followers represent people actively choosing to see Miles & Memories content in their feed."
+    }
+  ],
+
+  "actions": [
+    {
+      "title": "Corporate 1-Pager",
+      "description": "Designed and delivered corporate travel services one-pager.",
+      "status": "done"
+    },
+    {
+      "title": "Greek Life 1-Pager",
+      "description": "Designed and delivered Greek Life travel services one-pager.",
+      "status": "done"
+    },
+    {
+      "title": "Greek Life Referral 1-Pager",
+      "description": "Designed and delivered Greek Life referral program one-pager.",
+      "status": "done"
+    },
+    {
+      "title": "Email Signatures & Templates",
+      "description": "Created 2 new email templates and matching email signatures.",
+      "status": "done"
+    },
+    {
+      "title": "Luggage Tag Research",
+      "description": "Researched vendors and options — ready to design and send for print whenever you want to pull the trigger.",
+      "status": "done"
+    },
+    {
+      "title": "Project Management Tool Research",
+      "description": "Evaluated options and recommending Asana for task tracking and collaboration.",
+      "status": "done"
+    },
+    {
+      "title": "Google Business Profile Verification",
+      "description": "Still waiting on Google to verify the business profile.",
+      "status": "pending"
+    }
+  ],
+
+  "nextSteps": [
+    "Celebrity Cruise LinkedIn post going out soon.",
+    "Marketing meeting on March 4th — syncing up and mapping out next steps.",
+    "FAQ page for Greek Life clients (on the back burner — will revisit when timing is right).",
+    "NABTU pitch deck (on the back burner)."
+  ]
+}

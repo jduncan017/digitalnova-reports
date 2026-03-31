@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useEffect, useState } from "react";
+import { useRef } from "react";
 import {
   PieChart,
   Pie,
@@ -9,6 +9,7 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import { type ChartData } from "~/lib/types";
+import { useThemeColors } from "~/hooks/useThemeColors";
 
 const PALETTE = [
   "#60a5fa", // blue
@@ -23,28 +24,9 @@ const PALETTE = [
   "#f87171", // red
 ];
 
-function useThemeColors(ref: React.RefObject<HTMLDivElement | null>) {
-  const [bg, setBg] = useState("rgba(15, 17, 23, 0.95)");
-  const [text, setText] = useState("#e4e4e7");
-  const [border, setBorder] = useState("rgba(255,255,255,0.1)");
-
-  useEffect(() => {
-    if (!ref.current) return;
-    const s = getComputedStyle(ref.current);
-    const bgVal = s.getPropertyValue("--bg").trim();
-    const borderVal = s.getPropertyValue("--border").trim();
-    const textVal = s.getPropertyValue("--text-heading").trim();
-    if (bgVal) setBg(bgVal);
-    if (borderVal) setBorder(borderVal);
-    if (textVal) setText(textVal);
-  }, [ref]);
-
-  return { bg, text, border };
-}
-
 export function PieChartCard({ chart }: { chart: ChartData }) {
   const ref = useRef<HTMLDivElement>(null);
-  const { bg, text, border } = useThemeColors(ref);
+  const { tooltipBg, textColor, borderColor } = useThemeColors(ref);
 
   const data = chart.data.labels.map((label, i) => ({
     name: label,
@@ -84,13 +66,13 @@ export function PieChartCard({ chart }: { chart: ChartData }) {
             </Pie>
             <Tooltip
               contentStyle={{
-                backgroundColor: bg,
-                border: `1px solid ${border}`,
+                backgroundColor: tooltipBg,
+                border: `1px solid ${borderColor}`,
                 borderRadius: 10,
                 fontSize: 13,
               }}
-              itemStyle={{ color: text }}
-              labelStyle={{ color: text }}
+              itemStyle={{ color: textColor }}
+              labelStyle={{ color: textColor }}
               formatter={(value, name) => [String(value), String(name)]}
             />
           </PieChart>
