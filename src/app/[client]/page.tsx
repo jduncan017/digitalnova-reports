@@ -6,7 +6,12 @@ import { getClient, getDnLogo } from "~/lib/clients";
 import { MetricCard } from "~/components/MetricCard";
 import { TrendCharts } from "~/components/TrendCharts";
 import { isAuthenticated } from "~/lib/auth";
-import { getReportDates, getReport, getAllReports } from "~/lib/reports";
+import {
+  getReportDates,
+  getReport,
+  getAllReports,
+  formatDate,
+} from "~/lib/reports";
 import { ReportFooter } from "~/components/ReportFooter";
 
 export default async function ClientDashboard({
@@ -137,7 +142,7 @@ export default async function ClientDashboard({
                   className="text-2xl font-semibold"
                   style={{ color: "var(--text-heading)" }}
                 >
-                  {latestReport.date}
+                  {formatDate(latestReport.date)}
                 </div>
               </div>
               <div
@@ -232,7 +237,7 @@ export default async function ClientDashboard({
                         className="text-base font-medium"
                         style={{ color: "var(--text-heading)" }}
                       >
-                        {isMonthly ? "Monthly" : "Weekly"} Report — {date}
+                        {isMonthly ? "Monthly" : "Weekly"} Report — {formatDate(date)}
                       </div>
                       <div
                         className="text-sm"

@@ -11,7 +11,7 @@ import {
 import { isAdminAuthenticated } from "~/lib/admin-auth";
 import { NotifyButton } from "~/components/NotifyModal";
 import { getAllClientSlugs, getClient, getClientPassword } from "~/lib/clients";
-import { getReportDates, getReport } from "~/lib/reports";
+import { getReportDates, getReport, formatDate } from "~/lib/reports";
 
 type ClientSummary = {
   slug: string;
@@ -182,7 +182,7 @@ export default async function AdminDashboard() {
                     {client.lastReportDate ? (
                       <>
                         <div className="text-sm text-[#e4e4e7]">
-                          {client.lastReportDate}
+                          {formatDate(client.lastReportDate)}
                         </div>
                         <div
                           className={`text-xs ${
@@ -208,7 +208,9 @@ export default async function AdminDashboard() {
                       slug: client.slug,
                       name: client.name,
                       emails: client.emails,
-                      lastReportDate: client.lastReportDate,
+                      lastReportDate: client.lastReportDate
+                        ? formatDate(client.lastReportDate)
+                        : null,
                       password: client.password,
                       dashboardUrl: `https://reports.digitalnovastudio.com/${client.slug}`,
                     }}
@@ -245,7 +247,7 @@ export default async function AdminDashboard() {
                         {" "}
                         — last report was{" "}
                         {client.daysSinceLastReport} days ago
-                        ({client.lastReportDate})
+                        ({formatDate(client.lastReportDate!)})
                       </span>
                     </span>
                   </div>

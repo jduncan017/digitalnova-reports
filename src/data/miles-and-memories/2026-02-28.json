@@ -5,6 +5,8 @@
   "period": "Feb 1 – Feb 28, 2026",
   "date": "2026-02-28",
   "platform": "Content Marketing",
+  "summary": "February was a foundation-building month. We delivered a suite of brand assets — corporate and Greek Life one-pagers, email templates, and new email signatures — that give Mandy polished sales tools for outreach. LinkedIn engagement stayed strong at 6.2% across 3 posts, well above the platform average. Website traffic held steady at 96 active users with direct traffic making up the majority. We also researched project management tools (recommending Asana) and luggage tag vendors. Next month we're shifting focus to blog content and getting the Costa Rica pages live.",
+  "videoUrl": "",
 
   "kpis": {
     "websiteSessions": 96,
@@ -17,30 +19,46 @@
     {
       "label": "Website Sessions",
       "value": "96",
-      "note": "Monthly sessions from Google Analytics.",
+      "note": "Baseline month. Direct traffic accounts for ~79% of visits.",
       "status": "neutral"
     },
     {
       "label": "LinkedIn Followers",
       "value": "237",
-      "note": "Tracking followers instead of connections — more useful metric going forward.",
+      "note": "Now tracking followers instead of connections — more meaningful metric.",
       "status": "neutral"
     },
     {
       "label": "LinkedIn Impressions",
       "value": "1,104",
-      "note": "Across 3 posts this month.",
-      "status": "neutral"
+      "note": "Across 3 posts this month. Strong reach for a small audience.",
+      "status": "good"
     },
     {
       "label": "Engagement Rate",
       "value": "6.2%",
-      "note": "Well above LinkedIn average of 2-3%.",
+      "note": "Well above the LinkedIn average of 2–3%.",
       "status": "good"
     }
   ],
 
   "charts": [
+    {
+      "id": "traffic-sources",
+      "type": "horizontal-bar",
+      "title": "Website Traffic Sources",
+      "width": "full",
+      "data": {
+        "labels": [
+          "Direct",
+          "Google / Organic",
+          "Instagram / Social",
+          "LinkedIn / Referral",
+          "Bing / Organic"
+        ],
+        "values": [76, 9, 7, 2, 1]
+      }
+    },
     {
       "id": "linkedin-engagement",
       "type": "bar",
@@ -55,33 +73,33 @@
 
   "findings": [
     {
-      "title": "6.2% LinkedIn Engagement Rate Is Strong",
-      "description": "68 engagements on 1,104 impressions is well above the LinkedIn average of 2-3%. The audience is small but highly engaged — quality over quantity at this stage."
+      "title": "LinkedIn Engagement Rate Is Strong Out of the Gate",
+      "description": "68 engagements on 1,104 impressions gives a 6.2% engagement rate — more than double the LinkedIn average of 2–3%. The audience is small but highly engaged. Quality over quantity at this stage."
     },
     {
-      "title": "Website Traffic Needs a Growth Channel",
-      "description": "96 sessions is a baseline to build from. Organic search and LinkedIn referral traffic are the main levers — blog content and consistent posting will compound over time."
+      "title": "Direct Traffic Dominates Website Visits",
+      "description": "76 of 96 active users (79%) came from direct traffic — people typing in the URL or using bookmarks. Organic search brought in just 9 users. Blog content and SEO will be key to diversifying traffic sources."
     },
     {
-      "title": "Follower Tracking Is the Right Metric",
-      "description": "Switching from connections to followers gives a clearer picture of audience growth. Followers represent people actively choosing to see Miles & Memories content in their feed."
+      "title": "Follower Tracking Gives a Clearer Growth Picture",
+      "description": "Switching from connections to followers as our LinkedIn metric gives a more accurate view of audience growth. Followers are people actively choosing to see Miles & Memories content in their feed."
     }
   ],
 
   "actions": [
     {
-      "title": "Corporate 1-Pager",
-      "description": "Designed and delivered corporate travel services one-pager.",
+      "title": "Corporate Travel One-Pager",
+      "description": "Designed and delivered a corporate travel services one-pager for sales outreach.",
       "status": "done"
     },
     {
-      "title": "Greek Life 1-Pager",
-      "description": "Designed and delivered Greek Life travel services one-pager.",
+      "title": "Greek Life One-Pager",
+      "description": "Designed and delivered a Greek Life travel services one-pager.",
       "status": "done"
     },
     {
-      "title": "Greek Life Referral 1-Pager",
-      "description": "Designed and delivered Greek Life referral program one-pager.",
+      "title": "Greek Life Referral One-Pager",
+      "description": "Designed and delivered a referral program one-pager for Greek Life clients.",
       "status": "done"
     },
     {
@@ -90,8 +108,8 @@
       "status": "done"
     },
     {
-      "title": "Luggage Tag Research",
-      "description": "Researched vendors and options — ready to design and send for print whenever you want to pull the trigger.",
+      "title": "Luggage Tag Vendor Research",
+      "description": "Researched vendors and options — ready to design and send for print whenever Mandy wants to pull the trigger.",
       "status": "done"
     },
     {
@@ -109,7 +127,8 @@
   "nextSteps": [
     "Celebrity Cruise LinkedIn post going out soon.",
     "Marketing meeting on March 4th — syncing up and mapping out next steps.",
-    "FAQ page for Greek Life clients (on the back burner — will revisit when timing is right).",
-    "NABTU pitch deck (on the back burner)."
+    "Start building out blog content to drive organic search traffic.",
+    "FAQ page for Greek Life clients — on the back burner, will revisit when timing is right.",
+    "NABTU pitch deck — on the back burner."
   ]
 }
