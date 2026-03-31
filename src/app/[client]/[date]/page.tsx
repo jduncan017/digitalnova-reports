@@ -1,7 +1,7 @@
 import { notFound, redirect } from "next/navigation";
 import { getClient, getDnLogo } from "~/lib/clients";
 import { isAuthenticated } from "~/lib/auth";
-import { getReport } from "~/lib/reports";
+import { getReport, getReportDates } from "~/lib/reports";
 import { ReportHeader } from "~/components/ReportHeader";
 import { ReportFooter } from "~/components/ReportFooter";
 import { MetricGrid } from "~/components/MetricGrid";
@@ -27,8 +27,17 @@ export default async function ReportPage({
     redirect(`/${clientSlug}/login`);
   }
 
-  const report = await getReport(clientSlug, date);
+  const [report, dates] = await Promise.all([
+    getReport(clientSlug, date),
+    getReportDates(clientSlug),
+  ]);
   if (!report) notFound();
+
+  const isMonthly =
+    dates.length >= 2 &&
+    (new Date(dates[0]!).getTime() - new Date(dates[1]!).getTime()) /
+      (1000 * 60 * 60 * 24) >
+      20;
 
   const videoUrl =
     typeof report.videoUrl === "string" && report.videoUrl.length > 0
@@ -63,7 +72,10 @@ export default async function ReportPage({
 
         {report.summary && (
           <div className="mb-12">
-            <SectionHeader label="Summary" title="This Week at a Glance" />
+            <SectionHeader
+              label="Summary"
+              title={isMonthly ? "This Month at a Glance" : "This Week at a Glance"}
+            />
             <p
               className="max-w-[720px] text-base leading-relaxed whitespace-pre-line"
               style={{ color: "var(--text-body)" }}
@@ -111,17 +123,20 @@ export default async function ReportPage({
 
         {report.nextSteps.length > 0 && (
           <div className="mt-12">
-            <SectionHeader label="Looking Ahead" title="Next Week" />
+            <SectionHeader
+              label="Looking Ahead"
+              title={isMonthly ? "Coming Up" : "Next Week"}
+            />
             <NextSteps steps={report.nextSteps} />
           </div>
         )}
         <div className="mt-12">
-          <SectionHeader label="Your Input" title="Report Feedback" />
           <ReportFeedback
             clientSlug={clientSlug}
             clientName={client.name}
             reportDate={date}
             clientEmails={client.emails ?? []}
+            isMonthly={isMonthly}
           />
         </div>
       </div>
