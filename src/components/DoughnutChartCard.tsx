@@ -35,14 +35,22 @@ export function DoughnutChartCard({ chart }: { chart: ChartData }) {
             >
               {item.name}
             </div>
-            <div
-              className="h-7 rounded-md"
-              style={{
-                width: `${Math.max((item.value / maxVal) * 100, 3)}%`,
-                backgroundColor: "var(--primary)",
-                opacity: Math.max(0.35, 1 - i * 0.12),
-              }}
-            />
+            <div className="flex items-center gap-2">
+              <div
+                className="h-7 rounded-md"
+                style={{
+                  width: `${Math.max((item.value / maxVal) * 100, 3)}%`,
+                  backgroundColor: "var(--primary)",
+                  opacity: Math.max(0.35, 1 - i * 0.12),
+                }}
+              />
+              <span
+                className="shrink-0 text-[13px] font-medium"
+                style={{ color: "var(--text-body)" }}
+              >
+                {item.value}
+              </span>
+            </div>
           </div>
         ))}
       </div>

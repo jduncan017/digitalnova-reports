@@ -5,11 +5,11 @@
   "period": "Mar 1 – Mar 31, 2026",
   "date": "2026-03-31",
   "platform": "Content Marketing",
-  "summary": "Website sessions grew 8% month-over-month to 104, driven by organic search traffic growing 40% (10 → 14 sessions). We published two Costa Rica blog posts this month — a travel guide and a corporate incentive trip case study — which are starting to pull in search traffic. LinkedIn posting was paused while we wait on photos and content from the Cancun trip, so impressions dropped significantly. On the wins side, the review QR codes we created for the Cancun trip helped more than double your reviews from ~40 to 92. Next month we're focused on getting Cancun and Costa Rica content live and exploring a LinkedIn ads pilot for the corporate side.",
+  "summary": "Website sessions grew 8% month-over-month to 106, driven by organic search traffic growing 40% (10 → 14 sessions). We published two Costa Rica blog posts this month — a travel guide and a corporate incentive trip case study — which are starting to pull in search traffic. LinkedIn posting is on pause until we have trip photos ready to pair with posts, so impressions are down this month — but that just means there's a lot of great content queued up for April.\n\n QR codes were a big win this month after the Cancun trip more than doubling reviews from ~40 to 92. Next month we're focused on getting Cancun and Costa Rica content live and exploring a LinkedIn ads pilot for the corporate side.",
   "videoUrl": "",
 
   "kpis": {
-    "websiteSessions": 104,
+    "websiteSessions": 106,
     "linkedinFollowers": 245,
     "linkedinImpressions": 92,
     "linkedinEngagementRate": 6.52
@@ -18,7 +18,7 @@
   "metrics": [
     {
       "label": "Website Sessions",
-      "value": "104",
+      "value": "106",
       "note": "Up 8% from 96 in February. Organic search up 40%.",
       "status": "good"
     },
@@ -31,7 +31,7 @@
     {
       "label": "LinkedIn Impressions",
       "value": "92",
-      "note": "No new posts this month — waiting on trip photos from Mandy.",
+      "note": "Posts paused this month — trip content queued up for April.",
       "status": "warning"
     },
     {
@@ -56,7 +56,7 @@
           "Framer / Referral",
           "ChatGPT / Referral"
         ],
-        "values": [76, 14, 11, 2, 1]
+        "values": [77, 15, 11, 2, 1]
       }
     }
   ],
@@ -67,12 +67,8 @@
       "description": "Google organic sessions went from 10 in February to 14 in March — a 40% increase. Still small numbers, but the two Costa Rica blog posts are starting to index and pull in search traffic. This is the compounding effect of consistent content."
     },
     {
-      "title": "Reviews Nearly Doubled After Cancun",
-      "description": "The QR code review system we set up for the Cancun trip helped drive reviews from approximately 40 to 92 on the TLN site. That social proof is a major asset for future pitches and website credibility."
-    },
-    {
-      "title": "LinkedIn Needs Consistent Fuel",
-      "description": "Impressions dropped from 1,104 to 92 because no new posts went out this month. The audience engagement rate is strong (6.5%), but LinkedIn's algorithm requires regular posting to maintain reach. Once Cancun and Costa Rica content is ready, we should see a quick rebound."
+      "title": "QR Codes Work for Client Action",
+      "description": "The QR codes seemed to work great, and you did great with getting people to follow through. That social proof is a great asset for future pitches and website credibility."
     }
   ],
 
@@ -88,32 +84,26 @@
       "status": "done"
     },
     {
-      "title": "Review QR Codes for Cancun Trip",
-      "description": "Created QR code review cards for the Cancun spring break trip. Helped drive reviews from ~40 to 92.",
-      "status": "done"
-    },
-    {
       "title": "Content Strategy for April",
       "description": "Mapped out next month's content plan including Cancun case study, LinkedIn posts, and Costa Rica page updates.",
       "status": "done"
     },
     {
       "title": "Costa Rica Page Photo Swap",
-      "description": "Waiting on Dropbox link from Mandy with Costa Rica and Cancun photos to update the page hero image.",
+      "description": "Ready to update the page hero image once we have the Costa Rica and Cancun photos from the trips.",
       "status": "pending"
     },
     {
       "title": "LinkedIn Content — Cancun & Costa Rica",
-      "description": "Posts drafted but on hold until trip photos and video content arrive.",
+      "description": "Posts drafted and ready to go — just need to pair them with trip photos for maximum impact.",
       "status": "pending"
     }
   ],
 
   "nextSteps": [
-    "Get Cancun and Costa Rica photos from Mandy and update the website pages.",
+    "Swap in trip photos on the website once we have them — the pages are prepped and ready.",
     "Publish Cancun spring break case study — 347 students, 6 groups, zero-fee model. Great content for LinkedIn and the website.",
     "Resume LinkedIn posting cadence with trip content, aiming for 2-4 posts in April.",
-    "Pull best testimonial quotes from TLN reviews for social proof content.",
-    "Presenting a LinkedIn Ads proposal at our April 8 meeting — low-budget pilot targeting corporate travel decision-makers."
+    "Pull best testimonial quotes from TLN reviews for social proof content."
   ]
 }
