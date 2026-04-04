@@ -27,7 +27,7 @@ export async function verifyPassword(
   const master = process.env.MASTER_CLIENT_PASSWORD;
   const expected = getClientPassword(clientSlug);
   const isValid =
-    (expected && expected === password) || (master && master === password);
+    (expected && expected === password) ?? (master && master === password);
   if (!isValid) return null;
   return generateToken(clientSlug);
 }
