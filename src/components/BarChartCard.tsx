@@ -18,9 +18,10 @@ export function BarChartCard({ chart }: { chart: ChartData }) {
   const { primary, tooltipBg, textColor, mutedColor, borderColor, cursorFill } =
     useThemeColors(ref);
 
+  const values = chart.data.values ?? [];
   const data = chart.data.labels.map((label, i) => ({
     name: label,
-    value: chart.data.values[i],
+    value: values[i] ?? 0,
   }));
 
   const barColors = [

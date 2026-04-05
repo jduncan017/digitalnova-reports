@@ -1,0 +1,239 @@
+{
+  "client": "EventCombo",
+  "reportTitle": "Google Ads Week 4 Report",
+  "reportSubtitle": "Clean Data Baseline & Strategic Pivot Recommendation",
+  "period": "Mar 28 – Apr 3, 2026",
+  "date": "2026-04-03",
+  "platform": "Google Ads",
+  "summary": "This is our first full week of real Google Search data after removing Search Partners (which were consuming 88% of clicks with junk traffic). The picture is now clear: we're getting the right people to the page, but the page isn't converting them.\n\nCPC jumped from $1.17 to $5.33 — not because costs went up, but because we eliminated the cheap garbage clicks from Search Partners that were masking the true cost.\n\nAcross 89 clicks on our two highest-intent campaigns (Competitor Conquest + Integration Intent), we got 0 conversions. These are people searching for Cvent alternatives and CRM event integrations — exactly the right audience. The landing page's CRM-only messaging and external Cal.com booking link aren't converting them.\n\nWe also paused 2 underperforming campaigns, added 17 negative keywords to stop ~35% wasted spend, and consolidated budget into 3 active campaigns at $90/day.\n\nWe've completed the diagnostic phase — Search Partners eliminated, keywords cleaned across 3 rounds of negatives, underperformers paused. The next phase requires landing page control and a tighter strategic focus, detailed in our recommendation below.",
+
+  "kpis": {
+    "adSpend": 537.34,
+    "adSpendTotal": 633.69,
+    "videoSpend": 96.35,
+    "impressions": 3083,
+    "clicks": 124,
+    "ctr": 4.02,
+    "cpc": 5.33,
+    "conversions": 0,
+    "costPerConversion": null,
+    "fourWeekTotalSpend": 2417,
+    "fourWeekTotalConversions": 1,
+    "fourWeekVerifiedLeads": 1
+  },
+
+  "metrics": [
+    {
+      "label": "Search Ad Spend",
+      "value": "$537.34",
+      "note": "Down from $691. Two campaigns paused on 4/2 — budget consolidated into top 3.",
+      "status": "neutral"
+    },
+    {
+      "label": "Conversions",
+      "value": "0",
+      "note": "Second consecutive week at 0. But this is the first week of clean Google Search traffic.",
+      "status": "bad"
+    },
+    {
+      "label": "Avg CPC",
+      "value": "$5.33",
+      "note": "Up from $1.17. Search Partners were delivering junk clicks at ~$0.50-1.00. With those off, we're now seeing true Google Search pricing.",
+      "status": "neutral"
+    }
+  ],
+
+  "funnel": {
+    "title": "Ad-to-Demo Funnel (Search Only)",
+    "source": "Google Ads — Search Campaigns",
+    "steps": [
+      { "label": "Impressions", "count": 3083, "pct": 100 },
+      { "label": "Clicks", "count": 124, "pct": 4.02 },
+      { "label": "Demo Bookings", "count": 0, "pct": 0 }
+    ],
+    "notes": "124 real Google Search clicks, 0 conversions. The 89 clicks from Competitor Conquest and Integration Intent are the most telling — these are high-intent searches from people comparing platforms and looking for CRM integrations. They're clicking the ad, reaching the page, and leaving without booking."
+  },
+
+  "charts": [
+    {
+      "id": "campaign-performance",
+      "type": "table",
+      "title": "Campaign Performance Breakdown (Mar 28 – Apr 3)",
+      "data": {
+        "headers": [
+          "Campaign",
+          "Status",
+          "Impressions",
+          "Clicks",
+          "Spend",
+          "CPC",
+          "Conv"
+        ],
+        "rows": [
+          [
+            "Competitor Conquest",
+            "Active ($45/day)",
+            "692",
+            "34",
+            "$235.03",
+            "$6.91",
+            "0"
+          ],
+          [
+            "Integration Intent",
+            "Active ($25/day)",
+            "491",
+            "24",
+            "$166.68",
+            "$6.95",
+            "0"
+          ],
+          [
+            "Enterprise Keywords",
+            "Active ($20/day)",
+            "734",
+            "31",
+            "$72.40",
+            "$2.34",
+            "0"
+          ],
+          [
+            "Event Registration",
+            "Paused 4/2",
+            "~583",
+            "~18",
+            "~$32",
+            "~$1.78",
+            "0"
+          ],
+          [
+            "ROI & Analytics",
+            "Paused 4/2",
+            "~583",
+            "~17",
+            "~$31",
+            "~$1.82",
+            "0"
+          ],
+          ["Video (Saroosh)", "Active", "34,917", "12", "$96.35", "$8.03", "0"],
+          ["TOTAL", "", "~38,000", "136", "$633.69", "", "0"]
+        ]
+      }
+    },
+    {
+      "id": "week-over-week",
+      "type": "bar",
+      "title": "Week-over-Week Performance",
+      "data": {
+        "labels": ["Week 1", "Week 2", "Week 3", "Week 4"],
+        "values": [2, 5, 1, 0],
+        "note": "Tracked conversions by week. Weeks 1-2 were largely Search Partner noise — only 1 verified real lead (Kait Pulliam) across all 4 weeks. Decline correlates with eliminating junk traffic sources."
+      }
+    },
+    {
+      "id": "cpc-trend",
+      "type": "line",
+      "title": "Average CPC Trend — The Real Cost Emerging",
+      "data": {
+        "labels": [
+          "Week 1 (w/ Search Partners)",
+          "Week 2 (w/ Search Partners)",
+          "Week 3 (w/ Search Partners)",
+          "Week 4 (Search Partners OFF)"
+        ],
+        "values": [1.5, 1.09, 1.17, 5.33],
+        "note": "CPC jumped 4.5x because we removed the cheap junk clicks. $5-7 is what B2B event management keywords actually cost on Google Search."
+      }
+    },
+    {
+      "id": "budget-allocation",
+      "type": "doughnut",
+      "title": "Active Budget Allocation (Post-Consolidation)",
+      "data": {
+        "labels": [
+          "Competitor Conquest ($45/day — 50%)",
+          "Integration Intent ($25/day — 28%)",
+          "Enterprise Keywords ($20/day — 22%)"
+        ],
+        "values": [50, 28, 22]
+      }
+    }
+  ],
+
+  "growthTrajectory": {
+    "currentPhase": "LEARN",
+    "currentMarker": "M2",
+    "caption": "Initial tests revealed needed pivots. We eliminated junk traffic sources, cleaned keywords, and paused underperformers. We adjust strategy, then recover stronger. This is normal for complex B2B audiences."
+  },
+
+  "findings": [
+    {
+      "title": "Search Partners Removal Reveals True Economics",
+      "description": "CPC jumped from $1.17 to $5.33 because we eliminated the artificially cheap Search Partner clicks that were 88% of traffic. This is what Google Search actually costs for these terms. At $90/day, we're getting ~13-15 real clicks per day across all campaigns. Each click now matters significantly more."
+    },
+    {
+      "title": "89 High-Intent Clicks, 0 Conversions — The Landing Page Gap",
+      "description": "Competitor Conquest and Integration Intent represent the best possible traffic for EventCombo. Zero conversions from 89 clicks over a full week points to a possible conversion problem. The current landing page targets integration-focused CRM terms, and we could test a form in addition to demo bookings."
+    },
+    {
+      "title": "Still wasting spend on irrelevant queries",
+      "description": "Search term audit found branded 'eventcombo' queries (~$101, people who are already searching for you), zoom/scheduling terms (~$62), and irrelevant competitors (~$31) consuming over a third of budget. 17 negative keywords deployed on 4/2."
+    },
+    {
+      "title": "Event Registration & ROI Analytics Paused",
+      "description": "Both campaigns ran for 4 weeks with 0 conversions total. Budget redistributed to the three campaigns with strategic value."
+    }
+  ],
+
+  "actions": [
+    {
+      "title": "Deployed 17 Negative Keywords (Round 3)",
+      "description": "Blocked branded queries, wrong-category terms (zoom, scheduling), and irrelevant competitors. Applied across active campaigns with CRM terms kept available for Integration Intent only. Done 4/2.",
+      "status": "done"
+    },
+    {
+      "title": "Paused Underperforming Campaigns",
+      "description": "Event Registration and ROI & Analytics paused on 4/2. Zero conversions across all 4 weeks, irrelevant search terms, Google flagging them as poorly targeted. Budget consolidated into 3 active campaigns at $90/day.",
+      "status": "done"
+    },
+    {
+      "title": "Conducted SEMrush Competitive Deep Dive",
+      "description": "Full analysis of EventCombo's market position, competitor ad strategies, keyword opportunity mapping, and industry vertical research. Findings inform the strategic pivot recommendation below.",
+      "status": "done"
+    }
+  ],
+
+  "recommendation": {
+    "title": "Phase 2: Landing Page Control + Industry Vertical Test",
+    "context": "We've completed the diagnostic phase. Over 4 weeks we've eliminated junk traffic sources, cleaned keywords across 3 rounds, paused underperformers, and established a clean-data baseline. The campaigns are reaching the right audience — the conversion gap is on the landing page side. Phase 2 requires two changes to unlock results.",
+
+    "changes": [
+      {
+        "title": "Landing Page Control – Focus on Conversions",
+        "description": "We'd like to build and manage landing pages on a subdomain (e.g., demo.eventcombo.com) so we can test messaging, iterate quickly, and implement a lead capture form instead of direct booking.",
+        "impact": "Even a 2-3% form conversion rate on 89 high-intent weekly clicks = 2-3 leads/week vs 0 today."
+      },
+      {
+        "title": "Add Healthcare/Pharma Industry Campaign",
+        "description": "SEMrush research found that 'pharmaceutical event management' and 'healthcare event management' have virtually zero advertiser competition. EventCombo has real case studies in this space, so a dedicated campaign with a healthcare-focused landing page would test whether industry-specific targeting converts better than broad event management terms.",
+        "impact": "Low volume but extremely low competition and high relevance. Would fund by trimming Competitor Conquest from $45 to $30/day."
+      }
+    ],
+
+    "timeline": "Landing pages live within 1 week of approval. Healthcare campaign can launch same week. Recommend 3-week test period before assessing results.",
+
+    "whatWeNeed": [
+      "Permission to build and manage landing pages (subdomain or separate hosting)",
+      "Approval to add healthcare/pharma campaign using Sharp Healthcare case study",
+      "Any additional healthcare/pharma client stories or data we can feature"
+    ]
+  },
+
+  "nextSteps": [
+    "Monitor Week 5 (Apr 4-10) with new negatives and consolidated budget for cleaner baseline data",
+    "If landing page approved: build Competitor Conquest page first (highest budget, highest intent), then Healthcare/Pharma page",
+    "3-week checkpoint after Phase 2 launches to assess whether Google Ads is viable for EventCombo at current budget level"
+  ],
+
+  "videoUrl": "https://supercut.ai/share/digitalnova-studio/13HYvNFKAP6RVRimEi_W6D"
+}

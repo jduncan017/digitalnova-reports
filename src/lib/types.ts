@@ -49,6 +49,36 @@ export type TrendChartConfig = {
   format: "number" | "dollar" | "dollar2" | "percent";
 };
 
+export type GrowthTrajectory = {
+  currentPhase: string;
+  currentMarker: string;
+  caption: string;
+};
+
+export type RecommendationChange = {
+  title: string;
+  description: string;
+  impact: string;
+};
+
+export type ProposedCampaign = {
+  name: string;
+  daily: string;
+  note: string;
+};
+
+export type Recommendation = {
+  title: string;
+  context: string;
+  changes: RecommendationChange[];
+  proposedBudget?: {
+    total: string;
+    campaigns: ProposedCampaign[];
+  };
+  timeline?: string;
+  whatWeNeed?: string[];
+};
+
 export type Report = {
   client: string;
   reportTitle: string;
@@ -65,4 +95,6 @@ export type Report = {
   actions: Action[];
   nextSteps: string[];
   videoUrl?: string;
+  growthTrajectory?: GrowthTrajectory;
+  recommendation?: Recommendation;
 };

@@ -12,9 +12,13 @@ function ChartComponent({ chart }: { chart: ChartData }) {
 }
 
 export function ChartGrid({ charts }: { charts: ChartData[] }) {
+  const renderable = charts.filter(
+    (c) => c.type === "bar" || c.type === "horizontal-bar" || c.type === "doughnut" || c.type === "pie",
+  );
+
   return (
     <div className="mb-10 grid grid-cols-1 gap-6 sm:grid-cols-2">
-      {charts.map((chart) => (
+      {renderable.map((chart) => (
         <div
           key={chart.id}
           className={

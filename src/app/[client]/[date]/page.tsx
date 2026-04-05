@@ -13,6 +13,8 @@ import { NextSteps } from "~/components/NextSteps";
 import { SectionHeader } from "~/components/SectionHeader";
 import { VideoEmbed } from "~/components/VideoEmbed";
 import { ReportFeedback } from "~/components/ReportFeedback";
+import { GrowthTrajectory } from "~/components/GrowthTrajectory";
+import { RecommendationSection } from "~/components/RecommendationSection";
 
 export default async function ReportPage({
   params,
@@ -104,6 +106,16 @@ export default async function ReportPage({
           </div>
         )}
 
+        {report.growthTrajectory && (
+          <div className="mt-12">
+            <SectionHeader
+              label="The Trajectory"
+              title="What Growth Looks Like"
+            />
+            <GrowthTrajectory trajectory={report.growthTrajectory} />
+          </div>
+        )}
+
         {report.findings.length > 0 && (
           <div className="mt-12">
             <SectionHeader
@@ -118,6 +130,16 @@ export default async function ReportPage({
           <div className="mt-12">
             <SectionHeader label="Actions Taken" title="What We Did" />
             <Timeline actions={report.actions} />
+          </div>
+        )}
+
+        {report.recommendation && (
+          <div className="mt-12">
+            <SectionHeader
+              label="Our Recommendation"
+              title={report.recommendation.title}
+            />
+            <RecommendationSection recommendation={report.recommendation} />
           </div>
         )}
 

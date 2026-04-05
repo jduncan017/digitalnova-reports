@@ -1,0 +1,238 @@
+{
+  "client": "FinalBit",
+  "reportTitle": "Meta Ads Week 4 Report",
+  "reportSubtitle": "Static Wins, PostHog Funnel Fix, Infrastructure Week",
+  "period": "Mar 28 – Apr 3, 2026",
+  "date": "2026-04-04",
+  "platform": "Meta Ads",
+  "summary": "Slower week on lead volume (1 vs 4 last week), but a productive one for infrastructure. We confirmed Static as the winning creative, made several backend improvements, and uncovered a significant issue with our PostHog funnel setup.\n\nMeta Ads: $335.86 total spend — Static delivered 1 lead at $170.76, Video spent $165.10 with 0 leads before we paused it to remove Premiere/After Effects targeting. The new AU/DE/FR secondary market ad set launched Apr 4.\n\nPostHog (this week): 234 pageviews, 15 plan signup clicks (6.41%), 2 calendar opens (0.85%). Important finding: the current PostHog funnel is treating plan_signup_clicked and cal_modal_opened as sequential steps, but they're actually parallel conversion paths. plan_signup_clicked fires when someone clicks Basic/Creator/Pro (going to finalbitai.com/login). cal_modal_opened fires when someone clicks Book a Demo (going to cal.com). These are two separate user groups, not one funnel. The '76% drop' we previously flagged isn't a real drop — it's comparing apples to oranges.\n\nInfrastructure: Installed GTM tags on the funnel, added team-size branching to N8N automation, cleaned lookalike audience CSV, launched secondary markets. Also identified that PostHog has no reverse proxy — ad blockers are silently dropping 10-25% of events.",
+
+  "kpis": {
+    "adSpend": 335.86,
+    "leads": 1,
+    "cpl": 335.86,
+    "pageviews": 234,
+    "planSignupClicks": 15,
+    "calendarOpens": 2,
+    "planSignupRate": 6.41,
+    "demoBookingRate": 0.85
+  },
+
+  "metrics": [
+    {
+      "label": "Ad Spend",
+      "value": "$335.86",
+      "note": "Static $170.76 + Video $165.10. Down from $362 last week. Video paused mid-week after removing Premiere/AE targeting. AU/DE/FR launched Apr 4 ($10/day), $0 spend yet.",
+      "status": "neutral"
+    },
+    {
+      "label": "Leads (Demo Bookings)",
+      "value": "1",
+      "note": "Down from 4 last week. Static: 1 lead. Video: 0 leads. One-week variance or early sign Video isn't working — monitoring next week.",
+      "status": "bad"
+    },
+    {
+      "label": "Landing Page Visitors",
+      "value": "234",
+      "note": "PostHog pageviews this week. Note: PostHog has no reverse proxy, so ad blockers are likely dropping 10-25% of events. Real traffic is probably 260-300+.",
+      "status": "neutral"
+    },
+    {
+      "label": "Self-Serve Signups (plan_signup_clicked)",
+      "value": "15 (6.41%)",
+      "note": "People clicking Basic, Creator, or Pro plan buttons → going to finalbitai.com/login. This is the self-serve conversion path. Now that GTM is installed, we can start tracking whether these actually complete signup.",
+      "status": "good"
+    },
+    {
+      "label": "Demo Interest (cal_modal_opened)",
+      "value": "2 (0.85%)",
+      "note": "People clicking Book a Demo → going to cal.com. This is the enterprise conversion path. Only 1 of these resulted in a confirmed Meta-attributed booking this week.",
+      "status": "neutral"
+    }
+  ],
+
+  "funnel": {
+    "title": "Two Parallel Conversion Paths (This Week — PostHog)",
+    "source": "PostHog Last 7 Days",
+    "steps": [
+      { "label": "Pageviews", "count": 234, "pct": 100 },
+      { "label": "Plan Signup Clicks", "count": 15, "pct": 6.41 },
+      { "label": "Calendar Opens", "count": 2, "pct": 0.85 },
+      { "label": "Demo Booked", "count": 1, "pct": 0.43 }
+    ],
+    "notes": "IMPORTANT: The current PostHog funnel dashboard treats these as sequential steps (Pageview → plan_signup_clicked → cal_modal_opened), which is incorrect. plan_signup_clicked fires for self-serve plan buttons (Basic/Creator/Pro → finalbitai.com/login). cal_modal_opened fires for Book a Demo buttons (→ cal.com). These are PARALLEL paths, not sequential. The '76% drop' previously reported was comparing two different user groups. Recommend splitting into two separate funnel insights in PostHog."
+  },
+
+  "charts": [
+    {
+      "id": "adset-performance",
+      "type": "table",
+      "title": "Ad Set Performance — This Week (Mar 28 – Apr 3)",
+      "data": {
+        "headers": ["Ad Set", "Status", "Leads", "CPL", "Spend", "Impressions", "Reach"],
+        "rows": [
+          ["Static - US/CA/UK", "Active", "1", "$170.76", "$170.76", "4,650", "2,691"],
+          ["Video - US/CA/UK", "Ads Inactive", "0", "—", "$165.10", "3,633", "2,050"],
+          ["Static + Video - AU/DE/FR", "Just Launched Apr 4", "—", "—", "$0.00", "—", "—"],
+          ["TOTAL", "", "1", "$335.86", "$335.86", "8,283", "4,741"]
+        ]
+      }
+    },
+    {
+      "id": "posthog-conversion",
+      "type": "table",
+      "title": "PostHog Conversion Paths — This Week",
+      "data": {
+        "headers": ["Path", "Event", "Count", "% of Visitors"],
+        "rows": [
+          ["—", "Pageviews", "234", "100%"],
+          ["Self-Serve", "Plan Signup Clicked", "15", "6.41%"],
+          ["Enterprise", "Calendar Modal Opened", "2", "0.85%"],
+          ["Enterprise", "Demo Booked (Meta)", "1", "0.43%"],
+          ["TOTAL ENGAGED", "Any CTA", "17", "7.26%"]
+        ],
+        "note": "7.26% total engagement rate is solid for cold traffic. The self-serve path (6.41%) is pulling 7.5x more conversions than the enterprise demo path (0.85%), which makes sense — lower commitment action."
+      }
+    }
+  ],
+
+  "findings": [
+    {
+      "title": "PostHog Funnel Is Misconfigured — Giving Misleading Data",
+      "description": "The current CTA Conversion Funnel in PostHog treats plan_signup_clicked and cal_modal_opened as sequential steps. But they fire from different buttons for different user paths: plan_signup_clicked = Basic/Creator/Pro signup buttons (→ finalbitai.com/login), cal_modal_opened = Book a Demo buttons (→ cal.com). The '76% drop between steps 2 and 3' we previously identified isn't a real conversion bottleneck — it's just that most people who click a self-serve plan don't also click Book a Demo. These should be two separate funnels in PostHog.",
+      "severity": "high"
+    },
+    {
+      "title": "No PostHog Reverse Proxy — Losing 10-25% of Events",
+      "description": "PostHog is initialized with api_host 'us.i.posthog.com' (the default). PostHog itself warns at the top of the dashboard: 'Ad blockers can silently drop 10-25% of your events.' Since all traffic comes from Meta ads, ad blocker usage may be even higher. Setting up a reverse proxy through try.finalbitai.com would capture most of these lost events. However, FinalBit won't give us domain access to set this up.",
+      "severity": "medium"
+    },
+    {
+      "title": "Static Creative Confirmed as Winner",
+      "description": "This week: Static 1 lead at $170.76, Video 0 leads at $165.10. Cumulative: Static 3 leads at $136 CPL, Video 2 leads at $324 CPL. Static is 2.4x more cost-efficient with less spend and fewer days running. Video ads are now paused after removing Premiere/After Effects interests.",
+      "severity": "info"
+    },
+    {
+      "title": "Self-Serve Path Is the Volume Play",
+      "description": "15 plan signup clicks (6.41%) vs 2 demo calendar opens (0.85%) this week. The lower-commitment self-serve path is pulling 7.5x more engagement. Now that GTM is installed, we'll finally see if these clicks convert to actual signups on finalbitai.com — which would change the ROI picture significantly.",
+      "severity": "info"
+    },
+    {
+      "title": "Dead Code in Analytics — Events That Never Fire",
+      "description": "Code audit found: cta_clicked event is defined in analytics.ts but never called by any component. demo_requested and trial_started events exist but their components (DemoForm, EmailCapture) aren't used on the enterprise page. These are template leftovers. No action needed, but worth cleaning up.",
+      "severity": "low"
+    }
+  ],
+
+  "actions": [
+    {
+      "title": "Removed Premiere & After Effects from Video Targeting",
+      "description": "Per Anna's feedback — solo editors were wasting demo time. Video ad set targeting narrowed.",
+      "status": "done"
+    },
+    {
+      "title": "Launched AU/DE/FR Secondary Market Ad Set",
+      "description": "Static + Video creative at $10/day. Tests Australia, Germany, France. Launched Apr 4.",
+      "status": "done"
+    },
+    {
+      "title": "Installed GTM Tags on Funnel Site",
+      "description": "Khachatur's GTM container added to the Next.js marketing site. Will track actual signups on finalbitai.com.",
+      "status": "done"
+    },
+    {
+      "title": "Cleaned Lookalike Audience CSV",
+      "description": "16 production contacts extracted from Anna's mixed spreadsheet. Too small — need 50-100+ for quality lookalike.",
+      "status": "done"
+    },
+    {
+      "title": "Added Team Size Branch to N8N Automation",
+      "description": "24hr reminder and reschedule emails now branch on team size. 5+ teams get screenplay request, smaller teams get simpler reminder.",
+      "status": "done"
+    },
+    {
+      "title": "Fix PostHog Funnel — Split Into Two Separate Funnels",
+      "description": "Create: (1) Enterprise Funnel: Pageview → cal_modal_opened → demo booked. (2) Self-Serve Funnel: Pageview → plan_signup_clicked → signup_completed (once GTM data flows). Delete or rename the current combined funnel.",
+      "status": "next"
+    },
+    {
+      "title": "Ask Anna for Larger Lookalike Email List (50-100+)",
+      "description": "16 contacts is below quality threshold. Need at least 50 production company contacts.",
+      "status": "next"
+    }
+  ],
+
+  "recommendation": {
+    "title": "Fix the Measurement, Then Optimize",
+    "context": "Before making more campaign changes, we need to fix how we're measuring success. The PostHog funnel is giving us misleading conversion data, and we just got GTM installed to close the self-serve tracking gap. Next week we'll have clean data on both conversion paths for the first time.",
+
+    "changes": [
+      {
+        "title": "1. Fix PostHog Funnels (This Weekend)",
+        "description": "Split the current single funnel into two: Enterprise path (pageview → cal_modal_opened) and Self-Serve path (pageview → plan_signup_clicked → signup_completed). This gives us accurate conversion rates for each path instead of a misleading blended number.",
+        "impact": "Clean data = better decisions. We'll know the true enterprise demo booking rate and the true self-serve signup rate separately."
+      },
+      {
+        "title": "2. Monitor GTM Signup Data (Next Week)",
+        "description": "The GTM tags we just installed should start showing signup_completed events on finalbitai.com. If even a fraction of those 15 weekly plan_signup_clicks are converting to actual signups, the campaign ROI looks very different than the 1 demo booking suggests.",
+        "impact": "Could reveal that the campaign is already profitable on self-serve revenue, even without enterprise demos."
+      },
+      {
+        "title": "3. Decide on Video Budget After Next Week's Data",
+        "description": "Video is paused with modified targeting. Options: (a) reactivate with new targeting and give it one more week, (b) reallocate $20/day to Static ($30) + AU/DE/FR ($10). Recommend waiting for one more week of Static-only data before deciding.",
+        "impact": "Either doubles down on the winner or gives Video a fair shot with cleaner targeting."
+      }
+    ],
+
+    "proposedBudget": {
+      "total": "$50/day ($1,500/mo)",
+      "campaigns": [
+        { "name": "Static - US/CA/UK", "daily": "$20", "note": "Keep as-is this week. If Video stays paused, increase to $30 next week." },
+        { "name": "Video - US/CA/UK", "daily": "$20", "note": "Paused (ads inactive). Decision next week: reactivate or reallocate." },
+        { "name": "Static + Video - AU/DE/FR", "daily": "$10", "note": "Just launched. Monitoring." }
+      ]
+    }
+  },
+
+  "posthogAudit": {
+    "title": "PostHog Setup Audit",
+    "status": "Issues Found",
+    "findings": [
+      {
+        "issue": "Funnel misconfigured — parallel paths treated as sequential",
+        "severity": "High",
+        "detail": "plan_signup_clicked (self-serve) and cal_modal_opened (enterprise demo) are alternative exit paths, not funnel steps. Current setup makes it look like there's a 76% drop between them, but they're different user groups.",
+        "fix": "Create two separate funnels in PostHog"
+      },
+      {
+        "issue": "No reverse proxy — 10-25% event loss from ad blockers",
+        "severity": "Medium",
+        "detail": "PostHog initialized with api_host 'us.i.posthog.com'. All events route through PostHog's domain, which ad blockers target. PostHog warns about this at the top of every dashboard.",
+        "fix": "Set up a reverse proxy at try.finalbitai.com/ingest → us.i.posthog.com. Requires domain/hosting access, which FinalBit hasn't provided."
+      },
+      {
+        "issue": "Dead analytics events in codebase",
+        "severity": "Low",
+        "detail": "cta_clicked is defined but never called. demo_requested and trial_started exist but their components (DemoForm, EmailCapture) aren't on the enterprise page. Template leftovers.",
+        "fix": "Clean up or remove unused events. Low priority."
+      },
+      {
+        "issue": "View Pricing buttons only tracked via autocapture",
+        "severity": "Low",
+        "detail": "Hero and Features 'View Pricing' buttons have data-ph-capture-attribute-button-id but no explicit custom event. They show up in autocapture but aren't as reliable as custom events.",
+        "fix": "Add analytics.ctaClicked() calls to View Pricing buttons, or rely on autocapture (acceptable)."
+      }
+    ]
+  },
+
+  "nextSteps": [
+    "Fix PostHog funnel — split into Enterprise and Self-Serve paths",
+    "Verify GTM tags are firing on finalbitai.com — check for signup_completed events",
+    "Monitor AU/DE/FR secondary market for first signals",
+    "Ask Anna for 50-100+ contacts for proper lookalike audience",
+    "Decide on Video budget reallocation after next week's data",
+    "Confirm N8N team-size branching works on next real booking"
+  ],
+
+  "videoUrl": ""
+}
