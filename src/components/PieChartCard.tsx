@@ -28,9 +28,9 @@ export function PieChartCard({ chart }: { chart: ChartData }) {
   const ref = useRef<HTMLDivElement>(null);
   const { tooltipBg, textColor, borderColor } = useThemeColors(ref);
 
-  const data = chart.data.labels.map((label, i) => ({
+  const data = (chart.data.labels ?? []).map((label, i) => ({
     name: label,
-    value: chart.data.values[i] ?? 0,
+    value: (chart.data.values ?? [])[i] ?? 0,
   }));
 
   return (

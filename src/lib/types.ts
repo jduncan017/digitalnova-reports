@@ -9,25 +9,35 @@ export type Metric = {
 
 export type FunnelStep = {
   label: string;
-  count: number;
-  pct: number;
+  count: number | string;
+  pct: number | string;
+  note?: string;
+};
+
+export type FunnelPath = {
+  name: string;
+  steps: FunnelStep[];
 };
 
 export type Funnel = {
   title: string;
   source: string;
-  steps: FunnelStep[];
-  notes: string;
+  steps?: FunnelStep[];
+  paths?: FunnelPath[];
+  notes?: string;
 };
 
 export type ChartData = {
   id: string;
-  type: "bar" | "horizontal-bar" | "pie" | "doughnut" | "line";
+  type: "bar" | "horizontal-bar" | "pie" | "doughnut" | "line" | "table";
   title: string;
   width?: "full" | "half";
   data: {
-    labels: string[];
-    values: number[];
+    labels?: string[];
+    values?: number[];
+    headers?: string[];
+    rows?: string[][];
+    note?: string;
   };
 };
 

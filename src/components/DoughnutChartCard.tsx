@@ -3,10 +3,10 @@
 import { type ChartData } from "~/lib/types";
 
 export function DoughnutChartCard({ chart }: { chart: ChartData }) {
-  const data = chart.data.labels
+  const data = (chart.data.labels ?? [])
     .map((label, i) => ({
       name: label,
-      value: chart.data.values[i] ?? 0,
+      value: (chart.data.values ?? [])[i] ?? 0,
     }))
     .sort((a, b) => b.value - a.value);
 

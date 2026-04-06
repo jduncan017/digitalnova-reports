@@ -19,7 +19,7 @@ export function BarChartCard({ chart }: { chart: ChartData }) {
     useThemeColors(ref);
 
   const values = chart.data.values ?? [];
-  const data = chart.data.labels.map((label, i) => ({
+  const data = (chart.data.labels ?? []).map((label, i) => ({
     name: label,
     value: values[i] ?? 0,
   }));
