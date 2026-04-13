@@ -1,0 +1,175 @@
+{
+  "client": "FinalBit",
+  "reportTitle": "Meta Ads Week 5 Report",
+  "reportSubtitle": "Best CPL Week, Lookalike Audience Ready, Campaign Restructure",
+  "period": "Apr 4 – Apr 10, 2026",
+  "date": "2026-04-10",
+  "platform": "Meta Ads",
+  "summary": "Best week of the campaign so far — 6 leads at ~$55 CPL across all three ad sets. That's nearly half the cost per lead of our best previous week ($90). Video bounced back to match Static after refined targeting, and AU/DE/FR got its first lead at ~$55.\n\nOn the funnel side, B2C interest is at an all-time high (21 plan signup clicks, up from 16 last week). Still waiting on GTM access to see if those signup clicks are converting.\n\nAnna provided a 1,395-contact LinkedIn audience (studio professionals), which I've formatted and filtered to 1,228 contacts in our target countries. Combined with her request to narrow age to 32-48 and drop Germany/France, we're restructuring to four ad sets: interest and lookalike audiences, each with static and video creative, at $12.50/day each.",
+
+  "kpis": {
+    "reach": null,
+    "clicks": null,
+    "demosBooked": 5,
+    "cpl": 55.36
+  },
+
+  "metrics": [
+    {
+      "label": "Ad Spend",
+      "value": "$276.81",
+      "note": "Down from $336 last week at nearly double the leads."
+    },
+    {
+      "label": "Leads (Demo Bookings)",
+      "value": "5",
+      "note": "Best week since launch. All three ad sets contributing."
+    },
+    {
+      "label": "Cost per Lead",
+      "value": "$55.36",
+      "note": "Down from $336 2 weeks ago, $90 the week before. Algorithm seems to have found a groove."
+    },
+    {
+      "label": "Plan Signup Clicks",
+      "value": "21",
+      "note": "Highest ever. B2C paths have momentum, but need GTM to track signups."
+    }
+  ],
+
+  "funnel": {
+    "title": "Conversion Paths (Last 7 Days)",
+    "source": "PostHog",
+    "paths": [
+      {
+        "name": "Enterprise Demo Path",
+        "steps": [
+          { "label": "Landing Page Visitors", "count": 297, "pct": 100 },
+          { "label": "Cal Modal Opened", "count": 12, "pct": 4.04 },
+          { "label": "Demo Booked (Meta)", "count": 5, "pct": 1.68 }
+        ]
+      },
+      {
+        "name": "B2C Path",
+        "steps": [
+          { "label": "Landing Page Visitors", "count": 297, "pct": 100 },
+          { "label": "Plan Signup Clicked", "count": 21, "pct": 7.07 },
+          {
+            "label": "Signup Completed",
+            "count": "?",
+            "pct": null,
+            "note": "Still waiting on GTM access"
+          }
+        ],
+        "tierBreakdown": {
+          "note": "30-day plan_signup_clicked by tier",
+          "tiers": [
+            {
+              "tier": "Basic (free)",
+              "clicks": 45,
+              "pct": 67,
+              "monthlyPrice": 0
+            },
+            { "tier": "Creator", "clicks": 13, "pct": 19, "monthlyPrice": 28 },
+            { "tier": "Pro", "clicks": 9, "pct": 13, "monthlyPrice": 70 }
+          ],
+          "revenueceiling": "$994/mo if all 22 paid-tier clicks converted",
+          "adSpendComparison": "$1,366/mo spend — breakeven requires ~2 months retention per user"
+        }
+      }
+    ]
+  },
+
+  "charts": [
+    {
+      "id": "adset-performance-this-week",
+      "type": "table",
+      "title": "Ad Set Performance — This Week (Apr 4–10)",
+      "width": "full",
+      "data": {
+        "headers": ["Ad Set", "Status", "Leads", "CPL", "Spend", "Impressions"],
+        "rows": [
+          ["Static - US/CA/UK", "Active", "2", "$55.75", "$111.50", "3,562"],
+          ["Video - US/CA/UK", "Active", "2", "$55.10", "$110.19", "2,721"],
+          [
+            "Static + Video - AU/DE/FR",
+            "Active",
+            "1",
+            "$55.12",
+            "$55.12",
+            "2,275"
+          ],
+          ["TOTAL", "", "5", "$55.36", "$276.81", "8,558"]
+        ]
+      }
+    },
+    {
+      "id": "cta-clicks-trend",
+      "type": "table",
+      "title": "Button Click Trends by Week (PostHog)",
+      "width": "full",
+      "data": {
+        "headers": [
+          "Button",
+          "Wk Mar 15",
+          "Wk Mar 22",
+          "Wk Mar 29",
+          "Wk Apr 5"
+        ],
+        "rows": [
+          ["View Pricing", "20", "35", "29", "47"],
+          ["Book a Demo", "21", "19", "18", "7"],
+          ["Start Free", "8", "14", "12", "13"],
+          ["Book a Demo — Save 90%", "8", "3", "10", "5"]
+        ]
+      }
+    },
+    {
+      "id": "plan-signup-by-tier",
+      "type": "bar",
+      "title": "Plan Signup Clicks by Tier (30-Day)",
+      "width": "full",
+      "data": {
+        "labels": ["Basic (free)", "Creator ($28/mo)", "Pro ($70/mo)"],
+        "values": [45, 13, 9]
+      },
+      "note": "67% of self-serve interest is on the free tier. 22 paid-tier clicks = $994/mo revenue ceiling if all converted."
+    }
+  ],
+
+  "findings": [
+    {
+      "title": "All Three Ad Sets Converged Around $55 CPL",
+      "description": "Static ($55.75), Video ($55.10), and AU/DE/FR ($55.12) all delivered leads at nearly the same cost this week. This is a significant shift from last week when Video produced zero leads and the week before when Static was 2.4x more efficient."
+    },
+    {
+      "title": "B2C Interest remains high, Demo Interest remains low",
+      "description": "Plan signup clicks hit 21 (up from 16), while cal_modal_opened dropped to 12 (from 29). 'View Pricing' button clicks surged to 47 (from 29). 'Book a Demo' clicks fell to 7 (from 18). Visitors are increasingly exploring pricing and self-serve tiers rather than the enterprise demo path."
+    },
+    {
+      "title": "Lead Quality Is the Bottleneck, Not Volume",
+      "description": "CRM notes show most demos are B2C individual creators, low-budget prospects, or single-person operations. At $55 CPL the volume is there, but converting to enterprise revenue requires reaching higher-quality prospects — which the new lookalike audience is designed to address."
+    }
+  ],
+
+  "actions": [
+    {
+      "title": "Formatted 1,228-Contact LinkedIn Audience for Meta Upload",
+      "description": "Processed Anna's 1,395 LinkedIn contacts (studio professionals, 10+ employees). Filtered to US/UK/CA/AU, mapped to Meta's CSV template with email, name, location, zip, and company size as value signal.",
+      "status": "done"
+    },
+    {
+      "title": "Campaign Restructure to 4 Ad Sets",
+      "description": "New structure: Interest Static, Interest Video, Lookalike Static, Lookalike Video — $12.50/day each. Retiring AU/DE/FR ad set, folding AU into primary geos. Age narrowed to 32-48 per Anna.",
+      "status": "done"
+    }
+  ],
+
+  "nextSteps": [
+    "Monitor first week of restructured campaign closely — age narrowing may temporarily affect CPL",
+    "Follow up on GTM access for finalbitai.com to close the signup attribution loop",
+    "Check Pipedrive in 2 weeks to compare lead quality between interest and lookalike audiences"
+  ],
+
+  "videoUrl": "https://supercut.ai/share/digitalnova-studio/ZDUU2qlFe_Cdm5R5PPKffy"
+}

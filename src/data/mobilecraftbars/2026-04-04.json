@@ -1,0 +1,120 @@
+{
+  "client": "Mobile Craft Bars",
+  "reportTitle": "Google Ads Weekly Report",
+  "reportSubtitle": "Slow Week, Busy Season Competition Heating Up",
+  "period": "Mar 29 – Apr 4, 2026",
+  "date": "2026-04-04",
+  "platform": "Google Ads",
+  "summary": "Tough week on conversions — 1 booking at $320.50 vs 5 at $56 last week. Traffic quality is still solid (clean search terms, stable CTR) so this looks like small-sample variance rather than a real problem.\n\nThe bigger story: four new local competitors entered the Google Ads auction this week — Velvet Alchemy, Bad Rabbit Caravan, CaterCow, and The Next Course. Event season is ramping up in Denver, which pushed CPC up 17% from $6.52 to $7.63. Thumbtack remains the top competitor with nearly identical impression share. MCB is holding position well — 82% top of page — but the auction is getting more expensive.",
+
+  "kpis": {
+    "conversions": 1,
+    "adSpend": 320.5,
+    "costPerConversion": 320.5,
+    "cpc": 7.63
+  },
+
+  "metrics": [
+    {
+      "label": "Conversions",
+      "value": "1",
+      "note": "Down from 5 last week. Likely variance — traffic quality is unchanged."
+    },
+    {
+      "label": "Ad Spend",
+      "value": "$320",
+      "note": "Up from $281 last week. Still budget-limited at $40/day."
+    },
+    {
+      "label": "Avg CPC",
+      "value": "$7.63",
+      "note": "Up 17% from $6.52. More competitors in the auction as event season ramps up."
+    },
+    {
+      "label": "CTR",
+      "value": "9.17%",
+      "note": "Stable — ad relevance holding up despite more competition."
+    }
+  ],
+
+  "funnel": {
+    "title": "Ad-to-Booking Funnel",
+    "source": "Google Ads",
+    "steps": [
+      { "label": "Impressions", "count": 458, "pct": 100 },
+      { "label": "Clicks", "count": 42, "pct": 9.17 },
+      { "label": "Bookings", "count": 1, "pct": 0.22 }
+    ],
+    "notes": "Search terms are clean — zero spam. 'Bartenders for hire' still drives 97% of spend."
+  },
+
+  "charts": [
+    {
+      "id": "competitor-landscape",
+      "type": "horizontal-bar",
+      "title": "Auction Impression Share — Who's Competing",
+      "width": "full",
+      "data": {
+        "labels": [
+          "thumbtack.com (16.2%)",
+          "You — MCB (15.8%)",
+          "badrabbitcaravan.com (<10%)",
+          "velvetalchemymobilespirits.com (<10%)",
+          "bark.com (<10%)",
+          "catercow.com (<10%)"
+        ],
+        "values": [16.2, 15.8, 8, 8, 7, 5]
+      }
+    },
+    {
+      "id": "cpc-trend",
+      "type": "table",
+      "title": "CPC Trend — Event Season Is Driving Up Costs",
+      "data": {
+        "headers": [
+          "Week",
+          "Avg CPC",
+          "Clicks",
+          "Conversions",
+          "New Competitors"
+        ],
+        "rows": [
+          ["Mar 14–20", "$5.53", "41", "1", "—"],
+          ["Mar 21–27", "$6.52", "47", "5", "—"],
+          ["Mar 29–Apr 4", "$7.63", "42", "1", "+4 local competitors"]
+        ]
+      }
+    }
+  ],
+
+  "findings": [
+    {
+      "title": "Event Season Competition Is Here",
+      "description": "Four new local competitors entered the auction: Velvet Alchemy Mobile Spirits, Bad Rabbit Caravan, CaterCow, and The Next Course Co. Previous competitors Barmasters and Moderncate have dropped off. CPC jumped 17% ($6.52 → $7.63) as more Denver mobile bar companies turn on Google Ads for event season."
+    },
+    {
+      "title": "Thumbtack Is Still the Top Competitor",
+      "description": "Nearly identical impression share (16.2% vs 15.8%) and they beat MCB on position about half the time. MCB is holding its own with 82% top of page rate — strong positioning despite the increased competition."
+    }
+  ],
+
+  "actions": [
+    {
+      "title": "Reviewed Search Terms",
+      "description": "All visible search terms are relevant — event bartending, hire a bartender, denver wedding catering, wedding bar cart. Zero spam. A few competitor brand searches (tap truck denver, the one mobile bar) showing buyer intent.",
+      "status": "done"
+    },
+    {
+      "title": "Analyzed Auction Insights for New Competitors",
+      "description": "Identified 4 new local competitors entering the auction. CPC increase correlates with the busier auction. This is seasonal — expect it to continue through summer.",
+      "status": "done"
+    }
+  ],
+
+  "nextSteps": [
+    "Monitor whether conversion volume recovers next week — one bad week isn't a trend.",
+    "Track CPC trajectory as event season continues. If it keeps climbing, discuss budget increase to maintain impression share."
+  ],
+
+  "videoUrl": ""
+}
