@@ -1,0 +1,116 @@
+{
+  "client": "Mobile Craft Bars",
+  "reportTitle": "Google Ads Weekly Report",
+  "reportSubtitle": "Traffic Quality Improving, Fixed the CPA Target",
+  "period": "Apr 3 – 10, 2026",
+  "date": "2026-04-10",
+  "platform": "Google Ads",
+  "summary": "Traffic quality improved last week — CPC dropped 22% ($7.63 to $5.92), CTR climbed to 10.61%, and click volume ticked up slightly. Competitive pressure from the new local entrants eased a bit in the auction.\n\nConversions are back at 1 for the week though, which is the signal I've been watching. I dug into the account and found a propbably issue: a change back on Apr 4 dropped the Target CPA from $100 to the $80 campaign default, even though actual cost per conversion has been running around $153 over the last 30 days. Smart Bidding was walking away from auctions because it couldn't hit a target that was roughly half of reality. I reverted that today and added 4 high-intent exact match keywords to give the algorithm better signals to work with.",
+
+  "kpis": {
+    "conversions": 1,
+    "adSpend": 289.91,
+    "costPerConversion": 289.91,
+    "cpc": 5.92
+  },
+
+  "metrics": [
+    {
+      "label": "Ad Spend",
+      "value": "$290",
+      "note": "Down $30 from the previous week. Still budget-limited at $40/day but Smart Bidding held back on some days."
+    },
+    {
+      "label": "Conversions",
+      "value": "1",
+      "note": "Flat at 1 for a second week. Expecting recovery now that the CPA target is realistic."
+    },
+    {
+      "label": "Cost per Conversion",
+      "value": "$289.91",
+      "note": "Down from $320 last week but still well above our $153 30-day average."
+    },
+    {
+      "label": "CTR",
+      "value": "10.61%",
+      "note": "Up from 9.17%. Ads are resonating — people are clicking when they see us."
+    }
+  ],
+
+  "funnel": {
+    "title": "Ad-to-Booking Funnel",
+    "source": "Google Ads",
+    "steps": [
+      { "label": "Impressions", "count": 462, "pct": 100 },
+      { "label": "Clicks", "count": 49, "pct": 10.61 },
+      { "label": "Bookings", "count": 1, "pct": 0.22 }
+    ],
+    "notes": "'Bartenders for hire' broad match still drove 97% of spend ($282 of $290) — concentration risk persists."
+  },
+
+  "charts": [
+    {
+      "id": "cpc-trend",
+      "type": "table",
+      "title": "Weekly Trend — CPC Cooled Off This Week",
+      "data": {
+        "headers": ["Week", "Impr", "Clicks", "CTR", "Avg CPC", "Cost", "Conv"],
+        "rows": [
+          ["Mar 14–20", "374", "41", "—", "$5.53", "$226.80", "1"],
+          ["Mar 21–27", "345", "47", "8.98%", "$6.52", "$281.18", "5"],
+          ["Mar 29–Apr 4", "458", "42", "9.17%", "$7.63", "$320.50", "1"],
+          ["Apr 3–10", "462", "49", "10.61%", "$5.92", "$289.91", "1"]
+        ]
+      }
+    },
+    {
+      "id": "keyword-spend-concentration",
+      "type": "horizontal-bar",
+      "title": "Spend by Keyword — The Concentration Problem",
+      "width": "full",
+      "data": {
+        "labels": [
+          "bartenders for hire (broad)",
+          "All phrase match keywords combined",
+          "All other broad terms"
+        ],
+        "values": [281.95, 0, 7.96]
+      }
+    }
+  ],
+
+  "findings": [
+    {
+      "title": "The Algorithm Likely Backed Off",
+      "description": "Over the past 30 days actual cost per conversion has been $153 — Smart Bidding couldn't hit $80, so it pulled back on bids and impression share. That aligns with what we saw: strong CTR and clean search terms, but suppressed volume."
+    },
+    {
+      "title": "Competitive CPC Pressure Eased This Week",
+      "description": "Avg CPC dropped from $7.63 to $5.92 — a 22% decrease. Either some of last week's new local entrants (Velvet Alchemy, Bad Rabbit Caravan, etc.) pulled back on bids, or google views our ads as more relevant. CTR of 10.61% suggests the latter is at least partly true."
+    },
+    {
+      "title": "Broad Match Concentration Is Still 97%",
+      "description": "'Bartenders for hire' broad match continues to eat 97% of spend ($282 of $290). Phrase match keywords got basically zero spend again this week. TWe've been tracking this long enough to do something about it."
+    }
+  ],
+
+  "actions": [
+    {
+      "title": "Reverted Target CPA to $100 at the Ad Group Level",
+      "description": "Set a $100 Target CPA override on the Bar Catering ad group so Smart Bidding stops optimizing to the unrealistic $80 default. This gives the algorithm room to bid in auctions where it thinks a conversion is likely to come in above $80.",
+      "status": "done"
+    },
+    {
+      "title": "Added 4 Exact Match High-Intent Keywords",
+      "description": "Added [hire a bartender], [bartender for hire], [event bartending], and [bartender rental for party] as exact match. These are all search terms that have been converting or showing high intent in search term reports. Exact match gives Smart Bidding a cleaner signal than relying on one broad match keyword.",
+      "status": "done"
+    }
+  ],
+
+  "nextSteps": [
+    "Watch for conversion recovery over the next 7-10 days as Smart Bidding re-learns against the $100 target.",
+    "Track impression volume on the new exact match keywords — 'Pending Under review' status should clear within 24 hours."
+  ],
+
+  "videoUrl": "https://supercut.ai/share/digitalnova-studio/qkMVs4s5SzMOEKPr0ni-Fg"
+}

@@ -7,10 +7,16 @@ import {
   AlertTriangle,
   ExternalLink,
   Eye,
+  Archive,
 } from "lucide-react";
 import { isAdminAuthenticated } from "~/lib/admin-auth";
 import { NotifyButton } from "~/components/NotifyModal";
-import { getAllClientSlugs, getClient, getClientPassword } from "~/lib/clients";
+import {
+  getActiveClientSlugs,
+  getArchivedClientSlugs,
+  getClient,
+  getClientPassword,
+} from "~/lib/clients";
 import { getReportDates, getReport, formatDate } from "~/lib/reports";
 
 type ClientSummary = {
@@ -26,7 +32,7 @@ type ClientSummary = {
 };
 
 async function getClientSummaries(): Promise<ClientSummary[]> {
-  const slugs = getAllClientSlugs();
+  const slugs = getActiveClientSlugs();
   const summaries: ClientSummary[] = [];
 
   for (const slug of slugs) {
@@ -71,6 +77,7 @@ export default async function AdminDashboard() {
   const staleClients = clients.filter(
     (c) => c.daysSinceLastReport !== null && c.daysSinceLastReport > 7,
   );
+  const archivedCount = getArchivedClientSlugs().length;
 
   return (
     <div className="min-h-screen bg-[#0f1115]">
@@ -130,9 +137,18 @@ export default async function AdminDashboard() {
 
         {/* Client overview */}
         <div className="mb-8">
-          <h2 className="mb-4 text-lg font-semibold text-[#e4e4e7]">
-            Clients
-          </h2>
+          <div className="mb-4 flex items-center justify-between">
+            <h2 className="text-lg font-semibold text-[#e4e4e7]">Clients</h2>
+            {archivedCount > 0 && (
+              <Link
+                href="/admin/archived"
+                className="flex items-center gap-1.5 text-sm text-[#71717a] transition hover:text-[#e4e4e7]"
+              >
+                <Archive className="h-3.5 w-3.5" />
+                {archivedCount} archived
+              </Link>
+            )}
+          </div>
           <div className="space-y-3">
             {clients.map((client) => (
               <div

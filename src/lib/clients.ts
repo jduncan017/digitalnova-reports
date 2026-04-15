@@ -15,6 +15,9 @@ export type ClientConfig = {
   splash?: string;
   brand: ClientBrand;
   trendCharts: TrendChartConfig[];
+  archived?: boolean;
+  archivedAt?: string;
+  archivedReason?: string;
 };
 
 const clients: Record<string, ClientConfig> = {
@@ -63,6 +66,9 @@ const clients: Record<string, ClientConfig> = {
     logo: "/logos/eventcombo.png",
     emails: ["saroosh@eventcombo.com"],
     splash: "/splash-images/eventcombo.webp",
+    archived: true,
+    archivedAt: "2026-04-14",
+    archivedReason: "Client dropped off",
     brand: {
       background: "#fff",
       surface: "#FFF0ED",
@@ -187,6 +193,14 @@ export function getClientPassword(slug: string): string | undefined {
 
 export function getAllClientSlugs(): string[] {
   return Object.keys(clients);
+}
+
+export function getActiveClientSlugs(): string[] {
+  return Object.keys(clients).filter((slug) => !clients[slug]?.archived);
+}
+
+export function getArchivedClientSlugs(): string[] {
+  return Object.keys(clients).filter((slug) => clients[slug]?.archived);
 }
 
 export function getDnLogo(client: ClientConfig): string {
