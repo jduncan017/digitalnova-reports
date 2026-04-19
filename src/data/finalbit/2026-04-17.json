@@ -1,0 +1,184 @@
+{
+  "client": "FinalBit",
+  "reportTitle": "Meta Ads Week 6 Report",
+  "reportSubtitle": "Restructured Campaign Week 1, Best CPL Ever, Lookalike Video Outlier",
+  "period": "Apr 11 - Apr 17, 2026",
+  "date": "2026-04-17",
+  "platform": "Meta Ads",
+  "summary": "First week running the restructured 4 ad set campaign and it produced our best week to date: 7 demos at $43.92 CPL on $307 spend. That beats last week (5 demos at $55.36) on every dimension, and beats every prior week of the campaign too.\n\nThe story inside the breakdown is the Lookalike Video ad set. 4 of the 7 demos came from it at a $16.54 CPL, roughly a third of any prior week's cost per lead. The other three active ad sets each delivered 1 demo at $68 to $87 CPL. With only one week of post-restructure data, I want to be careful not to overweight one strong week from a single ad set on a small sample.\n\nOn the self-serve side, paid-tier signup intent moved up. 9 of 20 plan signup clicks this week were on Pro or Creator (45% paid share, up from 33% on the prior 30-day snapshot). Pro alone hit 5 clicks in 7 days, more than half its prior 30-day total.\n\nNo budget changes this week. Next Friday we'll have 2 weeks of post-restructure data on each ad set and can make a more confident reallocation call rather than reacting to one week of small-sample variance.",
+
+  "videoUrl": "https://supercut.ai/share/digitalnova-studio/T7bzqrliurzG_95I1F1d_z",
+
+  "kpis": {
+    "reach": 3885,
+    "clicks": 137,
+    "demosBooked": 7,
+    "cpl": 43.92
+  },
+
+  "metrics": [
+    {
+      "label": "Ad Spend",
+      "value": "$307.41",
+      "note": "Up from $276.81 last week. AU/DE/FR ad set retired as planned.",
+      "status": "neutral"
+    },
+    {
+      "label": "Leads (Demo Bookings)",
+      "value": "7",
+      "note": "Best week of the campaign. Lookalike Video drove 4 of 7.",
+      "status": "good"
+    },
+    {
+      "label": "Cost per Lead",
+      "value": "$43.92",
+      "note": "Down from $55.36 last week. New all-time low.",
+      "status": "good"
+    },
+    {
+      "label": "Paid-Tier Signup Clicks",
+      "value": "9",
+      "note": "5 Pro + 4 Creator. 45% of plan signup clicks landed on a paid tier (up from 33% prior 30 days).",
+      "status": "good"
+    }
+  ],
+
+  "funnel": {
+    "title": "Conversion Paths (Last 7 Days)",
+    "source": "PostHog",
+    "paths": [
+      {
+        "name": "Enterprise Demo Path",
+        "steps": [
+          { "label": "Landing Page Visitors", "count": 164, "pct": 100 },
+          { "label": "Cal Modal Opened", "count": 20, "pct": 12.2 },
+          { "label": "Demo Booked (Meta)", "count": 7, "pct": 4.27 }
+        ]
+      },
+      {
+        "name": "Self-Serve Path",
+        "steps": [
+          { "label": "Landing Page Visitors", "count": 164, "pct": 100 },
+          { "label": "Plan Signup Clicked", "count": 20, "pct": 12.2 },
+          {
+            "label": "Signup Completed",
+            "count": "?",
+            "pct": null,
+            "note": "Awaiting tracking implementation"
+          }
+        ],
+        "tierBreakdown": {
+          "note": "7-day plan_signup_clicked by tier (Apr 11-17)",
+          "tiers": [
+            {
+              "tier": "Basic (free)",
+              "clicks": 11,
+              "pct": 55,
+              "monthlyPrice": 0
+            },
+            { "tier": "Pro", "clicks": 5, "pct": 25, "monthlyPrice": 70 },
+            { "tier": "Creator", "clicks": 4, "pct": 20, "monthlyPrice": 28 }
+          ],
+          "revenueceiling": "$462/mo if all 9 paid-tier clicks converted",
+          "adSpendComparison": "$1,317/mo equivalent ad spend, breakeven would require ~3 months retention per paid-tier user"
+        }
+      }
+    ]
+  },
+
+  "charts": [
+    {
+      "id": "adset-performance-this-week",
+      "type": "table",
+      "title": "Ad Set Performance, This Week (Apr 11-17)",
+      "width": "full",
+      "data": {
+        "headers": ["Ad Set", "Status", "Leads", "CPL", "Spend", "Impressions"],
+        "rows": [
+          ["Lookalike Video", "Active", "4", "$16.54", "$66.17", "1,231"],
+          ["Lookalike Static", "Active", "1", "$67.97", "$67.97", "1,324"],
+          [
+            "Interest Static (US/CA/UK/AU)",
+            "Active",
+            "1",
+            "$86.66",
+            "$86.66",
+            "2,580"
+          ],
+          [
+            "Interest Video (US/CA/UK/AU)",
+            "Active",
+            "1",
+            "$86.61",
+            "$86.61",
+            "1,851"
+          ],
+          ["AU/DE/FR (retired)", "Off", "0", "n/a", "$0.00", "n/a"],
+          ["TOTAL", "", "7", "$43.92", "$307.41", "6,986"]
+        ]
+      }
+    },
+    {
+      "id": "cta-clicks-trend",
+      "type": "table",
+      "title": "Button Click Trends by Week (PostHog)",
+      "width": "full",
+      "data": {
+        "headers": [
+          "Button",
+          "Wk Mar 15",
+          "Wk Mar 22",
+          "Wk Mar 29",
+          "Wk Apr 5",
+          "Wk Apr 12"
+        ],
+        "rows": [
+          ["View Pricing", "20", "35", "29", "47", "35"],
+          ["Book a Demo", "21", "19", "18", "7", "14"],
+          ["Start Free", "8", "14", "12", "13", "11"],
+          ["Book a Demo, Save 90%", "8", "3", "10", "5", "5"]
+        ]
+      }
+    },
+    {
+      "id": "plan-signup-by-tier",
+      "type": "bar",
+      "title": "Plan Signup Clicks by Tier (7-Day)",
+      "width": "full",
+      "data": {
+        "labels": ["Basic (free)", "Pro ($70/mo)", "Creator ($28/mo)"],
+        "values": [11, 5, 4]
+      },
+      "note": "55% of self-serve interest is on the free tier this week, down from 67% on prior 30-day snapshot. Pro tier clicks alone (5) are more than half its prior 30-day total (9)."
+    }
+  ],
+
+  "findings": [
+    {
+      "title": "Lookalike Video Drove 4 of 7 Demos at $16.54 CPL",
+      "description": "Best single ad set performance of the campaign. The other three active ad sets each produced 1 demo at $68 to $87 CPL on roughly equal $66 to $87 spend. Lookalike Static at $67.97 CPL is meaningfully behind its video counterpart even though both target the same audience, suggesting creative format is doing real work here, not just audience selection."
+    },
+    {
+      "title": "Paid-Tier Signup Mix Shifted Up",
+      "description": "Pro hit 5 clicks in 7 days versus 9 clicks across the entire prior 30 days. Creator stayed steady at 4. Basic dropped from 67% to 55% share of plan signup clicks. Total click volume held flat at 20, but the tier mix moved toward higher revenue intent."
+    },
+    {
+      "title": "Modal Opens Up Despite Tighter Targeting",
+      "description": "cal_modal_opened jumped to 20 (from 12 last week) on 164 unique visitors. That's a 12.2% modal-open rate, up from 4.0% last week. Narrowing the audience age to 32-48 and retiring secondary geos appears to have concentrated higher-intent visitors rather than thinned out demand."
+    }
+  ],
+
+  "actions": [
+    {
+      "title": "Ran Restructured Campaign for One Full Week, No Mid-Week Adjustments",
+      "description": "Held all 4 ad sets at $12.50/day each as launched on Apr 10. No budget shifts, no creative swaps, no audience tweaks. Goal was to get a clean week of post-restructure data before making any reallocation decisions.",
+      "status": "done"
+    }
+  ],
+
+  "nextSteps": [
+    "Hold all ad set budgets at $12.50/day for one more week to get 2 weeks of post-restructure data before any reallocation",
+    "Watch whether Lookalike Video sustains its $16-20 CPL range or regresses with more volume",
+    "Compare Lookalike Static vs Lookalike Video creative performance once both have a larger sample to determine whether to retire static or refresh the creative"
+  ]
+}

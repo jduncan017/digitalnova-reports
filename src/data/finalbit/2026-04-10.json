@@ -8,8 +8,8 @@
   "summary": "Best week of the campaign so far — 6 leads at ~$55 CPL across all three ad sets. That's nearly half the cost per lead of our best previous week ($90). Video bounced back to match Static after refined targeting, and AU/DE/FR got its first lead at ~$55.\n\nOn the funnel side, B2C interest is at an all-time high (21 plan signup clicks, up from 16 last week). Still waiting on GTM access to see if those signup clicks are converting.\n\nAnna provided a 1,395-contact LinkedIn audience (studio professionals), which I've formatted and filtered to 1,228 contacts in our target countries. Combined with her request to narrow age to 32-48 and drop Germany/France, we're restructuring to four ad sets: interest and lookalike audiences, each with static and video creative, at $12.50/day each.",
 
   "kpis": {
-    "reach": null,
-    "clicks": null,
+    "reach": 5669,
+    "clicks": 239,
     "demosBooked": 5,
     "cpl": 55.36
   },
