@@ -1,0 +1,157 @@
+{
+  "client": "FinalBit",
+  "reportTitle": "Meta Ads Week 8 Report",
+  "reportSubtitle": "Quieter Week After Two Record Highs — Reading It as Normal Variance",
+  "period": "Apr 25 - May 1, 2026",
+  "date": "2026-05-01",
+  "platform": "Meta Ads",
+  "summary": "We saw a dip this week, which isn't surprising after two back-to-back best-ever weeks. At 5 to 8 leads per week, this is the kind of swing you expect to see now and then.\n\nZooming out, the 3-week picture on Lookalike Video still looks healthy: 13 leads at a $23 blended CPL across that window, even with this week included. Most of the CPL jump traces back to the Apr 25 budget bump on that ad set (from $12.50 to $20/day), which usually triggers Meta to spend a few days re-learning before settling back in. The site funnel was a bit lighter across the board too (170 visitors vs 217, 14 modal opens vs 35, paid-tier mix at 12.5%), which reads more like a lower-intent traffic mix this week than anything broken on the page.\n\nWe'll chat Monday about a few ideas to keep momentum going. Top of the list: launching the high-spender Lookalike audience, refreshing the creative, and tightening up the funnel form for a smoother experience.",
+
+  "kpis": {
+    "adSpend": 359.44,
+    "impressions": 5999,
+    "reach": 3469,
+    "clicks": 145,
+    "leads": 5,
+    "cpl": 71.89,
+    "demosBooked": 5
+  },
+
+  "metrics": [
+    {
+      "label": "Ad Spend",
+      "value": "$359.44",
+      "note": "Flat vs $346.41 last week. New allocation paced as expected.",
+      "status": "neutral"
+    },
+    {
+      "label": "Leads (Demo Bookings)",
+      "value": "5",
+      "note": "Down from 8 last week. 3 of 5 still came from Lookalike Video.",
+      "status": "neutral"
+    },
+    {
+      "label": "Cost per Lead",
+      "value": "$71.89",
+      "note": "Up from $43.30 last week. Lookalike Video drove most of the swing after its Apr 25 budget bump.",
+      "status": "neutral"
+    },
+    {
+      "label": "Paid-Tier Signup Share",
+      "value": "12.5%",
+      "note": "1 of 8 plan signup clicks landed on a paid tier (1 Pro). Down from 48% last week.",
+      "status": "neutral"
+    }
+  ],
+
+  "funnel": {
+    "title": "Conversion Paths (Last 7 Days)",
+    "source": "PostHog",
+    "paths": [
+      {
+        "name": "Enterprise Demo Path",
+        "steps": [
+          { "label": "Landing Page Visitors", "count": 170, "pct": 100 },
+          { "label": "Cal Modal Opened", "count": 14, "pct": 8.2 },
+          { "label": "Demo Booked (Meta)", "count": 5, "pct": 2.9 }
+        ]
+      },
+      {
+        "name": "Self-Serve Path",
+        "steps": [
+          { "label": "Landing Page Visitors", "count": 170, "pct": 100 },
+          { "label": "Pricing Viewed", "count": 25, "pct": 14.7 },
+          { "label": "Plan Signup Clicked", "count": 8, "pct": 4.7 },
+          {
+            "label": "Signup Completed",
+            "count": "?",
+            "pct": null,
+            "note": "Awaiting tracking implementation"
+          }
+        ]
+      }
+    ]
+  },
+
+  "charts": [
+    {
+      "id": "adset-performance-this-week",
+      "type": "table",
+      "title": "Ad Set Performance, This Week (Apr 25 to May 1)",
+      "width": "full",
+      "data": {
+        "headers": ["Ad Set", "Status", "Leads", "CPL", "Spend", "Impressions"],
+        "rows": [
+          ["Lookalike Video", "Active", "3", "$47.32", "$141.95", "1,913"],
+          ["Lookalike Static", "Active", "1", "$106.76", "$106.76", "1,943"],
+          [
+            "Interest Production Video (US/CA/UK/AU)",
+            "Active",
+            "1",
+            "$105.71",
+            "$105.71",
+            "2,028"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "lookalike-video-3week",
+      "type": "table",
+      "title": "Lookalike Video, 3-Week View (Apr 11 to May 1)",
+      "width": "full",
+      "data": {
+        "headers": ["Week", "Leads", "CPL", "Spend"],
+        "rows": [
+          ["Wk 6 (Apr 11 to 17)", "4", "$19.69", "$78.75"],
+          ["Wk 7 (Apr 18 to 24)", "6", "$14.13", "$84.75"],
+          ["Wk 8 (Apr 25 to May 1)", "3", "$47.32", "$141.95"],
+          ["3-Week Total", "13", "$23.43", "$305.45"]
+        ],
+        "note": "Daily budget increased from $12.50 to $20 effective Apr 25. Higher spend at lower lead volume drove the CPL spike."
+      }
+    },
+    {
+      "id": "plan-signup-by-tier",
+      "type": "bar",
+      "title": "Plan Signup Clicks by Tier (7-Day)",
+      "width": "full",
+      "data": {
+        "labels": ["Basic (free)", "Pro ($70/mo)", "Creator ($28/mo)"],
+        "values": [7, 1, 0]
+      },
+      "note": "Just 12.5% of self-serve interest landed on a paid tier this week (1 of 8), down from 48% the prior week. Creator tier saw zero clicks for the first time since tracking started."
+    }
+  ],
+
+  "findings": [
+    {
+      "title": "Lookalike Video CPL Move Lines Up With the Apr 25 Budget Bump",
+      "description": "3 leads on $141.95 spend vs 6 leads on $84.75 last week. The daily budget went from $12.50 to $20 (a 60% jump) on Apr 25, well past the ~20% threshold that typically pushes Meta back into a short re-learning period. That usually resolves within a week. Zooming out, the ad set has produced 13 of 22 post-restructure leads across the last 3 weeks at a blended $23.43 CPL, so the underlying engine still looks healthy."
+    },
+    {
+      "title": "Softening Was Site-Wide, Not Isolated to One Ad Set",
+      "description": "Unique visitors to /enterprise dropped from 217 to 170 (down 22%), modal opens dropped from 35 to 14 (rate from 16.1% to 8.2%), and plan signup clicks dropped from 21 to 8. Lookalike Static and Interest Production Video also had quiet weeks (1 lead each, $106 and $105 CPL). When volume and conversion rates move down together across multiple ad sets, it usually points to a lower-intent traffic mix for the week rather than anything broken on the page or a single audience drying up."
+    }
+  ],
+
+  "actions": [
+    {
+      "title": "Held the Apr 25 Reallocation Through the Full Week",
+      "description": "Lookalike Video ran at $20/day, Lookalike Static at $15/day, Interest Production Video at $15/day, Interest Production Static stayed paused. Total daily budget held at $50. No mid-week intervention.",
+      "status": "done"
+    },
+    {
+      "title": "SMS Reminder System Still Awaiting Decision",
+      "description": "Proposed Apr 23. Will follow up at the Monday meeting after Anna's honeymoon. No new movement this week.",
+      "status": "pending"
+    }
+  ],
+
+  "videoUrl": "https://supercut.ai/share/digitalnova-studio/luoOBvlQB4PFAB6qISRnem",
+
+  "nextSteps": [
+    "Build the high-spender Lookalike audience this week so it can launch alongside the Week 9 report on May 8",
+    "Use Monday's meeting to align on the high-spender launch, creative refresh ideas, smoothing out the funnel form, and the SMS reminder decision"
+  ]
+}

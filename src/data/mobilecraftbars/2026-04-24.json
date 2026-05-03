@@ -1,0 +1,146 @@
+{
+  "client": "Mobile Craft Bars",
+  "reportTitle": "Google Ads 2-Week Update + Meta Ads Launch Prep",
+  "reportSubtitle": "The Apr 10 Fix Worked, CPA Halved, Volume Stayed Conservative",
+  "period": "Apr 11 - Apr 24, 2026",
+  "date": "2026-04-24",
+  "platform": "Google Ads",
+  "summary": "Quick note up front: this report covers a 2-week window since the last update. Going forward we'll be back on a weekly cadence, plus there's a Meta Ads campaign coming online soon that I'll fold in once it's live.\n\nThe headline is that the Apr 10 fix did exactly what we hoped. Conversions doubled (1 to 2), cost per conversion roughly halved ($290 to $107), and CPC came down 23% ($5.92 to $4.54). The ad group is now operating at an actually sustainable cost per booking inquiry. That's a real signal that the Target CPA reset and the new exact match keywords are pulling their weight.\n\nThe nuance is that Smart Bidding stayed conservative on volume. We spent $213 over 14 days, which is roughly $15/day on a $40/day campaign cap. So the algorithm is converting efficiently but it's not pushing for impression share the way it could. That's normal behavior when an ad group has just had a target change and the algorithm is rebuilding confidence. Two more weeks should tell us whether to nudge it further.\n\nThe one thing that hasn't changed is concentration. 'Bartenders for hire' broad match still ate 97% of spend ($207 of $213). The new exact match keyword '[bartender for hire]' got 19 impressions and 1 click. Until exact match builds search volume, the ad group is functionally a one-keyword campaign. That's a risk we should keep working on.\n\nThe other big news: we're launching Meta Ads for MCB. The owner sent me a brand-style video asset this week and I gave him notes plus 3 alternative script directions for higher-performing paid creative. Funnel and ad creative are in build. Target launch in early May, which means next month's reports will have both Google Ads and Meta Ads side by side.",
+
+  "kpis": {
+    "conversions": 2,
+    "adSpend": 213.24,
+    "costPerConversion": 106.62,
+    "cpc": 4.54
+  },
+
+  "metrics": [
+    {
+      "label": "Ad Spend (14 days)",
+      "value": "$213.24",
+      "note": "Roughly $15/day on a $40/day cap. Smart Bidding is still bidding conservatively post-fix.",
+      "status": "neutral"
+    },
+    {
+      "label": "Conversions",
+      "value": "2",
+      "note": "Up from 1 in the prior 7 days. Daily conversion rate roughly held (0.14/day vs 0.13/day).",
+      "status": "good"
+    },
+    {
+      "label": "Cost per Conversion",
+      "value": "$106.62",
+      "note": "Down from $289.91. Now within shouting distance of the $100 Target CPA we set on Apr 10.",
+      "status": "good"
+    },
+    {
+      "label": "CPC",
+      "value": "$4.54",
+      "note": "Down from $5.92 (-23%). Lowest CPC since mid-March. Auction pressure has eased and our quality signals are stronger.",
+      "status": "good"
+    }
+  ],
+
+  "funnel": {
+    "title": "Ad-to-Booking Funnel (14 Days)",
+    "source": "Google Ads",
+    "steps": [
+      { "label": "Impressions", "count": 545, "pct": 100 },
+      { "label": "Clicks", "count": 47, "pct": 8.62 },
+      { "label": "Conversions (Booking Inquiries)", "count": 2, "pct": 0.37 }
+    ],
+    "notes": "'Bartenders for hire' broad match still drove 97% of spend ($207 of $213). Concentration risk is unchanged from prior reports."
+  },
+
+  "charts": [
+    {
+      "id": "weekly-trend",
+      "type": "table",
+      "title": "Weekly Trend - Where We Are in Recovery",
+      "width": "full",
+      "data": {
+        "headers": ["Period", "Impr", "Clicks", "CTR", "Avg CPC", "Cost", "Conv", "CPA"],
+        "rows": [
+          ["Mar 14-20", "374", "41", "—", "$5.53", "$226.80", "1", "$226.80"],
+          ["Mar 21-27", "345", "47", "8.98%", "$6.52", "$281.18", "5", "$56.24"],
+          ["Mar 29-Apr 4", "458", "42", "9.17%", "$7.63", "$320.50", "1", "$320.50"],
+          ["Apr 3-10", "462", "49", "10.61%", "$5.92", "$289.91", "1", "$289.91"],
+          ["Apr 11-24 (2 wks)", "545", "47", "8.62%", "$4.54", "$213.24", "2", "$106.62"]
+        ],
+        "note": "The Apr 11-24 window is 2 weeks combined. Even at 14 days of data, total clicks landed in the same range as a typical week, which means daily volume came down ~45%. CPA dropped sharply though, which is what we wanted from the Apr 10 fix."
+      }
+    },
+    {
+      "id": "keyword-spend-concentration",
+      "type": "horizontal-bar",
+      "title": "Spend by Keyword - Concentration Is Unchanged",
+      "width": "full",
+      "data": {
+        "labels": [
+          "bartenders for hire (broad)",
+          "mobile bartender near me (broad)",
+          "[bartender for hire] (exact)"
+        ],
+        "values": [207.11, 4.87, 1.26],
+        "note": "Of $213 spent across 14 days, 97% went to one broad match keyword. The new exact match keyword we added Apr 10 has only attracted 19 impressions so far, which is normal for early-stage exact match in a small-volume account."
+      }
+    }
+  ],
+
+  "findings": [
+    {
+      "title": "The Apr 10 Fix Worked, Just at Conservative Volume",
+      "description": "Two conversions across 14 days at $106 CPA, vs 1 conversion at $290 in the prior week. The Target CPA reset to $100 gave Smart Bidding permission to find auctions where it could win at a realistic price, and it did. The trade-off is that the algorithm is still being cautious on bid levels: we spent $15/day on a $40/day cap, which means Google sees opportunity but isn't pushing hard yet. That's normal post-fix behavior. We need more conversion data before the algorithm bids more aggressively."
+    },
+    {
+      "title": "CPC Dropped 23%, CTR Came Off the Recent High",
+      "description": "Average CPC went from $5.92 to $4.54, the lowest since mid-March. Two likely drivers: the new local entrants from prior weeks (Velvet Alchemy, Bad Rabbit Caravan, etc.) appear to have eased back on bids, AND the new exact match keyword carries higher quality scores than broad match, which compounds into better auction economics. CTR ticked down from 10.61% to 8.62%, but at lower CPC that's actually fine. We're getting clicks for less, even if a slightly smaller percentage of impressions clicks through."
+    },
+    {
+      "title": "One Keyword is Still 97% of the Account",
+      "description": "'Bartenders for hire' broad match remains the workhorse: 478 impressions, 44 clicks, both conversions, $103 CPA. The two other active keywords (one broad, one exact) combined for $6 in spend. We've been flagging this for weeks and it's still true. The exact match keyword only got 19 impressions in 14 days, so there's no way to evaluate whether it's a winner yet. Until exact match builds search volume, the campaign's success is tied to a single broad match term."
+    }
+  ],
+
+  "actions": [
+    {
+      "title": "Monitored Apr 10 Fixes Across the 2-Week Window",
+      "description": "Verified Target CPA stayed at $100 at the ad group level (no further changes from Google), confirmed all 4 exact match keywords stayed approved and active. Of those 4, only [bartender for hire] has accrued any meaningful impression volume in 14 days. The others are eligible but Google hasn't surfaced them in auctions yet, which is normal for low-search-volume exact match terms.",
+      "status": "done"
+    },
+    {
+      "title": "Started Meta Ads Funnel and Creative Build",
+      "description": "Began designing the Meta Ads side of the campaign. Funnel will route to a discovery call booking flow (15-minute consult) which filters for higher-intent leads up front. The owner sent over a brand-style video asset and I gave detailed notes plus 3 alternative scripted directions to test. Targeting May 1 launch.",
+      "status": "pending"
+    }
+  ],
+
+  "recommendation": {
+    "title": "What Comes Next: Volume Push on Google + Meta Ads Coming Online",
+    "context": "We've now seen 2 weeks of post-fix Google Ads data. The conversion economics work at $106 CPA. The unsolved problem is volume. We're at 0.14 conversions/day on a campaign that could theoretically support more. Two parallel paths to address that.",
+    "changes": [
+      {
+        "title": "Nudge Target CPA Slightly Higher to Unlock Volume",
+        "description": "Raise Target CPA from $100 to $125 at the ad group level. This gives Smart Bidding permission to bid in auctions it currently considers borderline, which should lift impression share and click volume. The 30-day actual CPA is around $130, so $125 is honest about what it actually costs to convert in this auction without being so loose that we're paying for low-quality leads.",
+        "impact": "Expected outcome: 30-50% more daily clicks, similar conversion rate, CPA lands somewhere between $115-130. Trade-off: small risk that Smart Bidding bids on some weaker auctions before learning. We'll know within 5-7 days if it overshoots."
+      },
+      {
+        "title": "Launch Meta Ads to Reach a Different Audience Pool",
+        "description": "Google Ads catches people who are actively searching for a bartender right now. Meta Ads catches people in a different mental state: scrolling, planning, getting inspired about an event. Different funnel, different audience, complementary not redundant. Launch with the discovery call CTA built into the funnel so we filter out the low-budget tire-kickers from his last Meta attempt. Run 2-3 creative directions concurrently and let click-through and discovery call bookings tell us which voice works.",
+        "impact": "Adds a second channel of qualified leads at a price point we won't know until we run for 2-3 weeks. The funnel design (discovery call instead of direct booking) is what makes Meta worth doing this time. Last time the inbox was flooded with flakes because there was no qualifier. Now there is."
+      }
+    ],
+    "timeline": "Target CPA nudge can go in this week and start showing data within 5-7 days. Meta Ads target launch May 1, with first read on performance in the May 8 report.",
+    "whatWeNeed": [
+      "Approval on the Target CPA nudge from $100 to $125. I can implement immediately if it's a yes.",
+      "Owner's pick from the 3 Meta script directions I sent over (Comparison, Founder Selfie, or Side-by-Side Contrast), or a green-light to recut his existing brand video for paid alongside one of the alternatives.",
+      "Confirmation that the discovery call funnel destination is ready for traffic by May 1."
+    ]
+  },
+
+  "nextSteps": [
+    "Implement Target CPA $100 to $125 nudge once approved, monitor daily volume for 5-7 days",
+    "Finalize Meta Ads creative based on owner's selection, build campaigns, target May 1 launch",
+    "Continue watching whether [bartender for hire] exact match builds search volume, and whether the other 3 exact match keywords accrue any impressions"
+  ]
+}

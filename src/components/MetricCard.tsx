@@ -1,15 +1,6 @@
 import { type Metric } from "~/lib/types";
 
 export function MetricCard({ metric }: { metric: Metric }) {
-  const noteColor =
-    metric.status === "good"
-      ? "#059669"
-      : metric.status === "bad"
-        ? "#ef4444"
-        : metric.status === "warning"
-          ? "#f59e0b"
-          : "var(--primary)";
-
   return (
     <div
       className="card-shadow rounded-2xl p-4 backdrop-blur-sm sm:p-6"
@@ -30,7 +21,10 @@ export function MetricCard({ metric }: { metric: Metric }) {
       >
         {metric.value}
       </div>
-      <div className="mt-1.5 text-sm sm:text-[15px]" style={{ color: noteColor }}>
+      <div
+        className="mt-1.5 text-sm sm:text-[15px]"
+        style={{ color: "var(--text-muted)" }}
+      >
         {metric.note}
       </div>
     </div>
