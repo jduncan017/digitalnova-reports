@@ -1,0 +1,117 @@
+{
+  "client": "Miles & Memories",
+  "reportTitle": "April Marketing Report",
+  "reportSubtitle": "Content Marketing & LinkedIn Performance",
+  "period": "Apr 1 – Apr 30, 2026",
+  "date": "2026-04-30",
+  "platform": "Content Marketing",
+  "summary": "April was about getting Cancun to market. Two new Cancun blogs went live, a destination guide and a trip experience case study, adding to the growing blog catalog. The bigger story is organic search: Google sessions grew 71% month over month (14 to 24) as the published content starts to compound. Total website sessions hit 111, up modestly from March. LinkedIn impressions stayed low while we held posts for the Cancun carousel launch in early May. The LinkedIn ads pilot was presented; the decision was to revisit in the fall.",
+  "videoUrl": "",
+
+  "kpis": {
+    "websiteSessions": 111,
+    "linkedinFollowers": 251,
+    "linkedinImpressions": 11,
+    "linkedinEngagementRate": 9.09
+  },
+
+  "metrics": [
+    {
+      "label": "Website Sessions",
+      "value": "111",
+      "note": "Up 7% from 104 in March. Organic search up 71%.",
+      "status": "good"
+    },
+    {
+      "label": "LinkedIn Followers",
+      "value": "251",
+      "note": "+6 from last month. Steady organic growth without active posting.",
+      "status": "neutral"
+    },
+    {
+      "label": "LinkedIn Impressions",
+      "value": "11",
+      "note": "Posts held this month for the Cancun carousel launch in early May.",
+      "status": "warning"
+    },
+    {
+      "label": "Engagement Rate",
+      "value": "9.1%",
+      "note": "Sample size too small to be meaningful (1 engagement on 11 impressions).",
+      "status": "neutral"
+    }
+  ],
+
+  "charts": [
+    {
+      "id": "traffic-sources",
+      "type": "horizontal-bar",
+      "title": "Website Traffic Sources",
+      "width": "full",
+      "data": {
+        "labels": ["Direct", "Google / Organic", "Framer / Referral", "Claude.ai / Referral"],
+        "values": [81, 24, 5, 1]
+      }
+    },
+    {
+      "id": "top-blogs",
+      "type": "bar",
+      "title": "Top Blog Pages (Views)",
+      "width": "full",
+      "data": {
+        "labels": ["Banff Retreat", "Costa Rica Guide", "Cancun Guide", "Costa Rica Case Study", "Spring Break"],
+        "values": [6, 4, 3, 3, 3]
+      }
+    }
+  ],
+
+  "findings": [
+    {
+      "title": "Organic Search Is Compounding",
+      "description": "Google organic sessions grew from 14 in March to 24 in April, a 71% jump. The blog catalog is starting to do real work in search. As more destination content publishes, this should keep trending up."
+    },
+    {
+      "title": "Two New Cancun Blogs Now Live",
+      "description": "The Cancun destination guide and Cancun trip experience case study both published this month. They're already showing up in traffic and they round out the content trio (Costa Rica, Banff, Cancun) anchoring organic growth."
+    },
+    {
+      "title": "LinkedIn Was Quiet by Design",
+      "description": "Impressions came in at 11 because we intentionally held the Cancun carousels for a coordinated launch in early May. Followers still grew organically (+6 to 251), which means the audience is sticking around even without active posts."
+    }
+  ],
+
+  "actions": [
+    {
+      "title": "Cancun Destination Guide Blog",
+      "description": "Published a full Cancun and Riviera Maya group travel guide on the website.",
+      "status": "done"
+    },
+    {
+      "title": "Cancun Trip Experience Case Study",
+      "description": "Published the spring break case study covering 347 students across 6 groups.",
+      "status": "done"
+    },
+    {
+      "title": "Cancun LinkedIn Carousels",
+      "description": "Drafted and designed two LinkedIn carousel posts for the Cancun trip. Shipped early May.",
+      "status": "done"
+    },
+    {
+      "title": "LinkedIn Ads Pilot Proposal",
+      "description": "Presented the corporate-targeted ads pilot at our April 8 meeting. Decision was to revisit in the fall.",
+      "status": "done"
+    },
+    {
+      "title": "LinkedIn Article Versions of Cancun & Costa Rica Blogs",
+      "description": "Adapting both blog sets into LinkedIn article format to extend reach beyond the website.",
+      "status": "pending"
+    }
+  ],
+
+  "nextSteps": [
+    "Cancun LinkedIn carousels go live in early May.",
+    "Adapt the Cancun and Costa Rica blogs into LinkedIn article format to extend reach.",
+    "Banff was the top blog this month with 6 views; worth a follow-up piece or refresh to capitalize.",
+    "Revisit the LinkedIn ads pilot in the fall."
+  ]
+}
