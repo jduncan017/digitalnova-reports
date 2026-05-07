@@ -49,7 +49,12 @@
       "title": "Website Traffic Sources",
       "width": "full",
       "data": {
-        "labels": ["Direct", "Google / Organic", "Framer / Referral", "Claude.ai / Referral"],
+        "labels": [
+          "Direct",
+          "Google / Organic",
+          "Framer / Referral",
+          "Claude.ai / Referral"
+        ],
         "values": [81, 24, 5, 1]
       }
     },
@@ -59,7 +64,13 @@
       "title": "Top Blog Pages (Views)",
       "width": "full",
       "data": {
-        "labels": ["Banff Retreat", "Costa Rica Guide", "Cancun Guide", "Costa Rica Case Study", "Spring Break"],
+        "labels": [
+          "Banff Retreat",
+          "Costa Rica Guide",
+          "Cancun Guide",
+          "Costa Rica Case Study",
+          "Spring Break"
+        ],
         "values": [6, 4, 3, 3, 3]
       }
     }
@@ -73,10 +84,6 @@
     {
       "title": "Two New Cancun Blogs Now Live",
       "description": "The Cancun destination guide and Cancun trip experience case study both published this month. They're already showing up in traffic and they round out the content trio (Costa Rica, Banff, Cancun) anchoring organic growth."
-    },
-    {
-      "title": "LinkedIn Was Quiet by Design",
-      "description": "Impressions came in at 11 because we intentionally held the Cancun carousels for a coordinated launch in early May. Followers still grew organically (+6 to 251), which means the audience is sticking around even without active posts."
     }
   ],
 
