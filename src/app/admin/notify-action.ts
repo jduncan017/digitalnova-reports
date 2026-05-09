@@ -29,7 +29,7 @@ export async function sendNotification(
     <div style="font-family: -apple-system, sans-serif; max-width: 560px; margin: 0 auto;">
       <div style="white-space: pre-wrap; line-height: 1.6; color: #27272a; font-size: 15px;">${data.message}</div>
       <div style="margin-top: 32px; padding-top: 16px; border-top: 1px solid #e4e4e7;">
-        <img src="https://reports.digitalnovastudio.com/dn-logo-dark.png" alt="DigitalNova Studio" height="24" />
+        <img src="https://reports.digitalnovastudio.com/dn-logo-dark.png" alt="DigitalNova Studio" width="120" height="24" style="display:block; height:24px; width:auto; max-height:24px; max-width:200px; border:0;" />
       </div>
     </div>
   `;

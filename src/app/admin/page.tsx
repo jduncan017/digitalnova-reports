@@ -8,6 +8,7 @@ import {
   ExternalLink,
   Eye,
   Archive,
+  ClipboardList,
 } from "lucide-react";
 import { isAdminAuthenticated } from "~/lib/admin-auth";
 import { NotifyButton } from "~/components/NotifyModal";
@@ -139,15 +140,24 @@ export default async function AdminDashboard() {
         <div className="mb-8">
           <div className="mb-4 flex items-center justify-between">
             <h2 className="text-lg font-semibold text-[#e4e4e7]">Clients</h2>
-            {archivedCount > 0 && (
+            <div className="flex items-center gap-4">
               <Link
-                href="/admin/archived"
+                href="/admin/brand-questionnaire"
                 className="flex items-center gap-1.5 text-sm text-[#71717a] transition hover:text-[#e4e4e7]"
               >
-                <Archive className="h-3.5 w-3.5" />
-                {archivedCount} archived
+                <ClipboardList className="h-3.5 w-3.5" />
+                Questionnaire builder
               </Link>
-            )}
+              {archivedCount > 0 && (
+                <Link
+                  href="/admin/archived"
+                  className="flex items-center gap-1.5 text-sm text-[#71717a] transition hover:text-[#e4e4e7]"
+                >
+                  <Archive className="h-3.5 w-3.5" />
+                  {archivedCount} archived
+                </Link>
+              )}
+            </div>
           </div>
           <div className="space-y-3">
             {clients.map((client) => (
