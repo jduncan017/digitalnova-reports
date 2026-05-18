@@ -1,0 +1,145 @@
+{
+  "client": "FinalBit",
+  "reportTitle": "Meta Ads Week 10 Report",
+  "reportSubtitle": "Qualifier Filter Working, Demo Path Empty",
+  "period": "May 9 - 15, 2026",
+  "date": "2026-05-15",
+  "platform": "Meta Ads",
+  "summary": "Won't be doing a video recap this week, as the data is thin and I think we'll have greater insights next week after launching new creatives and having a few weeks of data. \n\n Week 10 was the first week with the new prequalifier modal in market, though the launch landed mid-week on May 11, so only five of the seven days operated on the new flow. \n\n The big picture: the qualifier filter is doing exactly what it was designed to do, and unfortuantely we got no demo sign ups this week. Six unique people opened the modal and all six ended up routed to the pricing page after selecting a solo or duo team size.\n\nThe ad-side story is the trend we have been watching for three weeks now landing where the pattern said it would. Lookalike Video and Lookalike Static combined to spend $247.83 and produce zero leads. Lookalike Video specifically posted leads of 4, 6, 3, 2, and 0 across the last five weeks, so the decline is no longer a wobble. The two leads Meta did credit this week both came from Interest Production Video on May 9 and 10 before the pause took full effect.\n\nThe big takeaway this week is that we're filtering B2C leads accurately now. Getting the new ad creative and targeting the new audience this week should help with attracting higher quality leads, and if we want to go further with B2C we could create a lead nurture sequence to encourage them to sign up and try higher pricing tiers.",
+
+  "kpis": {
+    "adSpend": 293.4,
+    "impressions": 4629,
+    "reach": 2756,
+    "clicks": 114,
+    "leads": 2,
+    "cpl": 146.7,
+    "demosBooked": 0
+  },
+
+  "metrics": [
+    {
+      "label": "Ad Spend",
+      "value": "$293.40",
+      "note": "Down $56.39 from $349.79 last week. Spend reduction came from Interest Production Video winding down after the May 11 pause.",
+      "status": "neutral"
+    },
+    {
+      "label": "Leads (Meta Pixel)",
+      "value": "2",
+      "note": "Both attributed to Interest Production Video on May 9 and 10, before the prequalifier launch. Zero leads credited to the active Lookalike ad sets.",
+      "status": "neutral"
+    },
+    {
+      "label": "Cost per Lead",
+      "value": "$146.70",
+      "note": "Mechanical lift. The two leads we did get came from a paused ad set on its first two days. The active ad sets spent $247.83 and produced nothing.",
+      "status": "neutral"
+    },
+    {
+      "label": "Demos Booked",
+      "value": "0",
+      "note": "Six unique visitors entered the qualifier modal post-launch and none completed a Cal booking.",
+      "status": "neutral"
+    }
+  ],
+
+  "funnel": {
+    "title": "Conversion Path (Post Launch May 11 to 15)",
+    "source": "PostHog",
+    "paths": [
+      {
+        "name": "Qualifier Funnel",
+        "steps": [
+          { "label": "Funnel Visitors", "count": 93, "pct": 100 },
+          { "label": "Qualifier modal opened", "count": 6, "pct": 6.5 },
+          { "label": "Routed to Pricing (Solo / Duo)", "count": 6, "pct": 6.5 },
+          {
+            "label": "Demo Booked on Cal",
+            "count": 0,
+            "pct": 0
+          }
+        ]
+      }
+    ]
+  },
+
+  "charts": [
+    {
+      "id": "prequalifier-answer-breakdown",
+      "type": "table",
+      "title": "Prequalifier Modal Answers (May 11 to 15)",
+      "width": "full",
+      "data": {
+        "headers": ["Step", "Answer", "Count"],
+        "rows": [
+          ["Team Size", "Just me", "5"],
+          ["Team Size", "2 of us", "1"],
+          ["Role", "Producer", "3"],
+          ["Role", "Director", "2"],
+          ["Role", "Other", "1"],
+          ["Production Timeline", "This month", "4"],
+          ["Production Timeline", "1 to 3 months", "2"]
+        ]
+      }
+    },
+    {
+      "id": "adset-performance-this-week",
+      "type": "table",
+      "title": "Ad Set Performance, This Week (May 9 to 15)",
+      "width": "full",
+      "data": {
+        "headers": ["Ad Set", "Status", "Leads", "CPL", "Spend", "Impressions"],
+        "rows": [
+          ["Lookalike Video", "Active", "0", "n/a", "$146.66", "2,040"],
+          ["Lookalike Static", "Active", "0", "n/a", "$101.17", "1,760"],
+          [
+            "Interest Production Video",
+            "Paused May 11",
+            "2",
+            "$22.79",
+            "$45.57",
+            "829"
+          ]
+        ],
+        "note": "Both leads came from Interest Production Video before its May 11 pause took effect. The two active Lookalike audiences spent a combined $247.83 with zero leads this week."
+      }
+    }
+  ],
+
+  "findings": [
+    {
+      "title": "Prequalifier Is Doing Exactly What It Was Designed To Do",
+      "description": "Six unique people entered the new prequalifier modal between May 11 and 15. Every one of them, across their final answers, hit a team size that routed them to the pricing page (Just me or 2 of us). The auto-redirect fired six times. No demo slots were burned on B2C inquiries this week, which was our explicit design intent. The cost of that filter is now visible in the demo number."
+    }
+  ],
+
+  "actions": [
+    {
+      "title": "Prequalifier Modal Flow in Market for First Full Week",
+      "description": "Launched and live since May 11 per the Week 9 report. This is the first week of data on the new flow aiming to filter B2C harder.",
+      "status": "done"
+    },
+    {
+      "title": "Interest Production Video Held Paused",
+      "description": "Stayed paused through the week per the Week 9 decision. The $45.57 that did spend was residual delivery before the pause took full effect, and produced the only two pixel leads of the week.",
+      "status": "done"
+    },
+    {
+      "title": "Removed B2C Pricing from the funnel",
+      "description": "Replaced with an enterprise pricing and offer section. B2C can still access pricing through the qualifier modal or by clicking 'see all pricing' in the enterprise section.",
+      "status": "done"
+    },
+    {
+      "title": "Created new lookalike audience based on high spend current users.",
+      "description": "Changing all ads to use this audience this week, but preferrably would like to get static ads live at the same time.",
+      "status": "pending"
+    }
+  ],
+
+  "nextSteps": [
+    "Decide on messaging for new static ads. Goal is to run 4 new types of messaging to dial in what performs best.",
+    "Use new audience for ads, effectively targeting a different audience altogether.",
+    "Continue monitoring the new funnel performance."
+  ]
+}
