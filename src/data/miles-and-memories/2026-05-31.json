@@ -1,0 +1,113 @@
+{
+  "client": "Miles & Memories",
+  "reportTitle": "May Marketing Report",
+  "reportSubtitle": "Content Marketing & LinkedIn Performance",
+  "period": "May 1 to May 31, 2026",
+  "date": "2026-05-31",
+  "platform": "Content Marketing",
+  "summary": "LinkedIn came back online in a big way this month. Impressions jumped to 1,983 (from 11 in April when posts were held for the Cancun launch) and you added 11 new followers, your strongest follower growth in the last four months. The clear winner was your Fairmont Austin thank-you post, a warm first-person recap of the Iron Chef night with Katie Kent and Joshua Jensen. It out-performed every designed piece we ran. The takeaway is simple: your audience responds to your voice and your relationships, not polished templates. Website traffic softened to 82 sessions as April's Cancun launch bump normalized. Organic search settled at 18 sessions, still above the March baseline of 14 but below April's 24. Behind the scenes we built you a custom RFP tool (in your hands for review), rolled out your new Corporate Travel Lead title across your email signatures, updated your phone number on the site, and scoped the app proposal.",
+  "videoUrl": "",
+
+  "kpis": {
+    "websiteSessions": 82,
+    "linkedinFollowers": 262,
+    "linkedinImpressions": 1983,
+    "linkedinEngagementRate": 4.44
+  },
+
+  "metrics": [
+    {
+      "label": "Website Sessions",
+      "value": "82",
+      "note": "Down from April's 111 as the Cancun launch bump normalized. Direct traffic still leads.",
+      "status": "neutral"
+    },
+    {
+      "label": "LinkedIn Followers",
+      "value": "262",
+      "note": "+11 from April, your strongest follower growth in the last four months.",
+      "status": "good"
+    },
+    {
+      "label": "LinkedIn Impressions",
+      "value": "1,983",
+      "note": "Cancun carousels plus the Fairmont Austin post drove the rebound from April's 11.",
+      "status": "good"
+    },
+    {
+      "label": "Engagement Rate",
+      "value": "4.4%",
+      "note": "88 engagements on 1,983 impressions. Still above the LinkedIn average of 2 to 3%.",
+      "status": "good"
+    }
+  ],
+
+  "charts": [
+    {
+      "id": "traffic-sources",
+      "type": "horizontal-bar",
+      "title": "Website Traffic Sources",
+      "width": "full",
+      "data": {
+        "labels": ["Direct", "Google / Organic", "Facebook / Referral", "Other Referrals", "Instagram / Social", "LinkedIn / Social"],
+        "values": [52, 18, 6, 3, 2, 1]
+      }
+    }
+  ],
+
+  "findings": [
+    {
+      "title": "Your Voice Out-Performs Polished Design",
+      "description": "The top post of the month was your Fairmont Austin thank-you recap, a single first-person post tagging Katie Kent and Joshua Jensen. It beat both the designed Costa Rica carousel and the Cancun blog repost. The takeaway: warm, in-the-room posts about real relationships are the strongest engagement driver for your audience right now. We'll lean into that format."
+    },
+    {
+      "title": "LinkedIn Is Back and Growing",
+      "description": "Impressions went from 11 in April to 1,983 in May, and followers climbed by 11, your biggest monthly gain in four months. The Cancun carousels finally going live plus the Fairmont post restored reach and pulled in new people. The engagement rate settled at 4.4%, which is healthy at this new volume."
+    },
+    {
+      "title": "Website Settled After April's Cancun Bump",
+      "description": "April hit 111 sessions on the back of the two new Cancun blogs and a 71% jump in organic search. May normalized to 82 sessions with organic at 18, still above the March baseline of 14 but below April's 24. The expected pattern after a content launch. The next destination cycle is what keeps this curve climbing."
+    }
+  ],
+
+  "actions": [
+    {
+      "title": "Cancun LinkedIn Carousels Shipped",
+      "description": "Both Cancun carousels published this month, anchoring the LinkedIn rebound.",
+      "status": "done"
+    },
+    {
+      "title": "Fairmont Austin Thank-You Post",
+      "description": "Drafted and published. Became the top-performing post of the month.",
+      "status": "done"
+    },
+    {
+      "title": "Custom RFP Tool Built",
+      "description": "Internal tool for client-to-agent intake and agent-to-supplier RFPs. Built, pending Mandy's review.",
+      "status": "pending"
+    },
+    {
+      "title": "Email Signatures Updated",
+      "description": "Rolled out new signatures across accounts with the Corporate Travel Lead at Travelmation title.",
+      "status": "done"
+    },
+    {
+      "title": "Website Phone Number Updated",
+      "description": "Updated the contact number on milesandmemories.net.",
+      "status": "done"
+    },
+    {
+      "title": "App Proposal Scoped",
+      "description": "Full scope and proposal delivered for the potential app build. Awaiting next steps from Mandy.",
+      "status": "pending"
+    }
+  ],
+
+  "nextSteps": [
+    "Lean into the Fairmont post format: more first-person vendor and partner recaps from upcoming site visits and events.",
+    "Mandy's review on the RFP tool so we can lock v1 and put it into rotation.",
+    "Decision on the app proposal so we can plan the next phase.",
+    "Plan the next destination content cycle. Banff was the top performing blog in April and is worth a follow-up or refresh.",
+    "Continue building organic search momentum with the next destination guide."
+  ]
+}
