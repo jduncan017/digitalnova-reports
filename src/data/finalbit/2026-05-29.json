@@ -1,0 +1,114 @@
+{
+  "client": "FinalBit",
+  "reportTitle": "Meta Ads Week 12 Report",
+  "reportSubtitle": "What 13 Weeks of Data Have Settled",
+  "period": "May 23 - 29, 2026",
+  "date": "2026-05-29",
+  "platform": "Meta Ads",
+  "summary": "Week 12 closed out the first full week of the new static creatives running with the updated Meta attribution model. $344.41 spent, 0 bookings confirmed.\n\nThe week brings the broader campaign into focus. Across 13 weeks of testing different audiences, creatives, and funnel iterations, the data points consistently to Meta being a viable channel for drumming up interest and reaching small-team users, and not a viable channel for closing enterprise customers at this price point.\n\nThe Wk 12 funnel: 93 unique /enterprise visitors, 5 entered the qualifier modal, 3 routed to pricing, 0 demo bookings. All 5 modal entrants answered with a team size of 1 or 2, which is consistent with the broader audience composition we've observed since the qualifier launched.\n\nPer your request, our retainer has been cancelled. You've got my services for two more weeks, and the report below covers what was observed this week, what's being done with the remaining time, and how the engagement will wind down.",
+
+  "kpis": {
+    "adSpend": 344.41,
+    "impressions": 6411,
+    "reach": 3371,
+    "clicks": 60,
+    "bookings": 0,
+    "demosBooked": 0,
+    "cpl": null,
+    "visitorsRoutedToPricing": 3,
+    "qualifierEntries": 5
+  },
+
+  "metrics": [
+    {
+      "label": "Ad Spend",
+      "value": "$344.41",
+      "note": "Up from $126.59 last week. Full week of all four new static creatives running.",
+      "status": "neutral"
+    },
+    {
+      "label": "Bookings",
+      "value": "0",
+      "note": "First week of the updated Meta attribution model, where Lead now equals booked demo.",
+      "status": "neutral"
+    },
+    {
+      "label": "Visitors Routed to Pricing",
+      "value": "3",
+      "note": "Solo and duo visitors that the qualifier modal correctly routed to the pricing page rather than the demo booking flow.",
+      "status": "neutral"
+    }
+  ],
+
+  "funnel": {
+    "title": "Conversion Path (May 23 to 29)",
+    "source": "PostHog + n8n",
+    "steps": [
+      { "label": "/enterprise Visitors", "count": 93, "pct": 100 },
+      { "label": "Qualifier Modal Entered", "count": 5, "pct": 5.4 },
+      { "label": "Routed to Pricing (Solo / Duo)", "count": 3, "pct": 3.2 },
+      { "label": "Demo Booked", "count": 0, "pct": 0 }
+    ]
+  },
+
+  "charts": [
+    {
+      "id": "ad-performance-breakdown",
+      "type": "table",
+      "title": "Ad Performance, All-Time on the 4 New Creatives (May 19 - 31)",
+      "width": "full",
+      "data": {
+        "headers": [
+          "Ad",
+          "Spend",
+          "Impressions",
+          "Link Clicks",
+          "Link CTR",
+          "Cost per LPV"
+        ],
+        "rows": [
+          ["One Workspace", "$467.07", "9,170", "78", "0.85%", "$35.93"],
+          ["Replaces Competitors", "$86.79", "1,851", "28", "1.51%", "$8.68"],
+          ["Outdated", "$24.37", "447", "4", "0.89%", "$6.09"],
+          ["In Sync", "$14.43", "323", "1", "0.31%", "$14.43"]
+        ],
+        "note": "Meta concentrated 78% of all-time spend on One Workspace despite Replaces Competitors having nearly 2x the click-through rate. Outdated and In Sync did not get enough budget allocation to be meaningfully evaluated."
+      }
+    }
+  ],
+
+  "findings": [
+    {
+      "title": "Meta Allocated Spend to One Creative",
+      "description": "Meta concentrated 86% of Wk 12 spend on One Workspace ($296 of $344) despite Replaces Competitors having a 1.94% link CTR against One Workspace's 0.85%. Meta's own conversion ranking flagged One Workspace as below average (bottom 35%). Moving forward I'm cancelling One Workspace and splitting the remaining creatives (Replaces Competitors, Outdated, In Sync) into their own ad sets with equal daily budgets."
+    },
+    {
+      "title": "Funnel Continues to Route Small-Teams Away From Demos",
+      "description": "All 5 unique people who entered the qualifier modal this week answered with team sizes of 1 or 2 employees. Across the 3 weeks the qualifier has been live, 78% of respondents are 1 to 2 person teams. The funnel is doing what it was designed to do, and small-team visitors continue to dominate site traffic."
+    }
+  ],
+
+  "actions": [
+    {
+      "title": "Retainer Cancelled",
+      "description": "The retainer has been formally cancelled. Two weeks of ad budget remain and the engagement will wind down at the end of that window.",
+      "status": "done"
+    },
+    {
+      "title": "Killed One Workspace, Restructured Remaining Ads",
+      "description": "Paused One Workspace based on its weaker click-through rate and below-average conversion ranking after meaningful spend. Restructured Replaces Competitors, Outdated, and In Sync into three separate ad sets with equal daily budgets so the remaining 2 weeks can produce a clean per-creative read.",
+      "status": "done"
+    },
+    {
+      "title": "Generated and Delivered Strategy Recommendations Report",
+      "description": "Drafted and delivered the end-of-May strategy review on May 28. The report covers the 13-week data summary, the structural case for moving away from cold Meta traffic at the $999/mo enterprise price point, and a proposed per-seat pricing model with a measured split B2C / B2B funnel.",
+      "status": "done"
+    }
+  ],
+
+  "nextSteps": [
+    "Pick a path for the final 2 weeks. Default: continue with the language test using the restructured 3 ad sets to identify whether any creative angle outperforms. Alternative: redirect the remaining time toward implementing the strategy review's funnel rebuild. Proceeding with the language test unless directed otherwise",
+    "Monitor the 3 remaining ad sets daily for a winning performer over the final 2 weeks",
+    "Engagement wind-down: at the end of the final 2 weeks, transfer ownership of the funnel, remove access from the Meta Ads account, and deliver a full final report summarizing all 13 weeks of campaign performance and findings"
+  ]
+}

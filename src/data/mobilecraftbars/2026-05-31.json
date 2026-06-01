@@ -1,0 +1,188 @@
+{
+  "client": "Mobile Craft Bars",
+  "reportTitle": "Cross-channel ads report",
+  "reportSubtitle": "First bi-weekly look with Google and Meta running together",
+  "period": "May 16 – May 31, 2026",
+  "date": "2026-05-31",
+  "platform": "Google + Meta",
+  "summary": "First report covering both Google and Meta side by side. Spent $576 across the two channels and got 3 booking inquiries. Google did the heavy lifting on cost efficiency at $107 per inquiry. Meta hit more eyeballs (13.6K impressions vs 520 on Google) but converted at a lower rate while we're still working on the creative side.\n\nBigger structural changes this period: switched Google off Smart Bidding to manual CPC, set bids per keyword based on top-of-page estimates, and added UTM tagging so PostHog can finally attribute Google traffic. Next report will show the full Google funnel from impression through booking for the first time.",
+
+  "kpis": {
+    "googleSpend": 214,
+    "metaSpend": 362,
+    "googleConversions": 2,
+    "metaConversions": 1
+  },
+
+  "metrics": [
+    {
+      "label": "Total spend",
+      "value": "$576",
+      "note": "$214 on Google, $362 on Meta.",
+      "status": "neutral"
+    },
+    {
+      "label": "Total conversions",
+      "value": "3",
+      "note": "Blended cost per inquiry of $192.",
+      "status": "neutral"
+    },
+    {
+      "label": "Google CPA",
+      "value": "$107",
+      "note": "2 inquiries on $214. Held steady from prior 14-day window.",
+      "status": "neutral"
+    },
+    {
+      "label": "Meta CPA",
+      "value": "$362",
+      "note": "1 inquiry on $362. Creative is the bottleneck (see findings).",
+      "status": "neutral"
+    }
+  ],
+
+  "funnel": {
+    "title": "Funnel by channel",
+    "source": "Google Ads + Meta Ads + PostHog",
+    "paths": [
+      {
+        "name": "Google Ads",
+        "steps": [
+          { "label": "Impressions", "count": 520, "pct": 100 },
+          { "label": "Clicks", "count": 33, "pct": 6.35 },
+          { "label": "Inquiries", "count": 2, "pct": 0.38, "note": "Reported by Google" }
+        ]
+      },
+      {
+        "name": "Meta Ads",
+        "steps": [
+          { "label": "Impressions", "count": 13595, "pct": 100 },
+          { "label": "Link clicks", "count": 117, "pct": 0.86 },
+          { "label": "Leads submitted", "count": 5, "pct": 0.04 },
+          { "label": "Bookings", "count": 1, "pct": 0.01 }
+        ]
+      }
+    ],
+    "notes": "Google funnel only shows 3 steps because UTM attribution to PostHog wasn't in place this period. Fixed on Jun 1; next report will show the full impression-to-booking path."
+  },
+
+  "charts": [
+    {
+      "id": "google-period-trend",
+      "type": "table",
+      "title": "Google Ads trend (most recent periods)",
+      "width": "full",
+      "data": {
+        "headers": ["Period", "Spend", "Clicks", "CTR", "Avg CPC", "Conv", "CPA"],
+        "rows": [
+          ["Mar 29 – Apr 4", "$320.50", "42", "9.17%", "$7.63", "1", "$320.50"],
+          ["Apr 3 – 10", "$289.91", "49", "10.61%", "$5.92", "1", "$289.91"],
+          ["Apr 11 – 24 (2 wks)", "$213.24", "47", "8.62%", "$4.54", "2", "$106.62"],
+          ["May 18 – 31 (2 wks)", "$214.33", "33", "6.35%", "$6.49", "2", "$107.17"]
+        ],
+        "note": "Google only — Meta launched in this period and is shown separately below. CPA held at ~$107 for the second period running. CTR dipped this period along with click volume, which lines up with the algorithm pulling back as it ran out of conversion signal."
+      }
+    },
+    {
+      "id": "channel-performance",
+      "type": "table",
+      "title": "Channel performance this period",
+      "width": "full",
+      "data": {
+        "headers": ["Channel", "Spend", "Impressions", "Reach", "CTR", "Conv", "CPA"],
+        "rows": [
+          ["Google search", "$214", "520", "—", "6.35%", "2", "$107"],
+          ["Meta video", "$362", "13,595", "7,779", "0.86%", "1", "$362"]
+        ]
+      }
+    },
+    {
+      "id": "keyword-spend-concentration",
+      "type": "horizontal-bar",
+      "title": "Google spend by keyword (last 30 days)",
+      "width": "full",
+      "data": {
+        "labels": [
+          "bartenders for hire (broad)",
+          "wedding bar service (phrase)",
+          "[bartender for hire] (exact)",
+          "wedding bartender (phrase)",
+          "mobile bar Denver (phrase)",
+          "mobile bartender near me (broad)",
+          "Mobile bartenders (phrase)"
+        ],
+        "values": [519.40, 20.42, 15.86, 6.51, 5.84, 3.11, 2.51],
+        "note": "91% of spend went to one broad-match keyword. This is what drove the move to manual CPC — the algorithm was concentrating because it didn't have enough conversion volume to optimize across the rest. Next report will show how the distribution shifts under manual bids."
+      }
+    }
+  ],
+
+  "findings": [
+    {
+      "title": "Funnel landing page is converting better than the main site",
+      "description": "The ad pointed at book.mobilecraftbars.com converted at 7.14% with a $100 CPA. The ad pointed at www.mobilecraftbars.com converted at 5.26% with a $113 CPA. Small sample, but directionally the discovery call funnel is doing what it was built to do."
+    },
+    {
+      "title": "Meta video creative is the bottleneck on that channel",
+      "description": "Both Meta ads under 1% link CTR (industry norm is 1-1.5%). 83% of viewers stop watching after the first 3 seconds. Meta is also flagging Nice_Waiters as below-average creative quality, which inflates CPMs further. Audience size isn't the issue — the hooks aren't earning the watch."
+    },
+    {
+      "title": "Google spend was concentrated on a single keyword",
+      "description": "Over the prior 30 days, $519 of $574 in Google spend went to one broad-match keyword (bartenders for hire). The other ~25 keywords in the campaign got either zero or negligible volume. The algorithm couldn't spread bets because it didn't have enough conversion signal to learn from. This is what drove the bid strategy change at end of period."
+    }
+  ],
+
+  "actions": [
+    {
+      "title": "Switched Google to manual CPC",
+      "description": "Moved off Maximize Conversions to manual bidding to break the single-keyword concentration and give every keyword a fair shot.",
+      "status": "done"
+    },
+    {
+      "title": "Set per-keyword max CPCs based on top-of-page estimates",
+      "description": "Bid each keyword at roughly its top-of-page CPC so we compete for visible placements rather than buried ones.",
+      "status": "done"
+    },
+    {
+      "title": "Paused 5 keywords with unreachable top-of-page CPCs",
+      "description": "Removed keywords whose top-of-page CPC was meaningfully above what the $40/day budget can sustain. Worth revisiting if budget grows.",
+      "status": "done"
+    },
+    {
+      "title": "Added UTM tagging to Google ads at the account level",
+      "description": "Google traffic will now appear in PostHog with proper source attribution starting next report.",
+      "status": "done"
+    },
+    {
+      "title": "Identified a PostHog tracking gap and queued the fix",
+      "description": "Found that bookings weren't stitching into the PostHog funnel view correctly. Fix is queued for the next development sprint.",
+      "status": "pending"
+    }
+  ],
+
+  "nextSteps": [
+    "Let manual CPC settle for 7 to 10 days before reading the numbers — daily fluctuations will be noisy at first.",
+    "Verify Google traffic is appearing in PostHog with proper UTM attribution.",
+    "Discuss a Meta creative refresh — details in the recommendation below.",
+    "Pull the Google search terms report to see what queries the manual bids are catching."
+  ],
+
+  "recommendation": {
+    "title": "Refresh the Meta creative",
+    "context": "Meta is the reach play on this campaign, but the current videos cap how many of those impressions can convert. 17% of viewers make it past the first 3 seconds. CPMs are $27 (high for this category) primarily because Meta's auction penalizes lower-quality creative. Fixing the creative compounds — lower CPMs AND higher CTR AND higher conversion rate from the same change.",
+    "changes": [
+      {
+        "title": "Produce 2 new short-form video concepts with stronger hooks",
+        "description": "First 3 seconds designed as standalone hooks (movement, on-screen text, sound design). Show the bar setup in action rather than opening with a static shot. Run alongside the existing creatives at equal budget for a clean comparison.",
+        "impact": "CTR lift from 0.86% to 1.5%+ would drop Meta CPA from $362 toward $150-200. Meta CPMs typically come down 20-30% on better-ranking creative, so the win compounds."
+      }
+    ],
+    "timeline": "Two concepts produced within one week of approval. 14 days of testing to declare a winner.",
+    "whatWeNeed": [
+      "Sign-off on the creative direction.",
+      "Raw footage of bar setups in action — not just static brand shots."
+    ]
+  },
+
+  "videoUrl": ""
+}
