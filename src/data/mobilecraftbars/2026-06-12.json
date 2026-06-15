@@ -1,0 +1,173 @@
+{
+  "client": "Mobile Craft Bars",
+  "reportTitle": "Google Ads report",
+  "reportSubtitle": "Focusing the budget on bartender-hire searches",
+  "period": "Two weeks ending June 11, 2026",
+  "date": "2026-06-12",
+  "platform": "Google",
+  "summary": "This update is about tightening the Google account so more of the budget reaches people who actually want to hire a bartender. When I looked closely at the real searches behind the spend, a good share of it was going to rental, catering, and venue queries that were never going to book us. So this cycle was less about volume and more about focus: pointing the keywords at bartender-hire intent and cutting the noise. The early signal on which searches convert is encouraging and it is quite specific. I have made the changes to act on it and I am watching how it settles. Detail below.",
+
+  "kpis": {
+    "conversions": 2,
+    "adSpend": 501.92,
+    "costPerConversion": 250.96,
+    "cpc": 5.84
+  },
+
+  "metrics": [
+    {
+      "label": "Google spend",
+      "value": "$502",
+      "note": "Now running at the full $40 a day budget.",
+      "status": "neutral"
+    },
+    {
+      "label": "Inquiries",
+      "value": "2",
+      "note": "Steady while the keyword setup was reworked.",
+      "status": "neutral"
+    },
+    {
+      "label": "Cost per inquiry",
+      "value": "$251",
+      "note": "Above the recent $107 range. Findings explain the cause.",
+      "status": "neutral"
+    },
+    {
+      "label": "Click-through rate",
+      "value": "5.04%",
+      "note": "In line with recent weeks.",
+      "status": "neutral"
+    }
+  ],
+
+  "funnel": {
+    "title": "Ad to booking funnel (2 weeks ending Jun 11)",
+    "source": "Google Ads",
+    "steps": [
+      { "label": "Impressions", "count": 1705, "pct": 100 },
+      { "label": "Clicks", "count": 86, "pct": 5.04 },
+      { "label": "Inquiries", "count": 2, "pct": 0.12 }
+    ],
+    "notes": "Two inquiries from 86 clicks, a click to inquiry rate of 2.3%."
+  },
+
+  "charts": [
+    {
+      "id": "google-period-trend",
+      "type": "table",
+      "title": "Google Ads trend (most recent periods)",
+      "width": "full",
+      "data": {
+        "headers": [
+          "Period",
+          "Spend",
+          "Clicks",
+          "CTR",
+          "Avg CPC",
+          "Conv",
+          "CPA"
+        ],
+        "rows": [
+          ["Apr 3 to 10", "$289.91", "49", "10.61%", "$5.92", "1", "$289.91"],
+          [
+            "Apr 11 to 24 (2 wks)",
+            "$213.24",
+            "47",
+            "8.62%",
+            "$4.54",
+            "2",
+            "$106.62"
+          ],
+          [
+            "May 18 to 31 (2 wks)",
+            "$214.33",
+            "33",
+            "6.35%",
+            "$6.49",
+            "2",
+            "$107.17"
+          ],
+          [
+            "2 wks ending Jun 11",
+            "$501.92",
+            "86",
+            "5.04%",
+            "$5.84",
+            "2",
+            "$250.96"
+          ]
+        ],
+        "note": "First full period running at the $40 a day budget, shown against recent periods for trajectory."
+      }
+    },
+    {
+      "id": "search-term-spend",
+      "type": "table",
+      "title": "Where the search spend went",
+      "width": "full",
+      "data": {
+        "headers": ["Search term", "Clicks", "Cost", "Booked"],
+        "rows": [
+          ["bartenders denver", "1", "$7.41", "Yes"],
+          ["bartender denver", "2", "$11.79", "No"],
+          ["party rentals", "2", "$11.78", "No"],
+          ["party rentals denver", "2", "$11.44", "No"],
+          ["cocktail table rentals", "1", "$5.94", "No"],
+          ["event rentals denver", "1", "$5.73", "No"],
+          ["catering cost for 100 people", "1", "$5.98", "No"],
+          ["brewery wedding venues", "1", "$5.86", "No"],
+          ["frozen cocktail machine rental", "1", "$5.72", "No"]
+        ],
+        "note": "A sample of the period's searches ranked by spend. The one booking came from a city-specific bartender search."
+      }
+    }
+  ],
+
+  "findings": [
+    {
+      "title": "Most of the spend was reaching the wrong kind of search",
+      "description": "Almost all of the Google budget was flowing through one broad keyword. When I pulled the actual searches it was matching, the majority were for party rentals, cocktail table rentals, food catering, and event venues rather than people looking to hire a bartender. That off-target traffic is what carried the average cost per inquiry above its usual level."
+    },
+    {
+      "title": "The searches that convert have the city in them",
+      "description": "The query that booked an inquiry this period was 'bartenders denver', and it came in at $7.41, far below the account average. The closely related 'bartender denver' pulled a high click-through. The clearest intent is coming from people searching the service together with the location, not the broad, generic terms."
+    },
+    {
+      "title": "The specific keywords had no room to prove themselves",
+      "description": "The campaign already held more than twenty bartender-specific keywords, but the single broad keyword was capturing the searches before they could reach them. That left almost no data on which of the specific terms actually perform, which is the thing we most want to learn."
+    }
+  ],
+
+  "actions": [
+    {
+      "title": "Focused the campaign on exact-match bartender terms",
+      "description": "Added exact-match keywords including the proven 'bartenders denver' and 'bartender denver' so each term competes on its own and earns a clean, readable result.",
+      "status": "done"
+    },
+    {
+      "title": "Paused the broad keyword pulling off-target traffic",
+      "description": "Turned off the broad term that was absorbing the rental and catering searches, so the budget can flow to bartender-hire intent.",
+      "status": "done"
+    },
+    {
+      "title": "Added negative keywords to block the noise",
+      "description": "Blocked the rental, equipment, classes, and food-catering search themes that were spending without booking, while keeping anything bar-related open.",
+      "status": "done"
+    },
+    {
+      "title": "Tuned bids on the keywords that matter",
+      "description": "Raised the bid on the proven bartender term so it can win stronger placement, and lifted two underbid keywords that were not showing at all.",
+      "status": "done"
+    }
+  ],
+
+  "videoUrl": "https://supercut.ai/share/digitalnova-studio/cdT3859cZdEcHkPeoO6KCI",
+
+  "nextSteps": [
+    "Let the focused setup run for 7 to 10 days before reading the numbers, since the first few days will be noisy.",
+    "Watch whether the specific bartender keywords start drawing traffic now that the broad term is not absorbing it.",
+    "Track cost per inquiry on the focused terms to confirm the spend is reaching real bartender demand.",
+    "Expect a dip in raw impressions as the wider, lower-intent traffic falls away. That is the intended trade for cleaner leads."
+  ]
+}

@@ -42,7 +42,17 @@ export async function getReport(
   const filePath = path.join(DATA_DIR, clientSlug, `${date}.json`);
   try {
     const raw = await fs.readFile(filePath, "utf-8");
-    return JSON.parse(raw) as Report;
+    const parsed = JSON.parse(raw) as Report;
+    // JSON is cast, not validated — default the array fields so a report
+    // that omits one (e.g. no charts) doesn't crash `.length` access.
+    return {
+      ...parsed,
+      metrics: parsed.metrics ?? [],
+      charts: parsed.charts ?? [],
+      findings: parsed.findings ?? [],
+      actions: parsed.actions ?? [],
+      nextSteps: parsed.nextSteps ?? [],
+    };
   } catch {
     return null;
   }

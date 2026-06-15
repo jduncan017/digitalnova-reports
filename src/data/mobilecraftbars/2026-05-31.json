@@ -8,10 +8,10 @@
   "summary": "First report covering both Google and Meta side by side. Spent $576 across the two channels and got 3 booking inquiries. Google did the heavy lifting on cost efficiency at $107 per inquiry. Meta hit more eyeballs (13.6K impressions vs 520 on Google) but converted at a lower rate while we're still working on the creative side.\n\nBigger structural changes this period: switched Google off Smart Bidding to manual CPC, set bids per keyword based on top-of-page estimates, and added UTM tagging so PostHog can finally attribute Google traffic. Next report will show the full Google funnel from impression through booking for the first time.",
 
   "kpis": {
-    "googleSpend": 214,
-    "metaSpend": 362,
-    "googleConversions": 2,
-    "metaConversions": 1
+    "conversions": 2,
+    "adSpend": 214.33,
+    "costPerConversion": 107.17,
+    "cpc": 6.49
   },
 
   "metrics": [
