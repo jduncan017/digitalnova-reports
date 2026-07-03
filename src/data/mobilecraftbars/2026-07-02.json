@@ -1,0 +1,217 @@
+{
+  "client": "Mobile Craft Bars",
+  "reportTitle": "Google Ads report",
+  "reportSubtitle": "The keyword audit is done — and a landing page built just for search",
+  "period": "Jun 12 – Jul 1, 2026",
+  "date": "2026-07-02",
+  "platform": "Google",
+  "summary": "I went keyword by keyword through every campaign we've ever run to answer one question: where were we getting conversions, and why are we struggling now?\n\nThe short version: we still had keywords matching for things we weren't selling - those are now off, and the searches that book are bartender-hire searches, especially ones with the city in them, so those terms are back in and leading the account.\n\nFollowing up on simplifying the funnel for google - I built a new dedicated Google landing page focused on simplifying the user journey.",
+
+  "kpis": {
+    "conversions": 2,
+    "adSpend": 1119.23,
+    "costPerConversion": 559.62,
+    "cpc": 5.86
+  },
+
+  "metrics": [
+    {
+      "label": "Ad spend (3 weeks)",
+      "value": "$1,119",
+      "note": "Budget moved from $40 to $60/day mid-period to hold visibility during peak season.",
+      "status": "neutral"
+    },
+    {
+      "label": "Clicks",
+      "value": "191",
+      "note": "Roughly 10 clicks a day, the highest sustained volume the account has run.",
+      "status": "good"
+    },
+    {
+      "label": "Inquiries",
+      "value": "2",
+      "note": "Both from bartender-intent searches. Findings explain where the rest of the spend went.",
+      "status": "warning"
+    },
+    {
+      "label": "CTR",
+      "value": "6.57%",
+      "note": "Healthy — the ads match what people search. The gap this period was after the click.",
+      "status": "good"
+    }
+  ],
+
+  "funnel": {
+    "title": "Ad to inquiry funnel (Jun 12 – Jul 1)",
+    "source": "Google Ads + PostHog",
+    "steps": [
+      { "label": "Impressions", "count": 2907, "pct": 100 },
+      { "label": "Clicks", "count": 191, "pct": 6.57 },
+      { "label": "Inquiries", "count": 2, "pct": 0.07 }
+    ],
+    "notes": "Funnel traffic itself was on target: roughly 30 visitors a week reached the booking site, nearly all Denver metro. The drop happened after they landed on the funnel page."
+  },
+
+  "charts": [
+    {
+      "id": "google-period-trend",
+      "type": "table",
+      "title": "Google Ads trend (most recent periods)",
+      "width": "full",
+      "data": {
+        "headers": [
+          "Period",
+          "Spend",
+          "Clicks",
+          "CTR",
+          "Avg CPC",
+          "Inq",
+          "Cost/Inq"
+        ],
+        "rows": [
+          [
+            "Apr 11 – 24 (2 wks)",
+            "$213.24",
+            "47",
+            "8.62%",
+            "$4.54",
+            "2",
+            "$106.62"
+          ],
+          [
+            "May 18 – 31 (2 wks)",
+            "$214.33",
+            "33",
+            "6.35%",
+            "$6.49",
+            "2",
+            "$107.17"
+          ],
+          [
+            "2 wks ending Jun 11",
+            "$501.92",
+            "86",
+            "5.04%",
+            "$5.84",
+            "2",
+            "$250.96"
+          ],
+          [
+            "Jun 12 – Jul 1 (3 wks)",
+            "$1,119.23",
+            "191",
+            "6.57%",
+            "$5.86",
+            "2",
+            "$559.62"
+          ]
+        ],
+        "note": "Spend rose with the budget increase but inquiries didn't follow — the keyword table below shows why: nearly half the period's spend was still flowing through two wide-match keywords that attracted the wrong searches. Those are now paused."
+      }
+    },
+    {
+      "id": "period-keyword-spend",
+      "type": "table",
+      "title": "Where the spend went this period",
+      "width": "full",
+      "data": {
+        "headers": ["Keyword", "Type", "Clicks", "Cost", "Inquiries"],
+        "rows": [
+          ["\"bartender for party\"", "Phrase", "69", "$431.45", "0"],
+          [
+            "mobile bartender near me",
+            "Broad — now paused",
+            "54",
+            "$315.44",
+            "0"
+          ],
+          ["mobile bartending bar", "Broad — now paused", "44", "$192.89", "0"],
+          ["[bartenders for hire]", "Exact", "9", "$83.64", "0"],
+          ["All other bartender terms", "Phrase/Exact", "15", "$95.81", "2"]
+        ],
+        "note": "The two broad keywords spent $508 (45% of the period) on searches like 'party rentals denver', 'brewery wedding venues', and 'bachelorette party ideas' — traffic that browses but never books. Pausing them redirects that budget to the terms that carry real hire-a-bartender intent."
+      }
+    },
+    {
+      "id": "alltime-converters",
+      "type": "table",
+      "title": "Where every inquiry has ever come from (all-time audit)",
+      "width": "full",
+      "data": {
+        "headers": ["Keyword", "Type", "Inquiries", "Cost per inquiry"],
+        "rows": [
+          ["bartenders for hire", "Broad (both campaigns)", "44", "$71 – $105"],
+          ["Bar Catering", "Broad (original campaign)", "4", "$22.75"],
+          ["\"mobile bar Denver\"", "Phrase", "1", "$52.95"],
+          ["\"cocktail classes\"", "Phrase (original campaign)", "1", "$5.58"],
+          ["mobile bartending bar", "Broad", "1", "$356.60"]
+        ],
+        "note": "51 inquiries all-time. The pattern: wide keywords found the bookers, but did it by paying for a huge amount of off-target traffic along the way. The searches that actually booked were bartender-hire searches — which is what the account is now built around directly, without the waste."
+      }
+    }
+  ],
+
+  "findings": [
+    {
+      "title": "Two wide-match keywords absorbed 45% of spend",
+      "description": "'Mobile bartender near me' and 'mobile bartending bar' spent $508 across 98 clicks this period with zero inquiries. The searches they matched tell the story: party rentals, cocktail equipment, banquet halls, event venues, and people researching how to start their own mobile bar business. High click-through, no intent to hire."
+    },
+    {
+      "title": "The all-time audit confirms what books: bartender-hire searches",
+      "description": "Across every campaign since launch, 48 of 51 inquiries came through wide keywords at $71 to $105 each — but the underlying searches that converted were consistently hire-a-bartender searches, and the single cheapest booking query had the city in it ('bartenders denver' at $7.41). The specific city terms have barely had traffic of their own yet, so this period's focused setup is their first real test at full budget."
+    },
+    {
+      "title": "Traffic reached the site correctly but converted poorly on a general-purpose page",
+      "description": "About 30 visitors a week landed on the booking site, nearly all from the Denver metro — targeting is right. But search visitors were landing on a page designed for social media traffic: a full story with the inquiry form at the very bottom. In May's split test the funnel page out-converted the main website on mixed traffic; for pure search traffic, the page needs to lead with the form, not end with it."
+    }
+  ],
+
+  "actions": [
+    {
+      "title": "Paused the two remaining wide-match keywords",
+      "description": "Budget now flows exclusively through bartender-intent phrase and exact terms. The off-target searches those keywords attracted (rentals, venues, business research) no longer spend a dollar.",
+      "status": "done"
+    },
+    {
+      "title": "Restored the proven city keywords",
+      "description": "[bartender denver] and [bartenders denver] are live again as exact matches, backed by the audit data showing city-plus-service searches are the cheapest bookings in the account's history.",
+      "status": "done"
+    },
+    {
+      "title": "Built a dedicated Google search landing page",
+      "description": "New page designed around search behavior: inquiry form directly under the headline, quote-within-24-hours promise, licensed-and-insured trust markers, and packages-from-$800 pricing so visitors qualify themselves before inquiring. The social media funnel page stays untouched and ready for when Meta ads resume.",
+      "status": "done"
+    },
+    {
+      "title": "Added deeper on-page measurement",
+      "description": "The booking site now records button clicks, how far visitors scroll, and whether the inquiry form was actually seen. From this point on we can see exactly where any visitor drops off instead of guessing.",
+      "status": "done"
+    }
+  ],
+
+  "recommendation": {
+    "title": "A clean two-week test, with a defined plan B",
+    "context": "The account is now the focused version of everything the audit says should work: proven terms, no waste, a page built for search intent, and enough budget to compete in peak season. What it needs is two clean weeks without changes so the results are readable. I've set the decision criteria in advance so the mid-July call is made on numbers, not feel.",
+    "changes": [
+      {
+        "title": "Run the focused setup untouched through July 16",
+        "description": "At $60/day and current CPCs, expect roughly 10 clicks a day. I'll review the incoming searches every two to three days and block anything off-target within 48 hours, but keywords, bids, and the page stay stable so we're testing one thing.",
+        "impact": "On track looks like 4 to 6 inquiries by July 16 at meaningfully under $250 each. At that rate the account beats its all-time average with none of the historical waste."
+      },
+      {
+        "title": "If volume doesn't materialize, widen deliberately — not accidentally",
+        "description": "If we're at 2 or fewer inquiries by July 16, the fallback is already designed: reintroduce the account's proven discovery keyword with the full block-list active and Google's automated bidding at the $60/day budget. That's the January engine with this quarter's guardrails.",
+        "impact": "Either outcome mid-July leaves the account in a stronger position than June: we'll know whether focused terms can carry the account, or we'll run discovery with the waste fenced off."
+      }
+    ]
+  },
+
+  "videoUrl": "https://supercut.ai/share/digitalnova-studio/0RpvlwwBenR9dCC5yvKGzh",
+
+  "nextSteps": [
+    "Point all Google ads at the new search landing page once it's live.",
+    "Review incoming search terms every 2 to 3 days and block off-target themes within 48 hours.",
+    "Watch inquiry volume against the 4-to-6 target and report the decision numbers on July 16.",
+    "Keep the social media funnel page untouched so Meta can restart cleanly later this year."
+  ]
+}
