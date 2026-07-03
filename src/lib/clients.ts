@@ -27,6 +27,9 @@ const clients: Record<string, ClientConfig> = {
     logo: "/logos/finalbit.png",
     emails: ["anna@finalbitai.com", "khachatur@finalbitai.com"],
     splash: "/splash-images/finalbit.webp",
+    archived: true,
+    archivedAt: "2026-07-02",
+    archivedReason: "Client dropped off",
     brand: {
       background: "#191b1f",
       surface: "#0c0a09",
