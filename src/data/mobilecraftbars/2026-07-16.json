@@ -1,0 +1,187 @@
+{
+  "client": "Mobile Craft Bars",
+  "reportTitle": "Google Ads report",
+  "reportSubtitle": "Cost per inquiry nearly halved, and the new Google page is live",
+  "period": "Jul 2 - Jul 16, 2026",
+  "date": "2026-07-16",
+  "platform": "Google",
+  "summary": "Two weeks ago I set up a focused test: point the budget at bartender-hire searches, launch a landing page built specifically for people coming from Google, and give it a clean run. This report is the read on that test.\n\nThe headline is that cost per inquiry nearly halved, from about $560 to $314, and it is still moving in the right direction. We brought in three inquiries this period. The most encouraging one came in at $5.72, from someone searching a bartender term with the city in it, which is the single cheapest inquiry this account has ever produced. That is exactly the kind of search we rebuilt the account around.\n\nThe one thing still holding the average up is a single broad 'party' keyword that spends a lot for very little. I have been trimming its budget and steering money toward the exact bartender terms that convert cheaply. As that shift continues, the blended cost per inquiry should keep falling toward the account's historical best. Detail below.",
+
+  "kpis": {
+    "conversions": 3,
+    "adSpend": 942.01,
+    "costPerConversion": 314.0,
+    "cpc": 6.32
+  },
+
+  "metrics": [
+    {
+      "label": "Ad spend (2 weeks)",
+      "value": "$942",
+      "note": "About $67 a day at the $60 daily budget, which is running fully spent.",
+      "status": "neutral"
+    },
+    {
+      "label": "Inquiries",
+      "value": "3",
+      "note": "Up from 2 last cycle, including the cheapest inquiry the account has produced.",
+      "status": "good"
+    },
+    {
+      "label": "Cost per inquiry",
+      "value": "$314",
+      "note": "Down from $560 the prior cycle. Trending toward the account's historical range.",
+      "status": "good"
+    },
+    {
+      "label": "Click-through rate",
+      "value": "7.66%",
+      "note": "Strong and steady. The ads match what people are searching for.",
+      "status": "good"
+    }
+  ],
+
+  "funnel": {
+    "title": "Ad to inquiry funnel (Jul 2 - 16)",
+    "source": "Google Ads",
+    "steps": [
+      { "label": "Impressions", "count": 1945, "pct": 100 },
+      { "label": "Clicks", "count": 149, "pct": 7.66 },
+      { "label": "Inquiries", "count": 3, "pct": 0.2 }
+    ],
+    "notes": "Three inquiries from 149 clicks. Two came through the exact bartender terms at a low cost, which is the pattern we want to keep building on."
+  },
+
+  "charts": [
+    {
+      "id": "google-period-trend",
+      "type": "table",
+      "title": "Google Ads trend (most recent periods)",
+      "width": "full",
+      "data": {
+        "headers": [
+          "Period",
+          "Spend",
+          "Clicks",
+          "CTR",
+          "Avg CPC",
+          "Inq",
+          "Cost/Inq"
+        ],
+        "rows": [
+          [
+            "May 18 - 31 (2 wks)",
+            "$214.33",
+            "33",
+            "6.35%",
+            "$6.49",
+            "2",
+            "$107.17"
+          ],
+          [
+            "2 wks ending Jun 11",
+            "$501.92",
+            "86",
+            "5.04%",
+            "$5.84",
+            "2",
+            "$250.96"
+          ],
+          [
+            "Jun 12 - Jul 1 (3 wks)",
+            "$1,119.23",
+            "191",
+            "6.57%",
+            "$5.86",
+            "2",
+            "$559.62"
+          ],
+          [
+            "Jul 2 - 16 (2 wks)",
+            "$942.01",
+            "149",
+            "7.66%",
+            "$6.32",
+            "3",
+            "$314.00"
+          ]
+        ],
+        "note": "Cost per inquiry came down from $560 to $314 in one cycle while inquiries rose from 2 to 3. The direction is what matters here: the focused setup is pulling cost per inquiry back toward the account's historical best."
+      }
+    },
+    {
+      "id": "inquiry-sources",
+      "type": "table",
+      "title": "Where the three inquiries came from",
+      "width": "full",
+      "data": {
+        "headers": ["Search term", "Match type", "Cost per inquiry"],
+        "rows": [
+          ["bartenders denver", "Exact", "$5.72"],
+          ["bartenders for hire", "Exact", "$110.76"],
+          ["bartender for party", "Phrase", "$473.56"]
+        ],
+        "note": "The two exact bartender terms produced inquiries far below the phrase term. 'bartenders denver' at $5.72 is the cheapest inquiry this account has ever recorded. Concentrating budget on these exact terms is what pulls the blended cost down."
+      }
+    },
+    {
+      "id": "keyword-focus",
+      "type": "horizontal-bar",
+      "title": "Spend by keyword this period",
+      "width": "full",
+      "data": {
+        "labels": [
+          "bartender for party (phrase)",
+          "bartenders for hire (exact)",
+          "mobile bartender for party (phrase)",
+          "hire a bar for an event (exact)",
+          "mobile bar Denver (phrase)",
+          "bartenders denver (exact)"
+        ],
+        "values": [473.56, 110.76, 29.16, 20.52, 11.91, 5.72],
+        "note": "One phrase keyword, 'bartender for party', still took the largest share of spend for a single inquiry. It matches a wide, lower-intent set of 'party' searches. Trimming it toward the exact bartender terms is the main remaining lever on cost per inquiry."
+      }
+    }
+  ],
+
+  "findings": [
+    {
+      "title": "Cost per inquiry nearly halved, and the cheapest came from a city search",
+      "description": "Blended cost per inquiry dropped from $560 to $314 in a single cycle, and inquiries rose from two to three. The standout is a booking inquiry that came in at $5.72 from a search that paired the service with the city ('bartenders denver'). That is the cheapest inquiry the account has ever produced, and it confirms that city plus bartender is the highest-value search we can win."
+    },
+    {
+      "title": "The exact bartender terms convert far cheaper than the broad ones",
+      "description": "Both of this period's efficient inquiries came through exact-match terms: 'bartenders denver' at $5.72 and 'bartenders for hire' at $110.76. The one expensive inquiry, at $473, came through a broad 'party' phrase that pulls a wide, mixed set of searches. The lesson is consistent with the account's whole history: the tighter and more specific the term, the cheaper the inquiry."
+    },
+    {
+      "title": "One 'party' keyword still carries most of the cost",
+      "description": "A single phrase keyword, 'bartender for party', took the largest share of the budget this period for just one inquiry. Because it matches loosely across many 'party' searches, it draws clicks that rarely book. It is the clearest remaining source of inefficiency, and steering its budget toward the proven exact terms is what will keep the average falling."
+    }
+  ],
+
+  "actions": [
+    {
+      "title": "Paused the broad keyword pulling low-intent traffic",
+      "description": "Turned off the broad 'party' term that was drawing browse-only searches, so the budget flows to searches with real hire intent.",
+      "status": "done"
+    },
+    {
+      "title": "Concentrated the budget on the proven bartender terms",
+      "description": "Lowered bids on the expensive and lowest-quality terms and protected the exact bartender and city terms that are converting cheaply, so more of each day's budget reaches the searches that book.",
+      "status": "done"
+    },
+    {
+      "title": "Tuned the landing page for faster mobile load",
+      "description": "Improved how quickly the page loads on phones and tightened up its accessibility, so more of the people who click actually stay and reach the form.",
+      "status": "done"
+    }
+  ],
+
+  "nextSteps": [
+    "Keep concentrating the budget on the exact bartender and city terms and watch cost per inquiry continue to fall.",
+    "Let the new Google landing page gather more traffic so we can read its conversion rate cleanly.",
+    "Hold the budget at $60 a day and report the next read in two weeks."
+  ],
+
+  "videoUrl": "https://supercut.ai/share/digitalnova-studio/b729qVdkqgQtRWgBNwxLMM"
+}
