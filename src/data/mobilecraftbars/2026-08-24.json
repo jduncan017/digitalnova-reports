@@ -1,0 +1,222 @@
+{
+  "client": "Mobile Craft Bars",
+  "reportTitle": "Google Ads report",
+  "reportSubtitle": "Found the reason cost per inquiry is high, and it is the device people search on",
+  "period": "Jul 28 - Aug 24, 2026",
+  "date": "2026-08-24",
+  "platform": "Google",
+  "summary": "We spent $1,531 across four weeks and brought in four inquiries. That's $383 per inquiry which is still way above where I want to be.\n\nThat said, I broke the results down by device and found that desktop produced an inquiry for every $255 spent, while mobile needed $501. Mobile is taking two thirds of the budget and returning half the inquiries.\n\nSo I have reduced mobile bids by 30 percent, which shifts money toward the device that is actually converting without raising the budget a dollar. I also improved the site efficiency which should help with reducing bid cost on mobile. \n\nBeyond that, I have some better ideas for how to improve the funnel further going into next week. As we're exiting the busy season I'm also considering moving back to using the google AI for managing the campaign.",
+
+  "kpis": {
+    "conversions": 4,
+    "adSpend": 1530.69,
+    "costPerConversion": 382.67,
+    "cpc": 6.74
+  },
+
+  "metrics": [
+    {
+      "label": "Ad spend (4 weeks)",
+      "value": "$1,531",
+      "note": "About $55 a day, comfortably inside the $60 daily budget.",
+      "status": "neutral"
+    },
+    {
+      "label": "Inquiries",
+      "value": "4",
+      "note": "Steady volume. The device breakdown below explains the cost behind them.",
+      "status": "neutral"
+    },
+    {
+      "label": "Cost per inquiry",
+      "value": "$383",
+      "note": "Up from $314 last period. Driven by mobile, which is now addressed.",
+      "status": "warning"
+    },
+    {
+      "label": "Click-through rate",
+      "value": "10.10%",
+      "note": "Up from 7.66% and the strongest the account has recorded. The ads are matching what people search.",
+      "status": "good"
+    }
+  ],
+
+  "funnel": {
+    "title": "Ad to inquiry funnel (Jul 28 - Aug 24)",
+    "source": "Google Ads",
+    "steps": [
+      { "label": "Impressions", "count": 2247, "pct": 100 },
+      { "label": "Clicks", "count": 227, "pct": 10.1 },
+      { "label": "Inquiries", "count": 4, "pct": 0.18 }
+    ],
+    "notes": "More people are clicking than ever before. The work now is converting more of them once they arrive, which is where the device split matters."
+  },
+
+  "charts": [
+    {
+      "id": "device-performance",
+      "type": "table",
+      "title": "The key finding: desktop converts at twice the efficiency",
+      "width": "full",
+      "data": {
+        "headers": [
+          "Device",
+          "Spend",
+          "Share of budget",
+          "Clicks",
+          "Inquiries",
+          "Cost per inquiry"
+        ],
+        "rows": [
+          ["Desktop", "$509.49", "34%", "75", "2", "$255"],
+          ["Mobile", "$1,001.82", "66%", "149", "2", "$501"],
+          ["Tablet", "$6.48", "<1%", "1", "0", "n/a"]
+        ],
+        "note": "Mobile takes two thirds of the budget and returns half the inquiries. People researching an event on a phone browse; people on a desktop tend to be further along and ready to enquire. Reducing mobile bids moves money toward the device that books."
+      }
+    },
+    {
+      "id": "google-period-trend",
+      "type": "table",
+      "title": "Google Ads trend (most recent periods)",
+      "width": "full",
+      "data": {
+        "headers": [
+          "Period",
+          "Spend",
+          "Clicks",
+          "CTR",
+          "Avg CPC",
+          "Inq",
+          "Cost/Inq"
+        ],
+        "rows": [
+          [
+            "2 wks ending Jun 11",
+            "$501.92",
+            "86",
+            "5.04%",
+            "$5.84",
+            "2",
+            "$250.96"
+          ],
+          [
+            "Jun 12 - Jul 1 (3 wks)",
+            "$1,119.23",
+            "191",
+            "6.57%",
+            "$5.86",
+            "2",
+            "$559.62"
+          ],
+          [
+            "Jul 2 - 16 (2 wks)",
+            "$942.01",
+            "149",
+            "7.66%",
+            "$6.32",
+            "3",
+            "$314.00"
+          ],
+          [
+            "Jul 28 - Aug 24 (4 wks)",
+            "$1,530.69",
+            "227",
+            "10.10%",
+            "$6.74",
+            "4",
+            "$382.67"
+          ]
+        ],
+        "note": "Click-through rate has climbed every period, from 5.04% to 10.10%. That means the ads are reaching the right searches. Cost per inquiry has moved around because of what happens after the click, which is what this period's changes target."
+      }
+    },
+    {
+      "id": "inquiry-sources",
+      "type": "table",
+      "title": "Which keywords produced the inquiries",
+      "width": "full",
+      "data": {
+        "headers": [
+          "Keyword",
+          "Match type",
+          "Clicks",
+          "Spend",
+          "Inquiries",
+          "Cost per inquiry"
+        ],
+        "rows": [
+          ["event bartending service", "Phrase", "141", "$888.70", "3", "$296"],
+          ["bartender denver", "Exact", "14", "$98.16", "1", "$98"],
+          [
+            "All other keywords combined",
+            "Phrase and exact",
+            "72",
+            "$543.83",
+            "0",
+            "n/a"
+          ]
+        ],
+        "note": "Two keywords produced every inquiry this period. 'Event bartending service' is the volume engine and 'bartender denver' is the most efficient. Both stay. The remaining terms are being watched rather than cut, because at this click volume a month without an inquiry is not yet evidence that a keyword does not work."
+      }
+    }
+  ],
+
+  "findings": [
+    {
+      "title": "Mobile is where the money is going and desktop is where the bookings are",
+      "description": "Mobile took 66 percent of the budget and produced half the inquiries, at $501 each. Desktop took 34 percent and produced the other half at $255 each. This is a common pattern for considered purchases: someone researching a wedding or a party on their phone is often still browsing, while someone at a desktop is closer to making a decision. It is the single clearest explanation for why cost per inquiry has been sitting high."
+    },
+    {
+      "title": "Two keywords are carrying the account",
+      "description": "'Event bartending service' produced three of the four inquiries at $296 each, and 'bartender denver' produced the fourth at $98. Between them they account for every inquiry this period. This is worth knowing because it tells us where to protect budget rather than where to cut it."
+    },
+    {
+      "title": "Click-through rate is the best it has ever been",
+      "description": "10.10 percent, up from 7.66 percent last period and 5.04 percent in June. That is a strong signal that the ads and keywords are well matched to what people are actually searching for. The opportunity is no longer in getting people to click. It is in what happens after they land."
+    }
+  ],
+
+  "actions": [
+    {
+      "title": "Reduced mobile bids by 30 percent",
+      "description": "Shifts budget toward desktop, where inquiries cost half as much, without increasing the daily budget. This is the main change this period and the one I want to measure cleanly.",
+      "status": "done"
+    },
+    {
+      "title": "Completed the speed work on the booking page",
+      "description": "The page now loads well on phones, where most of the traffic arrives. Faster pages hold more visitors and Google also factors page experience into what you pay per click.",
+      "status": "done"
+    },
+    {
+      "title": "Reviewed every keyword against the inquiries it produced",
+      "description": "Confirmed which terms are carrying the account so budget stays protected on those, and set a clear threshold for reviewing the rest next period rather than cutting on a small sample.",
+      "status": "done"
+    }
+  ],
+
+  "recommendation": {
+    "title": "Hold everything steady for two to three weeks and read the mobile change cleanly",
+    "changes": [
+      {
+        "title": "No further changes to keywords, bids, or budget this cycle",
+        "description": "Keep the two keywords producing inquiries fully funded, leave the mobile adjustment to work, and hold the budget at $60 a day. I will keep reviewing incoming searches and block anything clearly off target, which does not disturb the test.",
+        "impact": "Expected outcome: blended cost per click falls from $6.74 toward the $5.50 to $5.75 range as budget shifts to desktop, with cost per inquiry following it down."
+      },
+      {
+        "title": "Then evaluate automated bidding for the off season",
+        "description": "Google's automated bidding historically produced this account's best results, but it needs enough room to compete. It struggled last spring on a smaller budget during peak season. With a larger budget and softer autumn competition, it is worth revisiting once we have a clean read on the mobile change.",
+        "impact": "A decision point in mid September, made on a clean set of numbers rather than on a hunch."
+      }
+    ]
+  },
+
+  "videoUrl": "https://supercut.ai/share/digitalnova-studio/JWxoLILIxm73nvkXoe67i2",
+
+  "nextSteps": [
+    "Let the mobile bid reduction run undisturbed and measure its effect on cost per click and cost per inquiry.",
+    "Continue reviewing incoming searches and blocking any that are clearly off target.",
+    "Watch whether autumn brings the usual easing in competition for these searches.",
+    "Report back in mid September with the mobile change measured and a recommendation on automated bidding."
+  ]
+}
