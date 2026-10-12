@@ -1,0 +1,210 @@
+{
+  "client": "Mobile Craft Bars",
+  "reportTitle": "Google Ads report",
+  "reportSubtitle": "Cost per inquiry held steady, the month finished slow, and the ads are now catering only",
+  "period": "Sep 10 - Oct 10, 2026",
+  "date": "2026-10-10",
+  "platform": "Google",
+  "summary": "This report covers the performance on ads after switching back to google's AI. Perfomance was mixed — Inquiries came in a little faster than last cycle at about the same cost each, but nearly all of them landed in the first two weeks and the last two were quiet. I walk through what I think happened below, including how much of it is chance. We also agreed to stop the staffing ads, so every search now goes through the bar catering ad. I also tightened the setup - I switched to target CPA so that google has a cost target to aim for, I reduced mobile bidding because mobile visitors don't convert, and I tightened up the keywords.",
+  "kpis": {
+    "conversions": 9,
+    "adSpend": 1955.0,
+    "costPerConversion": 217.22,
+    "cpc": 11.11
+  },
+  "metrics": [
+    {
+      "label": "Ad spend (31 days)",
+      "value": "$1,955",
+      "note": "About $63 a day against a $60 daily budget.",
+      "status": "neutral"
+    },
+    {
+      "label": "Inquiries",
+      "value": "9",
+      "note": "About two a week, against 1.75 last cycle.",
+      "status": "neutral"
+    },
+    {
+      "label": "Cost per inquiry",
+      "value": "$217",
+      "note": "Flat against $214 last cycle.",
+      "status": "neutral"
+    },
+    {
+      "label": "Cost per click",
+      "value": "$11.11",
+      "note": "Up from $5.31 last cycle.",
+      "status": "warning"
+    }
+  ],
+  "funnel": {
+    "title": "Ad to inquiry funnel (Sep 10 - Oct 10)",
+    "source": "Google Ads",
+    "steps": [
+      {
+        "label": "Impressions",
+        "count": 2287,
+        "pct": 100
+      },
+      {
+        "label": "Clicks",
+        "count": 176,
+        "pct": 7.7
+      },
+      {
+        "label": "Inquiries",
+        "count": 9,
+        "pct": 0.39
+      }
+    ]
+  },
+  "charts": [
+    {
+      "id": "google-period-trend",
+      "type": "table",
+      "title": "Google Ads trend (most recent periods)",
+      "width": "full",
+      "data": {
+        "headers": [
+          "Period",
+          "Spend",
+          "Clicks",
+          "CTR",
+          "Avg CPC",
+          "Inq",
+          "Cost/Inq"
+        ],
+        "rows": [
+          [
+            "Jul 2 - 16 (2 wks)",
+            "$942.01",
+            "149",
+            "7.66%",
+            "$6.32",
+            "3",
+            "$314.00"
+          ],
+          [
+            "Jul 28 - Aug 24 (4 wks)",
+            "$1,530.69",
+            "227",
+            "10.10%",
+            "$6.74",
+            "4",
+            "$382.67"
+          ],
+          [
+            "Aug 25 - Sep 9 (16 days)",
+            "$854.33",
+            "161",
+            "9.34%",
+            "$5.31",
+            "4",
+            "$213.58"
+          ],
+          [
+            "Sep 10 - Oct 10 (31 days)",
+            "$1,955.00",
+            "176",
+            "7.70%",
+            "$11.11",
+            "9",
+            "$217.22"
+          ]
+        ],
+        "note": "Bidding was manual through Sep 9 and automated from Sep 10."
+      }
+    },
+    {
+      "id": "cycle-halves",
+      "type": "table",
+      "title": "Inside this cycle",
+      "width": "full",
+      "data": {
+        "headers": ["Stretch", "Spend", "Per day", "Clicks", "Inq", "Cost/Inq"],
+        "rows": [
+          [
+            "Sep 10 - 13 (bidding settling in)",
+            "$64.79",
+            "$16",
+            "11",
+            "0",
+            "n/a"
+          ],
+          ["Sep 14 - 27", "$1,192.59", "$85", "98", "8", "$149.07"],
+          ["Sep 28 - Oct 10", "$697.62", "$54", "67", "1", "$697.62"]
+        ],
+        "note": "The daily budget is $60."
+      }
+    },
+    {
+      "id": "inquiry-sources",
+      "type": "table",
+      "title": "Every keyword that produced an inquiry, by ad",
+      "width": "full",
+      "data": {
+        "headers": [
+          "Keyword",
+          "Match type",
+          "Catering ad (clicks / inq)",
+          "Staffing ad (clicks / inq)"
+        ],
+        "rows": [
+          ["mobile bartender for party", "Phrase", "39 / 2", "14 / 0"],
+          ["mobile bar Denver", "Phrase", "26 / 2", "5 / 0"],
+          ["event bartending service", "Phrase", "4 / 2", "4 / 0"],
+          ["bartender denver", "Exact", "3 / 0", "7 / 1"],
+          ["event bartending", "Exact", "5 / 0", "5 / 1"],
+          ["private bartender", "Phrase", "0 / 0", "3 / 1"]
+        ],
+        "note": "Google showed both ads across nearly every keyword this cycle."
+      }
+    }
+  ],
+  "findings": [
+    {
+      "title": "Same cost per inquiry, reached a different way",
+      "description": "Automated bidding paid about twice as much per click as manual bidding did, and those clicks turned into inquiries about twice as often, so the cost of each inquiry landed almost exactly where it was. That is how automated bidding works: Google bids higher on searches it predicts will lead to an inquiry and lower, or not at all, on the rest."
+    },
+    {
+      "title": "The staffing ad was answering catering searches",
+      "description": "Google rotated both ads across nearly every search, so someone typing 'mobile bar Denver' could land on the hourly staffing page instead of the packages. The staffing ad took 41% of spend and brought three inquiries at $269 each, against $191 on the catering ad. The three searches behind six of the nine inquiries converted only through the catering ad; on the staffing ad those same searches got 23 clicks and no inquiries. With staffing at around 5% of your inquiries overall, that share of spend was going to the smaller side of the business."
+    }
+  ],
+  "actions": [
+    {
+      "title": "Stopped the staffing ads",
+      "description": "Every search now shows the catering ad and lands on the packages page. The staffing page itself stays live; it just no longer gets paid traffic.",
+      "status": "done"
+    },
+    {
+      "title": "Set a cost-per-inquiry target of $210",
+      "description": "Until now automated bidding chased as many inquiries as the budget allowed with no ceiling on what it paid, and one click cost $75. A target tells Google what an inquiry is worth to you, and it bids against that. $210 sits right at this cycle's actual cost, so it shouldn't choke volume.",
+      "status": "done"
+    },
+    {
+      "title": "Gave phones a lower target",
+      "description": "Phones now bid toward a target 30% lower, about $147, because phone clicks have turned into inquiries at roughly a third of the rate of computer clicks.",
+      "status": "done"
+    },
+    {
+      "title": "Turned off Google's search expansion",
+      "description": "This setting (Google calls it AI Max) lets Google show the ad on searches outside our keyword list. Once automated bidding started, it reached into searches like party buses, keg rentals, liquor permits and other bar companies' names, about a fifth of spend. It brought two inquiries, both early in the cycle, and none in the last two weeks.",
+      "status": "done"
+    },
+    {
+      "title": "Pointed every ad link at the booking page",
+      "description": "The extra links under the ad used to send people to the main website instead of the booking page built for ad visitors. They now go to sections of the booking page (packages, reviews, how it works and the quote form), and the staffing and cocktail class links are gone.",
+      "status": "done"
+    }
+  ],
+  "videoUrl": "https://supercut.ai/share/digitalnova-studio/n3VvqIkZsDzD2q5HcImT02",
+  "nextSteps": [
+    "Leave the new setup in place for two to three weeks, since Google needs a week or two to adjust to a new target, then judge it against this cycle's $217 per inquiry.",
+    "Review the searches we're paying for after the first week and block anything off target.",
+    "Watch spend in the first week. If it sits well under $60 a day, the target is too tight and I'll raise it.",
+    "Report back in early November with three weeks on the new setup.",
+    "Start considering some holiday marketing ideas to run ads for."
+  ]
+}
